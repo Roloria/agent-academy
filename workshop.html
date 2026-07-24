@@ -4,124 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>实战工坊 · Agent Academy</title>
-<meta name="description" content="40+ AI Agent 动手实战项目，从最小 ReAct 循环到完整大型系统。每一项目都包含完整代码、运行步骤、扩展挑战。">
+<meta name="description" content="从 0 代码到独立搭建的完整实战路径。即使没有任何编程基础，也能跟着步骤搭建属于自己的 AI Agent。提供轻量级应用实战项目和多种入门路径。">
+<!-- ========== SEO & Social ========== -->
+<meta name="keywords" content="AI Agent 实战, 零基础学 Agent, 轻量级 Agent 应用, Coze 教程, Dify 教程, ChatGPT Custom GPT, 无代码 Agent, LangChain 教程, 实战项目" />
+<meta name="author" content="Roloria" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="theme-color" content="#7c5cff" />
+<meta name="color-scheme" content="dark light" />
+<link rel="alternate" hreflang="zh-CN" href="https://roloria.github.io/agent-academy/workshop.html" />
+<link rel="canonical" href="https://roloria.github.io/agent-academy/workshop.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="0 代码也能动手 · 40+ AI Agent 实战项目" />
+<meta property="og:description" content="从零开始, 系统化实战 AI Agent。即使没有任何编程基础, 也能跟着搭建属于自己的智能体。" />
+<meta property="og:url" content="https://roloria.github.io/agent-academy/workshop.html" />
+<meta property="og:image" content="https://roloria.github.io/agent-academy/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="0 代码也能动手 · 40+ AI Agent 实战项目" />
+<meta name="twitter:description" content="从零开始, 系统化实战 AI Agent。即使没有任何编程基础, 也能跟着搭建属于自己的智能体。" />
+<meta name="twitter:image" content="https://roloria.github.io/agent-academy/og-image.png" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<!-- ========== END SEO ========== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<!-- ========== SEO & Social ========== -->
-<meta name="description" content="40+ AI Agent 动手实验:从最小 100 行 ReAct 循环到完整大型 Agent 项目。包含可运行的代码骨架、运行步骤、扩展挑战。覆盖 LangChain/LangGraph/CrewAI/AutoGen 实操。" />
-<meta name="keywords" content="AI Agent 实战, 动手实验, ReAct 实现, LangChain 教程, LangGraph 教程, 代码示例" />
-<meta name="author" content="Roloria" />
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
-<meta name="googlebot" content="index, follow" />
-<meta name="theme-color" content="#7c5cff" />
-<meta name="color-scheme" content="dark light" />
-<meta name="application-name" content="Agent Academy" />
-<meta name="apple-mobile-web-app-title" content="Agent Academy" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="format-detection" content="telephone=no" />
-<meta name="mobile-web-app-capable" content="yes" />
-
-<!-- 多语言 -->
-<link rel="alternate" hreflang="zh-CN" href="https://roloria.github.io/agent-academy/workshop.html" />
-<link rel="alternate" hreflang="x-default" href="https://roloria.github.io/agent-academy/workshop.html" />
-
-<!-- 规范化 URL -->
-<link rel="canonical" href="https://roloria.github.io/agent-academy/workshop.html" />
-
-<!-- Open Graph -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="40+ 动手实验 · 从 100 行代码到完整项目" />
-<meta property="og:description" content="40+ AI Agent 动手实验:从最小 100 行 ReAct 循环到完整大型 Agent 项目。包含可运行的代码骨架、运行步骤、扩展挑战。覆盖 LangChain/LangGraph/CrewAI/AutoGen 实操。" />
-<meta property="og:url" content="https://roloria.github.io/agent-academy/workshop.html" />
-<meta property="og:site_name" content="Agent Academy" />
-<meta property="og:image" content="https://roloria.github.io/agent-academy/og-image.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Agent Academy - 系统化学习 AI Agent" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:locale" content="zh_CN" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@roloria" />
-<meta name="twitter:creator" content="@roloria" />
-<meta name="twitter:title" content="40+ 动手实验 · 从 100 行代码到完整项目" />
-<meta name="twitter:description" content="40+ AI Agent 动手实验:从最小 100 行 ReAct 循环到完整大型 Agent 项目。包含可运行的代码骨架、运行步骤、扩展挑战。覆盖 LangChain/LangGraph/CrewAI/AutoGen 实操。" />
-<meta name="twitter:image" content="https://roloria.github.io/agent-academy/og-image.png" />
-<meta name="twitter:image:alt" content="Agent Academy - 系统化学习 AI Agent" />
-
-<!-- Favicon & PWA -->
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-<link rel="manifest" href="site.webmanifest" />
-
-<!-- Sitemap & RSS -->
-<link rel="sitemap" type="application/xml" href="sitemap.xml" />
-
-<!-- 结构化数据 -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Agent Academy",
-  "alternateName": "Agent Academy · AI Agent 学习平台",
-  "url": "https://roloria.github.io/agent-academy/",
-  "description": "系统化学习 AI Agent 的完整旅程 · 从认知到独立搭建大型 Agent 项目",
-  "inLanguage": "zh-CN",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://roloria.github.io/agent-academy/projects.html?search={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "实战工坊 · Agent Academy",
-  "description": "40+ AI Agent 动手实验:从最小 100 行 ReAct 循环到完整大型 Agent 项目。包含可运行的代码骨架、运行步骤、扩展挑战。覆盖 LangChain/LangGraph/CrewAI/AutoGen 实操。",
-  "provider": {
-    "@type": "Organization",
-    "name": "Agent Academy",
-    "sameAs": "https://github.com/Roloria/agent-academy"
-  },
-  "url": "https://roloria.github.io/agent-academy/workshop.html",
-  "image": "https://roloria.github.io/agent-academy/og-image.png",
-  "inLanguage": "zh-CN",
-  "isAccessibleForFree": true,
-  "hasCourseInstance": {
-    "@type": "CourseInstance",
-    "courseMode": "online",
-    "courseWorkload": "P12W"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://roloria.github.io/agent-academy/"},
-    {"@type": "ListItem", "position": 5, "name": "实战工坊", "item": "https://roloria.github.io/agent-academy/workshop.html"}
-  ]
-}
-</script>
-<!-- ========== END SEO ========== -->
-
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/components.css">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='18' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E">
@@ -141,608 +46,1071 @@
       <a href="workshop.html" class="nav-link">实战工坊</a>
       <a href="blueprint.html" class="nav-link">Agent 蓝图</a>
       <a href="resources.html" class="nav-link">资源中心</a>
-      <a href="path.html#get-started" class="nav-cta">开始学习 →</a>
+      <a href="#get-started" class="nav-cta">开始动手 →</a>
     </div>
     <div class="nav-toggle"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
+<!-- Page Hero -->
 <section class="page-hero">
   <div class="container">
-    <div class="hero-eyebrow"><span class="pulse-dot"></span><span>40+ 动手实验 · 边做边学</span></div>
+    <div class="hero-eyebrow"><span class="pulse-dot"></span><span>重磅更新 · 7 个轻量级应用 · 0 代码起步</span></div>
     <h1>实战<span class="hl">工坊</span></h1>
     <p class="hero-subtitle">
-      每一项实验都设计为可在 30 分钟 - 4 小时内完成。从"Hello Agent"到完整的多 Agent 系统，
-      跑起来、改起来、扩展起来，是掌握 Agent 的唯一路径。
+      <strong style="color: var(--text-0);">没写过一行代码？没问题。</strong>
+      我们把 AI Agent 实战改造成<strong style="color: var(--text-0);">任何人都能上手</strong>的样子——
+      从 5 分钟用现成 AI、30 分钟搭自己的 Bot、到 1 小时跑通完整项目，逐步深入。
     </p>
   </div>
 </section>
 
-<!-- 实验分级 -->
-<section class="section-sm">
+<!-- 路径选择器 -->
+<section class="section-sm" id="get-started">
   <div class="container">
-    <div data-tab-group>
-      <div class="tabs">
-        <div class="tab active" data-tab="lab1">Lab 01 · 入门</div>
-        <div class="tab" data-tab="lab2">Lab 02 · 框架</div>
-        <div class="tab" data-tab="lab3">Lab 03 · 进阶</div>
-        <div class="tab" data-tab="lab4">Lab 04 · 高级</div>
-        <div class="tab" data-tab="lab5">Lab 05 · 完整项目</div>
+    <div class="section-head" style="margin-bottom: 30px;">
+      <span class="eyebrow">🚦 选择你的起点</span>
+      <h2 style="font-size: 1.8rem;">你是哪类学习者？</h2>
+      <p class="section-subtitle">根据你的背景，选择最适合的入门方式。每条路最终都通向独立搭建大型 Agent 项目。</p>
+    </div>
+
+    <div class="grid grid-4">
+
+      <a href="#lab01-1" class="card" style="cursor: pointer; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 14px;">🌱</div>
+        <span class="badge badge-green" style="margin-bottom: 14px;">完全无代码</span>
+        <h3 style="font-size: 1.15rem; margin-bottom: 10px;">我只想用现成的</h3>
+        <p style="color: var(--text-3); font-size: 0.85rem; margin-bottom: 14px;">完全不想写代码，用 ChatGPT、Claude 或现成 Bot 平台就能搞定</p>
+        <div style="font-size: 0.82rem; color: var(--text-4);">⏱ 5-60 分钟</div>
+      </a>
+
+      <a href="#lab01-2" class="card" style="cursor: pointer; text-align: center; border-color: var(--brand-1);">
+        <div style="font-size: 2.5rem; margin-bottom: 14px;">🎨</div>
+        <span class="badge badge-purple" style="margin-bottom: 14px;">拖拽式搭建</span>
+        <h3 style="font-size: 1.15rem; margin-bottom: 10px;">我想搭建自己的</h3>
+        <p style="color: var(--text-3); font-size: 0.85rem; margin-bottom: 14px;">用 Dify / Coze / Flowise 可视化平台搭建，不写代码也能做出自己的 Agent</p>
+        <div style="font-size: 0.82rem; color: var(--text-4);">⏱ 1-3 小时</div>
+      </a>
+
+      <a href="#lab01-3" class="card" style="cursor: pointer; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 14px;">🐣</div>
+        <span class="badge badge-cyan" style="margin-bottom: 14px;">入门编程</span>
+        <h3 style="font-size: 1.15rem; margin-bottom: 10px;">我想学一点代码</h3>
+        <p style="color: var(--text-3); font-size: 0.85rem; margin-bottom: 14px;">从 0 开始学 Python,通过复制粘贴完整代码一步步搭建 Agent</p>
+        <div style="font-size: 0.82rem; color: var(--text-4);">⏱ 半天-2 天</div>
+      </a>
+
+      <a href="#lab02" class="card" style="cursor: pointer; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 14px;">🚀</div>
+        <span class="badge badge-pink" style="margin-bottom: 14px;">直接进框架</span>
+        <h3 style="font-size: 1.15rem; margin-bottom: 10px;">我已经会编程了</h3>
+        <p style="color: var(--text-3); font-size: 0.85rem; margin-bottom: 14px;">直接上手 LangChain / LangGraph / CrewAI,跳过入门基础</p>
+        <div style="font-size: 0.82rem; color: var(--text-4);">⏱ 1-3 周</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== Lab 01: 0 代码入门 ========== -->
+<section class="section" id="lab01">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Lab 01 · 0 代码入门</span>
+      <h2 class="section-title">不写代码，<span class="hl">5 分钟</span>体验 AI Agent</h2>
+      <p class="section-subtitle">
+        这一节不要求任何编程背景。我们用三个递进的阶段：先用现成的、搭建自己的、然后第一次跑通完整代码。
+        你会在 3 个小时内拥有几个真正能解决日常问题的 Agent。
+      </p>
+    </div>
+
+    <!-- Lab 01.1 -->
+    <div class="knowledge-card" id="lab01-1" style="margin-bottom: 32px;">
+      <span class="badge badge-green" style="margin-bottom: 14px;">01.1 · 5 分钟起步</span>
+      <h3 style="font-size: 1.6rem; margin-bottom: 16px;">🌟 用现成的 AI 智能体帮你做事</h3>
+      <p style="color: var(--text-2); margin-bottom: 20px;">
+        这一步完全不需要任何设置。你只需要打开浏览器，开始和 AI 对话。
+        关键不在于"看教程"，而在于<strong style="color:var(--text-0)">把它当成你的助手去解决真实问题</strong>。
+      </p>
+
+      <h4 style="margin: 18px 0 12px;">📋 5 个真实场景（任选 1-3 个试试）</h4>
+
+      <div class="grid grid-2" style="gap: 14px;">
+        <div class="card" style="padding: 18px;">
+          <strong style="color: var(--brand-2);">📚 场景 1：辅助阅读长文章</strong>
+          <p style="font-size: 0.9rem; color: var(--text-2); margin-top: 6px;">
+            找一篇 5000 字行业长文，粘给 ChatGPT，让它输出：核心观点 3 条 + 不易理解的术语 5 个 + 我应该采取的下一步行动。
+          </p>
+        </div>
+        <div class="card" style="padding: 18px;">
+          <strong style="color: var(--brand-2);">💡 场景 2：解释专业概念</strong>
+          <p style="font-size: 0.9rem; color: var(--text-2); margin-top: 6px;">
+            把不熟悉的概念贴给它："用 3 个不同层次的比喻，向一个 10 岁的孩子解释 Transformer 注意力机制"。
+          </p>
+        </div>
+        <div class="card" style="padding: 18px;">
+          <strong style="color: var(--brand-2);">🎯 场景 3：制定学习计划</strong>
+          <p style="font-size: 0.9rem; color: var(--text-2); margin-top: 6px;">
+            "我想在 4 周内从 0 学会 LangGraph,每天可投入 1.5 小时。请帮我制定一个分阶段计划,包含具体任务和检查清单。"
+          </p>
+        </div>
+        <div class="card" style="padding: 18px;">
+          <strong style="color: var(--brand-2);">🔍 场景 4：场景化决策辅助</strong>
+          <p style="font-size: 0.9rem; color: var(--text-2); margin-top: 6px;">
+            "我打算换一份工作,请扮演资深 HR 提问我 5 个我可能漏掉的关键问题"。让 AI 反向盘问你。
+          </p>
+        </div>
+        <div class="card" style="padding: 18px;">
+          <strong style="color: var(--brand-2);">📝 场景 5：写作协作</strong>
+          <p style="font-size: 0.9rem; color: var(--text-2); margin-top: 6px;">
+            把半成品草稿贴给 AI，"请帮我找出:1) 三处表达不够清晰的地方 2) 三个可以加入的实例 3) 一段更好的开头"。
+          </p>
+        </div>
+        <div class="card" style="padding: 18px;">
+          <strong style="color: var(--brand-2);">🧪 场景 6：脑暴伙伴</strong>
+          <p style="font-size: 0.9rem; color: var(--text-2); margin-top: 6px;">
+            想做一个小工具却没头绪？让它给出 10 个最常见的方案,然后追问每个方案的取舍。
+          </p>
+        </div>
       </div>
 
-      <!-- Lab 01 -->
-      <div class="tab-panel active" id="lab1">
-        <div class="section-head" style="text-align: left; margin-bottom: 40px;">
-          <span class="eyebrow">实验 01</span>
-          <h2 style="margin-top: 16px;">入门：<span class="hl">动手感受 Agent</span></h2>
-          <p class="section-subtitle">30-60 分钟可完成。目的是建立"Agent 是什么"的直觉。</p>
+      <div class="notice notice-success" style="margin-top: 20px;">
+        <span class="notice-icon">✓</span>
+        <div>
+          <strong>做完这一步你会有什么感觉？</strong>
+          <p>你会意识到:AI 不只是聊天工具,而是能把你的思考结构化、能解决真实问题的伙伴。这是理解 Agent 的第一步——Agent 本质就是一个"更自主的 AI 助手"。</p>
         </div>
+      </div>
+    </div>
 
-        <div class="card" style="margin-bottom: 20px;">
-          <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px;">
-            <div class="badge badge-green">30 min</div>
-            <h3 style="margin: 0;">实验 1.1：最小可用的 ReAct Agent</h3>
+    <!-- Lab 01.2 -->
+    <div class="knowledge-card" id="lab01-2" style="margin-bottom: 32px;">
+      <span class="badge badge-purple" style="margin-bottom: 14px;">01.2 · 30 分钟搭建</span>
+      <h3 style="font-size: 1.6rem; margin-bottom: 16px;">🛠 搭建你的第一个专属 AI 智能体</h3>
+      <p style="color: var(--text-2); margin-bottom: 20px;">
+        各大平台都已经提供了"搭积木"式的 Agent 构建器，无需写代码。
+        我们对比了主流方案，挑出最适合不同需求的几个。
+      </p>
+
+      <h4 style="margin: 18px 0 12px;">📊 主流平台对比</h4>
+      <div style="overflow-x: auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>平台</th>
+              <th>上手难度</th>
+              <th>免费额度</th>
+              <th>最强场景</th>
+              <th>适合谁</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ChatGPT Custom GPTs</strong></td>
+              <td><span class="badge badge-green">⭐ 最简</span></td>
+              <td>Plus 会员</td>
+              <td>个人知识库问答</td>
+              <td>纯使用者,只想给自己用</td>
+            </tr>
+            <tr>
+              <td><strong>Claude Projects</strong></td>
+              <td><span class="badge badge-green">⭐ 最简</span></td>
+              <td>Pro 会员</td>
+              <td>长文档研究助手</td>
+              <td>重度阅读 / 研究者</td>
+            </tr>
+            <tr>
+              <td><strong>Coze（扣子/Coze.com）</strong></td>
+              <td><span class="badge badge-purple">简单</span></td>
+              <td>免费版够用</td>
+              <td>发布到 IM 的 Bot</td>
+              <td>想分享 / 国内用户</td>
+            </tr>
+            <tr>
+              <td><strong>Dify</strong></td>
+              <td><span class="badge badge-purple">简单</span></td>
+              <td>云端 SaaS 免费</td>
+              <td>知识库 + 工作流</td>
+              <td>想做企业内部 AI</td>
+            </tr>
+            <tr>
+              <td><strong>Flowise</strong></td>
+              <td><span class="badge badge-cyan">中等</span></td>
+              <td>完全开源免费</td>
+              <td>深度定制、复杂流程</td>
+              <td>想私有化部署 / 技术爱好者</td>
+            </tr>
+            <tr>
+              <td><strong>n8n + AI 节点</strong></td>
+              <td><span class="badge badge-amber">较深</span></td>
+              <td>自托管免费</td>
+              <td>复杂业务流程自动化</td>
+              <td>运维 / 自动化专家</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4 style="margin: 30px 0 12px;">🚀 推荐路径 A：5 分钟搞定 ChatGPT Custom GPT（真零代码）</h4>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>步骤 1：打开 ChatGPT</h4>
+            <p>访问 chatgpt.com 并登录。需要 ChatGPT Plus 订阅（$20/月）。</p>
           </div>
-          <p style="color: var(--text-2); margin-bottom: 16px;"><strong>目标：</strong>不依赖任何框架，用 100 行 Python 代码实现 ReAct 循环。</p>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>步骤 2：进入 "Explore GPTs" → "Create"</h4>
+            <p>点左边的 "Explore GPTs"，再点右上角的 "Create"。这会打开 GPT 构建器。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>步骤 3：用自然语言配置</h4>
+            <p>在右边输入："你是一个学习助手。我会给你 PDF 笔记，请帮我基于笔记内容回答问题，并标注原始出处。" 然后点"创建"。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>步骤 4：在 "Knowledge" 上传资料</h4>
+            <p>把你想查询的笔记、PDF、文章上传上去。可以随时更新。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>步骤 5：保存并使用</h4>
+            <p>点右上角"保存"。以后在聊天框选择这个 GPT，问任何与你的资料相关的问题。</p>
+          </div>
+        </div>
+      </div>
 
-          <div class="code-block" style="margin-bottom: 16px;">
-            <div class="code-header">
-              <div class="code-dots"><span></span><span></span><span></span></div>
-              <span>minimal_react.py</span>
-            </div>
-            <pre><code><span class="code-comment">"""
-最小 ReAct Agent：100 行代码理解 Agent 本质
-依赖: pip install openai python-dotenv
-"""</span>
-<span class="code-keyword">import</span> os, re, json
+      <h4 style="margin: 30px 0 12px;">🚀 推荐路径 B：30 分钟搞定 Coze / Dify Bot（图形化，能发布给别人用）</h4>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>步骤 1：注册账号</h4>
+            <p>Coze 国际版: coze.com · Dify 云: cloud.dify.ai · 两者都有免费版。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>步骤 2：创建一个 "Bot" 或 "Chatflow"</h4>
+            <p>点 "Create Bot"（Coze）或 "Create App" → "Chatflow"（Dify）。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>步骤 3：填写 "Persona & Prompt"</h4>
+            <p>设置你的 Bot 是什么角色、应该做什么、语气风格。用自然语言描述。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>步骤 4：拖入工具</h4>
+            <p>在工具栏拖入 "Google 搜索"、"时间查询"、"网页读取" 等内置工具。<strong>这就是 Agent 的"工具调用"</strong>!</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>步骤 5：(可选) 上传知识库</h4>
+            <p>把 PDF / Word / 网页挂上去,AI 会基于这些内容回答。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>步骤 6：发布</h4>
+            <p>Coze 可以发布到飞书 / 微信 / 网页。Dify 提供 API 给你嵌入应用。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="notice notice-tip" style="margin-top: 24px;">
+        <span class="notice-icon">★</span>
+        <div>
+          <strong>看起来像在"配积木"，其实这就是 Agent!</strong>
+          <p>你在上面做的就是 Agent 的核心三件事:<br>1️⃣ 设定指令 (System Prompt)<br>2️⃣ 接入工具 (Tools)<br>3️⃣ 给出上下文 (Knowledge)<br>这些和写代码做的事情完全一样，只是用了图形界面。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lab 01.3 -->
+    <div class="knowledge-card" id="lab01-3" style="margin-bottom: 32px;">
+      <span class="badge badge-cyan" style="margin-bottom: 14px;">01.3 · 60 分钟</span>
+      <h3 style="font-size: 1.6rem; margin-bottom: 16px;">🐣 第一次运行完整代码（无需看懂）</h3>
+      <p style="color: var(--text-2); margin-bottom: 20px;">
+        这一节我们做一件有魔力的事情：<strong style="color:var(--text-0)">复制下面一整段代码 → 粘贴到本地 → 运行 → 你就有了第一个 Agent</strong>。
+        即使你完全不懂代码，只要一步一步跟着做就能成功。
+      </p>
+
+      <h4 style="margin: 18px 0 12px;">📋 环境准备（10 分钟）</h4>
+      <div class="grid grid-2" style="gap: 14px;">
+        <div class="card" style="padding: 18px;">
+          <strong style="color: var(--brand-2);">方法 1：本地安装（推荐）</strong>
+          <ol style="font-size: 0.88rem; color: var(--text-2); margin-top: 8px; padding-left: 18px; line-height: 1.8;">
+            <li>安装 Python 3.10+: <a href="https://python.org" style="color: var(--brand-2);">python.org/downloads</a></li>
+            <li>安装 VS Code: <a href="https://code.visualstudio.com" style="color: var(--brand-2);">code.visualstudio.com</a></li>
+            <li>新建文件夹 <code>my-first-agent</code></li>
+            <li>用 VS Code 打开这个文件夹</li>
+          </ol>
+        </div>
+        <div class="card" style="padding: 18px;">
+          <strong style="color: var(--brand-2);">方法 2：在线（最快）</strong>
+          <ol style="font-size: 0.88rem; color: var(--text-2); margin-top: 8px; padding-left: 18px; line-height: 1.8;">
+            <li>打开 <a href="https://replit.com" style="color: var(--brand-2);">Replit.com</a></li>
+            <li>新建 Python Repl</li>
+            <li>把代码粘进去即可运行</li>
+            <li>完全无需本地安装</li>
+          </ol>
+        </div>
+      </div>
+
+      <h4 style="margin: 24px 0 12px;">📋 获取 API Key</h4>
+      <p style="color: var(--text-2); margin-bottom: 12px;">
+        Agent 需要调用大语言模型。需要一个 API Key，就像水电费账号一样：
+      </p>
+      <div class="grid grid-3" style="gap: 12px;">
+        <div class="card" style="padding: 16px;">
+          <strong style="color: var(--text-0);">OpenAI</strong>
+          <p style="font-size: 0.82rem; color: var(--text-3); margin-top: 6px;">
+            <a href="https://platform.openai.com/api-keys" style="color: var(--brand-2);">platform.openai.com</a><br>
+            新用户有 $5 免费额度（约能跑 200+ 次）
+          </p>
+        </div>
+        <div class="card" style="padding: 16px;">
+          <strong style="color: var(--text-0);">DeepSeek</strong>
+          <p style="font-size: 0.82rem; color: var(--text-3); margin-top: 6px;">
+            <a href="https://platform.deepseek.com" style="color: var(--brand-2);">platform.deepseek.com</a><br>
+            国内访问快,价格低 (1 元 = 100 万 token)
+          </p>
+        </div>
+        <div class="card" style="padding: 16px;">
+          <strong style="color: var(--text-0);">智谱 GLM</strong>
+          <p style="font-size: 0.82rem; color: var(--text-3); margin-top: 6px;">
+            <a href="https://open.bigmodel.cn" style="color: var(--brand-2);">open.bigmodel.cn</a><br>
+            国内大模型,有免费额度,中文表现优异
+          </p>
+        </div>
+      </div>
+
+      <div class="notice notice-warning">
+        <span class="notice-icon">!</span>
+        <div>
+          <strong>不要慌，API 通常会先送你免费额度</strong>
+          <p>OpenAI 新账号送 $5（约 350 次对话）。DeepSeek / 智谱永久有免费额度。完全够学完本课程。</p>
+        </div>
+      </div>
+
+      <h4 style="margin: 24px 0 12px;">📝 复制整个文件</h4>
+      <p style="color: var(--text-2); margin-bottom: 12px;">新建文件 <code>agent.py</code>，复制下面的完整代码：</p>
+
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <span>agent.py · 复制即可运行</span>
+        </div>
+        <pre><code><span class="code-comment"># ==================================================================</span>
+<span class="code-comment"># 你的第一个 AI Agent —— 复制运行即可，无需理解</span>
+<span class="code-comment">#</span>
+<span class="code-comment"># 使用方法（按顺序执行 4 步）:</span>
+<span class="code-comment">#   1. 安装依赖:  终端运行: pip install openai</span>
+<span class="code-comment">#   2. 设置 Key:  终端运行: export OPENAI_API_KEY="你的key"</span>
+<span class="code-comment">#   3. 运行:      终端运行: python agent.py</span>
+<span class="code-comment">#   4. 提问:      在终端输入任何问题，按回车</span>
+<span class="code-comment"># ==================================================================</span>
+
+<span class="code-keyword">import</span> os
 <span class="code-keyword">from</span> openai <span class="code-keyword">import</span> OpenAI
 
+<span class="code-comment"># 初始化客户端（自动读取环境变量 OPENAI_API_KEY）</span>
 client = OpenAI(api_key=os.environ[<span class="code-string">"OPENAI_API_KEY"</span>])
 
-<span class="code-comment"># === 工具定义 ===</span>
-<span class="code-keyword">def</span> <span class="code-function">get_weather</span>(city: str) -> str:
-    <span class="code-comment"># 实际应调用天气 API</span>
-    <span class="code-keyword">return</span> f<span class="code-string">"{city} 当前 22°C 晴朗"</span>
+<span class="code-comment"># 这一段话告诉 AI 它是谁、能做什么、不能做什么</span>
+SYSTEM_PROMPT = <span class="code-string">"""
+你是一位耐心的 AI 助手,擅长用简单易懂的语言回答问题。
+- 如果问题不清楚,先问清楚再回答
+- 回答尽量简洁,不要啰嗦
+- 用中文回答
+"""</span>.strip()
 
-<span class="code-keyword">def</span> <span class="code-function">search</span>(query: str) -> str:
-    <span class="code-comment"># 实际应调用搜索 API</span>
-    <span class="code-keyword">return</span> f<span class="code-string">"关于 '{query}' 的搜索结果..."</span>
+<span class="code-comment"># 循环: 等用户输入 → 发送给 AI → 显示 AI 的回答</span>
+<span class="code-keyword">print</span>(<span class="code-string">"🎉 你的第一个 AI Agent 已启动!\n输入 'quit' 退出\n"</span>)
 
-TOOLS = {<span class="code-string">"get_weather"</span>: get_weather, <span class="code-string">"search"</span>: search}
+<span class="code-keyword">while True</span>:
+    <span class="code-comment"># 1. 接收用户问题</span>
+    question = <span class="code-keyword">input</span>(<span class="code-string">"你: "</span>)
+    <span class="code-keyword">if</span> question.lower() <span class="code-keyword">in</span> [<span class="code-string">"quit"</span>, <span class="code-string">"exit"</span>, <span class="code-string">"退出"</span>]:
+        <span class="code-keyword">print</span>(<span class="code-string">"👋 再见!"</span>)
+        <span class="code-keyword">break</span>
 
-TOOL_DESC = <span class="code-string">"""
-可用工具:
-- get_weather(city): 查询某城市天气
-- search(query): 网络搜索
-- Finish(answer): 输出最终答案
-"""</span>
-
-REACT_PROMPT = <span class="code-string">"""你是一个智能助手,可以调用以下工具:
-{tools}
-
-历史交互:
-{history}
-
-请按以下格式回应:
-思考: [你对当前问题的分析]
-行动: [工具名(参数)]
-观察: [工具返回的结果,会自动填充]
-...
-当任务完成时: Finish([最终答案])
-
-用户问题: {question}
-"""</span>
-
-<span class="code-keyword">def</span> <span class="code-function">react_agent</span>(question: str, max_steps: int = <span class="code-string">8</span>) -> str:
-    history = <span class="code-string">""</span>
-    prompt = REACT_PROMPT.format(tools=TOOL_DESC, history=history, question=question)
-
-    <span class="code-keyword">for</span> step <span class="code-keyword">in</span> range(max_steps):
-        response = client.chat.completions.create(
-            model=<span class="code-string">"gpt-4o-mini"</span>,
-            messages=[{<span class="code-string">"role"</span>: <span class="code-string">"user"</span>, <span class="code-string">"content"</span>: prompt}]
-        )
-        text = response.choices[<span class="code-string">0</span>].message.content
-
-        <span class="code-comment"># 解析行动</span>
-        action_match = re.search(<span class="code-string">r"行动:\s*(\w+)\((.*?)\)"</span>, text)
-        <span class="code-keyword">if not</span> action_match: <span class="code-keyword">break</span>
-
-        tool_name = action_match.group(<span class="code-string">1</span>)
-        args_str = action_match.group(<span class="code-string">2</span>)
-
-        <span class="code-keyword">if</span> tool_name == <span class="code-string">"Finish"</span>:
-            <span class="code-keyword">return</span> args_str.strip(<span class="code-string">'"\''</span>)
-
-        <span class="code-comment"># 执行工具</span>
-        <span class="code-keyword">if</span> tool_name <span class="code-keyword">in</span> TOOLS:
-            observation = TOOLS[tool_name](args_str.strip(<span class="code-string">'"\''</span>))
-        <span class="code-keyword">else</span>:
-            observation = <span class="code-string">f"未知工具: {tool_name}"</span>
-
-        history += text + <span class="code-string">f"\n观察: {observation}\n"</span>
-        prompt = REACT_PROMPT.format(tools=TOOL_DESC, history=history, question=question)
-
-    <span class="code-keyword">return</span> <span class="code-string">"未能完成"</span>
-
-<span class="code-comment"># 运行</span>
-<span class="code-keyword">if</span> __name__ == <span class="code-string">"__main__"</span>:
-    answer = react_agent(<span class="code-string">"北京今天天气如何？适合穿什么衣服?"</span>)
-    print(<span class="code-string">f"答案: {answer}"</span>)</code></pre>
-          </div>
-
-          <div class="notice notice-success">
-            <span class="notice-icon">✓</span>
-            <div>
-              <strong>实验目标</strong>
-              <p>运行这段代码，观察 Agent 如何自主决定"先查天气，再根据温度给出穿衣建议"。这就是 Agent 的核心循环。</p>
-            </div>
-          </div>
-
-          <h4 style="margin: 18px 0 12px;">🎯 挑战扩展</h4>
-          <ul style="color: var(--text-2); padding-left: 20px;">
-            <li>添加更多工具（如计算器、文件读取）</li>
-            <li>加入对工具调用失败的异常处理</li>
-            <li>加入 step 计数器，超过限制时强制返回</li>
-            <li>加入日志输出，观察 Agent 的"思考过程"</li>
-          </ul>
-        </div>
-
-        <div class="card" style="margin-bottom: 20px;">
-          <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px;">
-            <div class="badge badge-cyan">45 min</div>
-            <h3 style="margin: 0;">实验 1.2：Function Calling 的原生流程</h3>
-          </div>
-          <p style="color: var(--text-2); margin-bottom: 16px;"><strong>目标：</strong>用 OpenAI 原生 Function Calling 实现带工具的对话 Agent，理解模型如何决策工具调用。</p>
-
-          <div class="code-block">
-            <div class="code-header">
-              <div class="code-dots"><span></span><span></span><span></span></div>
-              <span>function_calling_demo.py</span>
-            </div>
-            <pre><code><span class="code-keyword">from</span> openai <span class="code-keyword">import</span> OpenAI
-<span class="code-keyword">import</span> json
-
-client = OpenAI()
-
-<span class="code-comment"># 工具定义: JSON Schema 格式</span>
-tools = [{
-    <span class="code-string">"type"</span>: <span class="code-string">"function"</span>,
-    <span class="code-string">"function"</span>: {
-        <span class="code-string">"name"</span>: <span class="code-string">"get_current_weather"</span>,
-        <span class="code-string">"description"</span>: <span class="code-string">"获取指定城市的当前天气"</span>,
-        <span class="code-string">"parameters"</span>: {
-            <span class="code-string">"type"</span>: <span class="code-string">"object"</span>,
-            <span class="code-string">"properties"</span>: {
-                <span class="code-string">"city"</span>: {<span class="code-string">"type"</span>: <span class="code-string">"string"</span>, <span class="code-string">"description"</span>: <span class="code-string">"城市名,如 '北京'"</span>},
-                <span class="code-string">"unit"</span>: {<span class="code-string">"type"</span>: <span class="code-string">"string"</span>, <span class="code-string">"enum"</span>: [<span class="code-string">"celsius"</span>, <span class="code-string">"fahrenheit"</span>]}
-            },
-            <span class="code-string">"required"</span>: [<span class="code-string">"city"</span>]
-        }
-    }
-}]
-
-<span class="code-keyword">def</span> <span class="code-function">run_conversation</span>(user_msg: str):
-    messages = [{<span class="code-string">"role"</span>: <span class="code-string">"user"</span>, <span class="code-string">"content"</span>: user_msg}]
-
+    <span class="code-comment"># 2. 调用大语言模型</span>
     response = client.chat.completions.create(
-        model=<span class="code-string">"gpt-4o-mini"</span>,
-        messages=messages,
-        tools=tools,
-        tool_choice=<span class="code-string">"auto"</span>  <span class="code-comment"># 让模型自主决定</span>
+        model=<span class="code-string">"gpt-4o-mini"</span>,  <span class="code-comment"># 便宜又够用</span>
+        messages=[
+            {<span class="code-string">"role"</span>: <span class="code-string">"system"</span>, <span class="code-string">"content"</span>: SYSTEM_PROMPT},
+            {<span class="code-string">"role"</span>: <span class="code-string">"user"</span>,   <span class="code-string">"content"</span>: question},
+        ],
     )
 
-    response_message = response.choices[<span class="code-string">0</span>].message
-    tool_calls = response_message.tool_calls
+    <span class="code-comment"># 3. 输出 AI 的回答</span>
+    answer = response.choices[<span class="code-string">0</span>].message.content
+    <span class="code-keyword">print</span>(<span class="code-string">f"AI: {answer}\n"</span>)</code></pre>
+      </div>
 
-    <span class="code-keyword">if</span> tool_calls:
-        messages.append(response_message)
-        <span class="code-keyword">for</span> tool_call <span class="code-keyword">in</span> tool_calls:
-            args = json.loads(tool_call.function.arguments)
-            <span class="code-comment"># 模拟工具执行</span>
-            result = {<span class="code-string">"temperature"</span>: <span class="code-string">22</span>, <span class="code-string">"condition"</span>: <span class="code-string">"晴朗"</span>}
-            messages.append({
-                <span class="code-string">"role"</span>: <span class="code-string">"tool"</span>,
-                <span class="code-string">"tool_call_id"</span>: tool_call.id,
-                <span class="code-string">"content"</span>: json.dumps(result, ensure_ascii=<span class="code-keyword">False</span>)
+      <h4 style="margin: 30px 0 12px;">🚀 跑起来！</h4>
+
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <span>运行命令 (复制到终端)</span>
+        </div>
+        <pre><code><span class="code-comment"># 第 1 步: 安装依赖</span>
+pip install openai
+
+<span class="code-comment"># 第 2 步: 设置密钥 (Mac/Linux)</span>
+export OPENAI_API_KEY=<span class="code-string">"sk-..."</span>
+
+<span class="code-comment"># Windows PowerShell:</span>
+$env:OPENAI_API_KEY=<span class="code-string">"sk-..."</span>
+
+<span class="code-comment"># 第 3 步: 运行 Agent</span>
+python agent.py</code></pre>
+      </div>
+
+      <div class="notice notice-success" style="margin-top: 24px;">
+        <span class="notice-icon">✓</span>
+        <div>
+          <strong>现在你可以和你的 Agent 对话了</strong>
+          <p>试试问它："用 3 句话解释量子计算"、"帮我写一首关于程序员的诗"、"把 247 拆成质因数"。这就是你搭建的第一个 Agent。它会一直运行,直到你输入 quit。</p>
+        </div>
+      </div>
+
+      <h4 style="margin: 28px 0 12px;">🎯 现在你可以试试的改动（最有意思的部分）</h4>
+      <p style="color: var(--text-2); margin-bottom: 12px;">
+        代码能跑起来后,改两处让它变成你的专属 Agent:
+      </p>
+
+      <ol style="padding-left: 22px; color: var(--text-2); line-height: 1.9;">
+        <li><strong style="color:var(--text-0)">改 SYSTEM_PROMPT</strong>: 把"耐心的 AI 助手"换成"资深 Python 教师",看看回答风格变化</li>
+        <li><strong style="color:var(--text-0)">改 model</strong>: 把 <code>gpt-4o-mini</code> 换成 <code>gpt-4o</code> 或 <code>deepseek-chat</code>,看看效果和速度差异</li>
+        <li><strong style="color:var(--text-0)">加 temperature</strong>: 在 <code>create()</code> 里加 <code>temperature=0.7</code> 控制创造性(0=严谨,1=发散)</li>
+      </ol>
+    </div>
+
+    <!-- Lab 01.4 轻量级应用实战 —— 核心新增 -->
+    <div class="knowledge-card" id="lab01-4" style="margin-bottom: 32px; border: 2px solid var(--brand-1);">
+      <span class="badge badge-pink" style="margin-bottom: 14px;">01.4 · 核心 · 轻量级应用实战</span>
+      <h3 style="font-size: 1.6rem; margin-bottom: 16px;">🚀 7 个能立刻用上的 AI 智能体</h3>
+      <p style="color: var(--text-2); margin-bottom: 18px;">
+        <strong style="color:var(--text-0)">这是整个 Agent Academy 最精华的部分。</strong>
+        下面 7 个项目，每一个都<strong style="color:var(--brand-2)">真实解决你的日常问题</strong>。
+        每个项目提供 <strong style="color:var(--brand-2)">3 种实现路径</strong>，你可以根据自己的水平选择。
+      </p>
+
+      <!-- 实现路径解释 -->
+      <div class="puzzle-pieces" style="margin-bottom: 30px;">
+        <div class="puzzle-piece">
+          <h4>路径 A · 完全无代码</h4>
+          <p>用 ChatGPT Custom GPT / Coze / Dify 的图形界面搭建。适合<strong style="color:var(--text-0)">完全不想碰代码</strong>的人。</p>
+        </div>
+        <div class="puzzle-piece">
+          <h4>路径 B · 可视化平台</h4>
+          <p>用 Dify / Coze / Flowise 拖拽搭建。适合想<strong style="color:var(--text-0)">做更复杂 Agent</strong> 但不想写代码。</p>
+        </div>
+        <div class="puzzle-piece">
+          <h4>路径 C · 写代码</h4>
+          <p>Python 50-100 行完整可运行。适合<strong style="color:var(--text-0)">想深入理解</strong> Agent 工作原理。</p>
+        </div>
+      </div>
+
+      <!-- 项目卡片网格 -->
+      <h4 style="margin: 30px 0 18px;">📦 7 个项目速览</h4>
+      <div class="grid grid-2" style="gap: 16px;">
+
+        <div class="card" style="padding: 22px;">
+          <div style="font-size: 1.8rem; margin-bottom: 10px;">📰</div>
+          <h4 style="margin-bottom: 8px;">项目 1 · 每日学习摘要 Bot</h4>
+          <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
+            自动汇总 RSS / 公众号内容,生成每日精炼摘要推送到你的 IM
+          </p>
+          <div class="tag-cloud">
+            <span class="tag">信息聚合</span>
+            <span class="tag">自动化</span>
+            <span class="tag">RSS</span>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 22px;">
+          <div style="font-size: 1.8rem; margin-bottom: 10px;">📚</div>
+          <h4 style="margin-bottom: 8px;">项目 2 · 个人知识库问答</h4>
+          <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
+            上传你的 PDF / 笔记,用自然语言提问,AI 找到原文段落并回答
+          </p>
+          <div class="tag-cloud">
+            <span class="tag">RAG</span>
+            <span class="tag">知识管理</span>
+            <span class="tag">学习</span>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 22px;">
+          <div style="font-size: 1.8rem; margin-bottom: 10px;">⏰</div>
+          <h4 style="margin-bottom: 8px;">项目 3 · 时间块规划师</h4>
+          <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
+            输入可用时间和任务清单,生成最优作息安排 + 自动设置提醒
+          </p>
+          <div class="tag-cloud">
+            <span class="tag">GTD</span>
+            <span class="tag">效率</span>
+            <span class="tag">日历</span>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 22px;">
+          <div style="font-size: 1.8rem; margin-bottom: 10px;">💌</div>
+          <h4 style="margin-bottom: 8px;">项目 4 · 邮件 / 微信回复助手</h4>
+          <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
+            转发邮件 / 消息 → AI 分析语境 → 生成多个草稿回复供你挑选
+          </p>
+          <div class="tag-cloud">
+            <span class="tag">沟通</span>
+            <span class="tag">IM</span>
+            <span class="tag">生产效率</span>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 22px;">
+          <div style="font-size: 1.8rem; margin-bottom: 10px;">📝</div>
+          <h4 style="margin-bottom: 8px;">项目 5 · 周报 / 月报生成器</h4>
+          <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
+            粘贴这周做的零散事项 → 输出结构化、优雅的工作汇报
+          </p>
+          <div class="tag-cloud">
+            <span class="tag">写作</span>
+            <span class="tag">职场</span>
+            <span class="tag">自动化</span>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 22px;">
+          <div style="font-size: 1.8rem; margin-bottom: 10px;">🔍</div>
+          <h4 style="margin-bottom: 8px;">项目 6 · 信息核查助手</h4>
+          <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
+            粘贴新闻 / 文章 → AI 从多个角度分析是否可信、可能的偏见
+          </p>
+          <div class="tag-cloud">
+            <span class="tag">批判思维</span>
+            <span class="tag">研究</span>
+            <span class="tag">多视角</span>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 22px;">
+          <div style="font-size: 1.8rem; margin-bottom: 10px;">🎴</div>
+          <h4 style="margin-bottom: 8px;">项目 7 · 学习卡片生成器</h4>
+          <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
+            粘贴学习材料 → 自动生成 Anki 风格问答卡片 → 导出到 Anki
+          </p>
+          <div class="tag-cloud">
+            <span class="tag">教育</span>
+            <span class="tag">间隔重复</span>
+            <span class="tag">Anki</span>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 22px;">
+          <div style="font-size: 1.8rem; margin-bottom: 10px;">💼</div>
+          <h4 style="margin-bottom: 8px;">项目 8 · 求职 / 面试教练</h4>
+          <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
+            输入职位描述 → 生成模拟面试题 + 回答思路 + 简历优化建议
+          </p>
+          <div class="tag-cloud">
+            <span class="tag">求职</span>
+            <span class="tag">职业发展</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 项目 1 详细案例 -->
+      <div style="background: var(--bg-2); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); padding: 30px; margin-top: 32px;">
+        <div class="badge badge-pink" style="margin-bottom: 14px;">📰 详细案例 · 项目 1</div>
+        <h3 style="font-size: 1.6rem; margin-bottom: 12px;">每日学习摘要 Bot</h3>
+        <p style="color: var(--text-2); margin-bottom: 16px;">
+          <strong>你想解决的问题</strong>：你关注的领域每天有大量文章,自己读不完。
+          这个 Bot 会自动帮你跟踪多源内容,每天生成精炼摘要发给你。
+        </p>
+        <p style="color: var(--text-2); margin-bottom: 16px;">
+          <strong>耗时</strong>：路径 A 30 分钟 / 路径 B 1.5 小时 / 路径 C 2 小时
+        </p>
+
+        <h4 style="margin: 18px 0 12px; color: var(--brand-2);">🅰️ 路径 A · Custom GPT 30 分钟搞定</h4>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num"></div>
+            <div class="step-content">
+              <h4>步骤 1：准备你的 RSS 源</h4>
+              <p>收集 5-10 个 RSS 链接（包括博客、新闻、Newsletter）。可以用 <a href="https://feedly.com" style="color:var(--brand-2)">Feedly</a> 先聚合,获取一个聚合的 OPML。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num"></div>
+            <div class="step-content">
+              <h4>步骤 2：创建 Custom GPT,配置 Capabilities</h4>
+              <p>在 Capabilities 里<strong>勾选 "Web Browsing"</strong>。这是给 Agent 装上"工具调用"的眼睛。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num"></div>
+            <div class="step-content">
+              <h4>步骤 3：填写 Instructions (System Prompt)</h4>
+              <p>复制下面的 Prompt:<br><br>
+              <code style="display:block; padding:14px; background:var(--bg-3); border-radius:8px; font-size:0.85rem; line-height:1.7;">
+你是一个每日学习助手。用户给你一份 RSS 源列表。<br>
+当用户说"今日摘要"时：<br>
+1. 用 Web Browsing 访问列表中每个源<br>
+2. 提取今天发布的新文章<br>
+3. 输出每篇文章的一句话摘要 + 一个关键洞察<br>
+4. 最后输出"今日推荐 TOP 3",说明原因<br>
+              </code>
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num"></div>
+            <div class="step-content">
+              <h4>步骤 4：试试效果</h4>
+              <p>在对话开头粘上 RSS 源列表,然后输入"今日摘要"。观察它如何自主决定访问哪些网站。</p>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="margin: 24px 0 12px; color: var(--brand-4);">🅱️ 路径 B · Dify 1.5 小时</h4>
+        <p style="color: var(--text-2); margin-bottom: 12px;">
+          在 <a href="https://cloud.dify.ai" style="color:var(--brand-2)">cloud.dify.ai</a> 上:
+        </p>
+        <ul style="color: var(--text-2); padding-left: 22px; line-height: 1.9; font-size: 0.92rem;">
+          <li>创建一个 Chatflow 工作流</li>
+          <li>添加"开始节点" → 添加"代码节点"(Python 脚本拉 RSS) → 添加"LLM 节点"(总结)</li>
+          <li>拖入"定时触发器",配置为每天早上 8 点运行</li>
+          <li>添加"邮件 / IM 节点",把结果发给你</li>
+        </ul>
+
+        <h4 style="margin: 24px 0 12px; color: var(--brand-2);">🅲 路径 C · 自己写代码 (Python 80 行)</h4>
+        <p style="color: var(--text-2); margin-bottom: 12px;">完整可运行代码:</p>
+
+        <div class="code-block">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span>daily_digest.py</span>
+          </div>
+          <pre><code><span class="code-comment"># 每日学习摘要 Bot · 复制即可运行</span>
+<span class="code-comment"># 安装: pip install feedparser openai</span>
+<span class="code-comment"># 设置: export OPENAI_API_KEY="sk-..."</span>
+
+<span class="code-keyword">import</span> feedparser
+<span class="code-keyword">from</span> openai <span class="code-keyword">import</span> OpenAI
+
+<span class="code-comment"># 你关注的 RSS 源列表（可任意添加）</span>
+RSS_FEEDS = [
+    <span class="code-string">"https://hnrss.org/frontpage"</span>,     <span class="code-comment"># Hacker News</span>
+    <span class="code-string">"https://www.smashingmagazine.com/feed/"</span>,
+    <span class="code-string">"https://github.blog/feed/"</span>,
+]
+
+<span class="code-keyword">def</span> <span class="code-function">fetch_articles</span>(feeds, max_per_feed=<span class="code-string">3</span>):
+    <span class="code-string">"""从 RSS 源拉取最新文章"""</span>
+    all_articles = []
+    <span class="code-keyword">for</span> url <span class="code-keyword">in</span> feeds:
+        feed = feedparser.parse(url)
+        <span class="code-keyword">for</span> entry <span class="code-keyword">in</span> feed.entries[:max_per_feed]:
+            all_articles.append({
+                <span class="code-string">"title"</span>: entry.title,
+                <span class="code-string">"link"</span>: entry.link,
+                <span class="code-string">"summary"</span>: getattr(entry, <span class="code-string">"summary"</span>, <span class="code-string">""</span>)[:<span class="code-string">300</span>],
             })
+    <span class="code-keyword">return</span> all_articles
 
-        second_response = client.chat.completions.create(
-            model=<span class="code-string">"gpt-4o-mini"</span>, messages=messages
-        )
-        <span class="code-keyword">return</span> second_response.choices[<span class="code-string">0</span>].message.content
-    <span class="code-keyword">return</span> response_message.content
+<span class="code-keyword">def</span> <span class="code-function">summarize_with_llm</span>(articles):
+    <span class="code-string">"""让 LLM 生成摘要 + 推荐"""</span>
+    client = OpenAI()
+    articles_text = <span class="code-string">"\n"</span>.join(
+        <span class="code-string">f"{i+1}. {a['title']}\n   {a['summary']}"</span>
+        <span class="code-keyword">for</span> i, a <span class="code-keyword">in</span> <span class="code-keyword">enumerate</span>(articles)
+    )
+    response = client.chat.completions.create(
+        model=<span class="code-string">"gpt-4o-mini"</span>,
+        messages=[{
+            <span class="code-string">"role"</span>: <span class="code-string">"user"</span>,
+            <span class="code-string">"content"</span>: <span class="code-string">f"""以下是今日抓取的文章列表:
 
-print(run_conversation(<span class="code-string">"上海现在天气怎么样?"</span>))</code></pre>
+{articles_text}
+
+请输出：
+1. 每篇文章 1 句话中文摘要
+2. 推荐 TOP 3 文章,说明为什么值得读"""</span>
+        }]
+    )
+    <span class="code-keyword">return</span> response.choices[<span class="code-string">0</span>].message.content
+
+<span class="code-keyword">if</span> __name__ == <span class="code-string">"__main__"</span>:
+    articles = fetch_articles(RSS_FEEDS)
+    digest = summarize_with_llm(articles)
+    <span class="code-keyword">print</span>(digest)
+    <span class="code-comment"># 想要自动发邮件?用 smtplib 或者第三方 SendGrid</span></code></pre>
+        </div>
+
+        <div class="notice notice-success" style="margin-top: 20px;">
+          <span class="notice-icon">✓</span>
+          <div>
+            <strong>三种路径的取舍</strong>
+            <p>
+              · 路径 A 最快但定制性差,只给自己用<br>
+              · 路径 B 能发布给他人/定时运行,功能居中<br>
+              · 路径 C 完全控制但要写代码,上限最高
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- Lab 02 -->
-      <div class="tab-panel" id="lab2">
-        <div class="section-head" style="text-align: left; margin-bottom: 40px;">
-          <span class="eyebrow">实验 02</span>
-          <h2 style="margin-top: 16px;">框架：<span class="hl-2">学会使用主流工具</span></h2>
-          <p class="section-subtitle">了解每个框架的设计理念并跑通它的核心功能。</p>
+      <!-- 其他项目的简要指引 -->
+      <div style="margin-top: 30px;">
+        <h4 style="margin-bottom: 16px;">📋 其它 6 个项目的快速指引</h4>
+        <p style="color: var(--text-2); margin-bottom: 16px;">下面给出每个项目的核心思路,你可以按相同模式展开。完整代码在 <a href="https://github.com/Roloria/agent-academy-examples" style="color:var(--brand-2)">agent-academy-examples</a> 仓库。</p>
+
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>项目</th>
+              <th>路径 A：Custom GPT 提示词</th>
+              <th>关键点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>📚 知识库问答</strong></td>
+              <td>"你是一位问答助手。我会上传 PDF 笔记,请基于笔记内容回答,并标注原文段落。"</td>
+              <td>Knowledge 字段上传 PDF</td>
+            </tr>
+            <tr>
+              <td><strong>⏰ 时间块规划</strong></td>
+              <td>"我会列出可用时间和任务,你是 GTD 教练,请生成 90 分钟作息表。"</td>
+              <td>迭代对话调整</td>
+            </tr>
+            <tr>
+              <td><strong>💌 邮件回复</strong></td>
+              <td>"你是邮件助手。我转发一封邮件,请生成 3 种不同语气(正式/友好/简洁)的回复草稿。"</td>
+              <td>选最好的直接发</td>
+            </tr>
+            <tr>
+              <td><strong>📝 周报生成</strong></td>
+              <td>"我会粘贴本周零散的工作事项,你是结构化表达专家,生成适合给上级看的周报。"</td>
+              <td>可加格式要求</td>
+            </tr>
+            <tr>
+              <td><strong>🔍 信息核查</strong></td>
+              <td>"我会粘贴一段文字,你是批判性思维专家,请:1) 找出可验证的事实 2) 检查逻辑漏洞 3) 列出 3 个反向思考。"</td>
+              <td>结合 Web Browsing</td>
+            </tr>
+            <tr>
+              <td><strong>🎴 学习卡片</strong></td>
+              <td>"你是有教学经验的人。我粘贴学习内容,请你生成 8-12 张 Anki 风格问答卡片 (问答对格式)。"</td>
+              <td>导出为 CSV 即可</td>
+            </tr>
+            <tr>
+              <td><strong>💼 求职教练</strong></td>
+              <td>"你是资深 HR。我会粘贴职位描述,请:1) 提炼岗位核心要求 2) 设计 6 道模拟面试题 3) 用 STAR 法举例最佳答案。"</td>
+              <td>迭代深化</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Lab 01.5 何时写代码? -->
+    <div class="knowledge-card">
+      <span class="badge badge-amber" style="margin-bottom: 14px;">01.5 · 给 0 基础人的建议</span>
+      <h3 style="font-size: 1.6rem; margin-bottom: 16px;">🧭 什么时候开始写代码？</h3>
+      <p style="color: var(--text-2); margin-bottom: 16px;">
+        很多人一上来就奔着"学代码"，结果疲于奔命却没看到 Agent 的价值。
+        我们的建议路径是<strong style="color:var(--text-0)">先体验价值，再决定深浅</strong>。
+      </p>
+
+      <h4 style="margin: 18px 0 12px;">三阶段成长路径</h4>
+      <div class="knowledge-graph">
+        <pre class="mermaid">
+graph LR
+  A["🌱 阶段 0<br>用现成 AI<br>5 分钟"] --> B["🎨 阶段 1<br>用平台搭建<br>1-3 小时"]
+  B --> C["🐣 阶段 2<br>复制粘贴代码<br>半天"]
+  C --> D["🐢 阶段 3<br>修改并理解<br>1-2 周"]
+  D --> E["🚀 阶段 4<br>独立开发<br>持续"]
+
+  A -.完成 Lab 01.1.-> A
+  B -.完成 Lab 01.2.-> B
+  C -.完成 Lab 01.3.-> C
+  D -.完成 Lab 02.-> D
+  E -.完成 Lab 03+.-> E
+
+  classDef stage0 fill:#00ffa3,stroke:#7c5cff,color:#000;
+  classDef stage1 fill:#7c5cff,stroke:#00d4ff,color:#fff;
+  classDef stage2 fill:#00d4ff,stroke:#7c5cff,color:#000;
+  classDef stage3 fill:#ff6ec7,stroke:#7c5cff,color:#fff;
+  classDef stage4 fill:#ffb84d,stroke:#7c5cff,color:#000;
+
+  class A stage0;
+  class B stage1;
+  class C stage2;
+  class D stage3;
+  class E stage4;
+        </pre>
+      </div>
+
+      <h4 style="margin: 24px 0 12px;">💡 真实建议</h4>
+      <ol style="padding-left: 22px; color: var(--text-2); line-height: 1.9;">
+        <li><strong style="color:var(--text-0)">不要从代码开始</strong> —— 先在 Lab 01.1 / 01.2 待上一周,你会发现不需要写代码也能解决 80% 的问题</li>
+        <li><strong style="color:var(--text-0)">代码是手段,不是目的</strong> —— 只在可视化平台无法满足时才写代码</li>
+        <li><strong style="color:var(--text-0)">每一次升级都要解决真实问题</strong> —— 不要为了学技术而学</li>
+        <li><strong style="color:var(--text-0)">保持"好奇心 + 实用性"双轮驱动</strong> —— 否则会迷失在技术细节</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Lab 02: 框架入门 · 真实应用 ========== -->
+<section class="section" id="lab02" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Lab 02 · 框架上手</span>
+      <h2 class="section-title">用主流框架,做<span class="hl-2">真实应用</span></h2>
+      <p class="section-subtitle">
+        在 Lab 02,我们假设你已经完成 Lab 01.3 并理解了代码基础。
+        接下来用 LangChain / LangGraph 等框架搭建稍复杂的、能解决日常问题的应用。
+      </p>
+    </div>
+
+    <div class="grid grid-2">
+
+      <div class="card">
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div class="badge badge-cyan">2 小时</div>
+          <h3 style="margin: 0;">实验 2.1 · LangChain 知识库问答</h3>
         </div>
-
-        <div class="grid grid-2" style="gap: 20px;">
-          <div class="card">
-            <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
-              <div class="badge badge-cyan">60 min</div>
-              <h3 style="margin: 0;">实验 2.1：LangChain Chain 与 LCEL</h3>
-            </div>
-            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">用 LCEL 表达式组合一个简单的 RAG + 工具链。</p>
-            <div class="tag-cloud">
-              <span class="tag">LCEL</span>
-              <span class="tag">Runnable</span>
-              <span class="tag">管道</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
-              <div class="badge badge-purple">90 min</div>
-              <h3 style="margin: 0;">实验 2.2：LangGraph 状态化 Agent</h3>
-            </div>
-            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">构建一个支持"思考 → 工具 → 重试 → 完成"的有状态图。</p>
-            <div class="tag-cloud">
-              <span class="tag">StateGraph</span>
-              <span class="tag">Nodes</span>
-              <span class="tag">Edges</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
-              <div class="badge badge-green">75 min</div>
-              <h3 style="margin: 0;">实验 2.3：CrewAI 多 Agent</h3>
-            </div>
-            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">构建"研究员 + 写作者"的协作流程，让 Agent 团队完成调研文章。</p>
-            <div class="tag-cloud">
-              <span class="tag">Crew</span>
-              <span class="tag">Role</span>
-              <span class="tag">Tasks</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
-              <div class="badge badge-pink">60 min</div>
-              <h3 style="margin: 0;">实验 2.4：AutoGen 群聊</h3>
-            </div>
-            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">搭建"用户 + 助手 + 评论员"的群聊 Agent，让对话自然推进。</p>
-            <div class="tag-cloud">
-              <span class="tag">GroupChat</span>
-              <span class="code-keyword"><span class="tag">UserProxy</span></span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
-              <div class="badge badge-amber">75 min</div>
-              <h3 style="margin: 0;">实验 2.5：LlamaIndex RAG</h3>
-            </div>
-            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">用 LlamaIndex 构建文档问答系统，对比不同检索策略的效果。</p>
-            <div class="tag-cloud">
-              <span class="tag">Index</span>
-              <span class="tag">Retriever</span>
-              <span class="tag">QueryEngine</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
-              <div class="badge badge-purple">45 min</div>
-              <h3 style="margin: 0;">实验 2.6：Smolagents 极简</h3>
-            </div>
-            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">用 Hugging Face Smolagents 实现一个 30 行代码 Agent。</p>
-            <div class="tag-cloud">
-              <span class="tag">CodeAgent</span>
-              <span class="tag">极简</span>
-            </div>
-          </div>
+        <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">
+          <strong>真实应用：</strong>把公司的产品手册做成可问答的智能助手。<br>
+          学会了"加载 → 切分 → 嵌入 → 检索 → 生成"的完整 RAG 链路。
+        </p>
+        <div class="tag-cloud">
+          <span class="tag">RAG</span>
+          <span class="tag">LangChain</span>
+          <span class="tag">PDF</span>
         </div>
       </div>
 
-      <!-- Lab 03 -->
-      <div class="tab-panel" id="lab3">
-        <div class="section-head" style="text-align: left; margin-bottom: 40px;">
-          <span class="eyebrow">实验 03</span>
-          <h2 style="margin-top: 16px;">进阶：<span class="hl-3">系统化设计能力</span></h2>
-          <p class="section-subtitle">掌握记忆、规划、检索、优化的系统化设计方法。</p>
+      <div class="card">
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div class="badge badge-purple">3 小时</div>
+          <h3 style="margin: 0;">实验 2.2 · LangGraph 多步骤研究助手</h3>
         </div>
-
-        <div class="card" style="margin-bottom: 20px;">
-          <h3>实验 3.1：长期记忆系统</h3>
-          <p style="color: var(--text-2); margin-bottom: 12px;"><strong>目标：</strong>为一个对话 Agent 加入"它能记住用户偏好"的能力，使用向量数据库 + 摘要策略。</p>
-          <div class="code-block">
-            <div class="code-header">
-              <div class="code-dots"><span></span><span></span><span></span></div>
-              <span>memory_system.py</span>
-            </div>
-            <pre><code><span class="code-comment"># 长期记忆系统的三种实现方式对比</span>
-<span class="code-keyword">from</span> langchain.memory <span class="code-keyword">import</span> (
-    ConversationBufferMemory,      <span class="code-comment"># 全量缓冲</span>
-    ConversationSummaryMemory,    <span class="code-comment"># 摘要压缩</span>
-    ConversationSummaryBufferMemory, <span class="code-comment"># 最近全量 + 远期摘要</span>
-    VectorStoreRetrieverMemory    <span class="code-comment"># 向量检索</span>
-)
-
-<span class="code-comment"># 实战: 组合使用</span>
-<span class="code-keyword">class</span> <span class="code-function">HybridMemory</span>:
-    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self, llm, vector_store, max_tokens=<span class="code-string">2000</span>):
-        self.short_term = ConversationBufferMemory(
-            max_token_limit=max_tokens, return_messages=<span class="code-keyword">True</span>
-        )
-        self.summary = ConversationSummaryMemory(llm=llm)
-        self.long_term = VectorStoreRetrieverMemory(retriever=vector_store.as_retriever(k=<span class="code-string">3</span>))
-
-    <span class="code-keyword">def</span> <span class="code-function">load</span>(self, query):
-        recent = self.short_term.load_memory_variables({})[<span class="code-string">"history"</span>]
-        relevant = self.long_term.load_memory_variables({<span class="code-string">"input"</span>: query})[<span class="code-string">"history"</span>]
-        <span class="code-keyword">return</span> recent + relevant</code></pre>
-          </div>
-        </div>
-
-        <div class="card" style="margin-bottom: 20px;">
-          <h3>实验 3.2：Plan-and-Execute 规划器</h3>
-          <p style="color: var(--text-2); margin-bottom: 12px;"><strong>目标：</strong>让 Agent 先制定计划，再分步执行，并在失败时重规划。</p>
-          <div class="code-block">
-            <div class="code-header">
-              <div class="code-dots"><span></span><span></span><span></span></div>
-              <span>planner.py</span>
-            </div>
-            <pre><code><span class="code-keyword">from</span> langchain <span class="code-keyword">import</span> hub
-<span class="code-keyword">from</span> langgraph <span class="code-keyword">import</span> StateGraph, END
-<span class="code-keyword">from</span> typing <span class="code-keyword">import</span> TypedDict, List
-
-<span class="code-keyword">class</span> <span class="code-function">PlanExecuteState</span>(TypedDict):
-    input: str
-    plan: List[str]
-    past_steps: List[tuple]
-    response: str
-
-<span class="code-keyword">def</span> <span class="code-function">planner_node</span>(state):
-    <span class="code-comment"># 用 LLM 生成步骤</span>
-    plan = llm.invoke(<span class="code-string">f"任务: {state['input']}\n生成 JSON 步骤列表"</span>)
-    <span class="code-keyword">return</span> {<span class="code-string">"plan"</span>: parse_steps(plan)}
-
-<span class="code-keyword">def</span> <span class="code-function">executor_node</span>(state):
-    step = state[<span class="code-string">"plan"</span>][<span class="code-string">0</span>]
-    result = execute_step(step)
-    <span class="code-keyword">return</span> {<span class="code-string">"past_steps"</span>: [(step, result)]}
-
-<span class="code-keyword">def</span> <span class="code-function">should_replan</span>(state):
-    <span class="code-keyword">if</span> state[<span class="code-string">"plan"</span>]:
-        <span class="code-keyword">return</span> <span class="code-string">"executor"</span>
-    <span class="code-keyword">return</span> END
-
-workflow = StateGraph(PlanExecuteState)
-workflow.add_node(<span class="code-string">"planner"</span>, planner_node)
-workflow.add_node(<span class="code-function">"executor"</span>, executor_node)
-workflow.set_entry_point(<span class="code-string">"planner"</span>)
-workflow.add_conditional_edges(<span class="code-string">"planner"</span>, should_replan, {<span class="code-string">"executor"</span>: <span class="code-string">"executor"</span>, END: END})
-workflow.add_edge(<span class="code-string">"executor"</span>, <span class="code-string">"planner"</span>)</code></pre>
-          </div>
-        </div>
-
-        <div class="card" style="margin-bottom: 20px;">
-          <h3>实验 3.3：可观测性集成</h3>
-          <p style="color: var(--text-2); margin-bottom: 12px;"><strong>目标：</strong>集成 LangSmith/LangFuse，记录 Agent 的每一步执行、token 用量、延迟。</p>
-          <div class="code-block">
-            <div class="code-header">
-              <div class="code-dots"><span></span><span></span><span></span></div>
-              <span>observability.py</span>
-            </div>
-            <pre><code><span class="code-comment"># LangFuse 集成示例</span>
-<span class="code-keyword">from</span> langfuse.callback <span class="code-keyword">import</span> CallbackHandler
-
-langfuse_handler = CallbackHandler(
-    public_key=<span class="code-string">"pk-..."</span>,
-    secret_key=<span class="code-string">"sk-..."</span>,
-    host=<span class="code-string">"https://cloud.langfuse.com"</span>
-)
-
-<span class="code-comment"># 在 Agent 调用时传入</span>
-result = agent.invoke(
-    {<span class="code-string">"input"</span>: user_query},
-    config={<span class="code-string">"callbacks"</span>: [langfuse_handler]}
-)
-
-<span class="code-comment"># 自动记录:</span>
-<span class="code-comment"># - LLM 调用次数、token 用量</span>
-span class="code-comment"># - 工具调用参数与结果</span>
-<span class="code-comment"># - 完整 trace 时间线</span>
-<span class="code-comment"># - 用户反馈评分</span></code></pre>
-          </div>
+        <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">
+          <strong>真实应用：</strong>输入"研究 X 主题"→ 自动搜索 → 分析 → 写报告。<br>
+          理解 Agent 的状态机、可中断、人工参与。
+        </p>
+        <div class="tag-cloud">
+          <span class="tag">LangGraph</span>
+          <span class="tag">状态机</span>
+          <span class="tag">研究助手</span>
         </div>
       </div>
 
-      <!-- Lab 04 -->
-      <div class="tab-panel" id="lab4">
-        <div class="section-head" style="text-align: left; margin-bottom: 40px;">
-          <span class="eyebrow">实验 04</span>
-          <h2 style="margin-top: 16px;">高级：<span class="hl">评估、优化、工具生态</span></h2>
-          <p class="section-subtitle">让 Agent 从"能跑"变成"跑得好"。</p>
+      <div class="card">
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div class="badge badge-green">2.5 小时</div>
+          <h3 style="margin: 0;">实验 2.3 · CrewAI 多角色写作组</h3>
         </div>
-
-        <div class="card" style="margin-bottom: 20px;">
-          <h3>实验 4.1：用 RAGAS 评估 RAG 质量</h3>
-          <p style="color: var(--text-2); margin-bottom: 12px;"><strong>目标：</strong>建立 RAG 系统的离线评估 Pipeline，量化"检索质量"和"答案质量"。</p>
-          <div class="code-block">
-            <div class="code-header">
-              <div class="code-dots"><span></span><span></span><span></span></div>
-              <span>eval_rag.py</span>
-            </div>
-            <pre><code><span class="code-keyword">from</span> ragas <span class="code-keyword">import</span> evaluate
-<span class="code-keyword">from</span> ragas.metrics <span class="code-keyword">import</span> (
-    faithfulness,           <span class="code-comment"># 答案基于上下文的程度</span>
-    answer_relevancy,       <span class="code-comment"># 答案与问题相关</span>
-    context_precision,      <span class="code-comment"># 检索精度</span>
-    context_recall,         <span class="code-comment"># 检索召回</span>
-)
-
-dataset = [{
-    <span class="code-string">"question"</span>: <span class="code-string">"..."</span>,
-    <span class="code-string">"answer"</span>: rag_chain.invoke(...),
-    <span class="code-string">"contexts"</span>: [...retrieved_docs],
-    <span class="code-string">"ground_truth"</span>: <span class="code-string">"..."</span>
-    <span class="code-comment"># ground_truth 可用 LLM 自动生成</span>
-}]
-
-result = evaluate(dataset, metrics=[faithfulness, answer_relevancy, context_precision])
-print(result)</code></pre>
-          </div>
-        </div>
-
-        <div class="card" style="margin-bottom: 20px;">
-          <h3>实验 4.2：DSPy 自动 Prompt 优化</h3>
-          <p style="color: var(--text-2); margin-bottom: 12px;"><strong>目标：</strong>用 DSPy 自动搜索最优 prompt 和示例，避免手工调参。</p>
-          <div class="code-block">
-            <div class="code-header">
-              <div class="code-dots"><span></span><span></span><span></span></div>
-              <span>dspy_optimize.py</span>
-            </div>
-            <pre><code><span class="code-keyword">import</span> dspy
-
-<span class="code-keyword">class</span> <span class="code-function">QASignature</span>(dspy.Signature):
-    <span class="code-string">"""根据上下文回答问题"""</span>
-    context = dspy.InputField()
-    question = dspy.InputField()
-    answer = dspy.OutputField()
-
-<span class="code-keyword">class</span> <span class="code-function">RAG</span>(dspy.Module):
-    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):
-        super().__init__()
-        self.retrieve = dspy.Retrieve(k=<span class="code-string">3</span>)
-        self.generate = dspy.ChainOfThought(QASignature)
-    <span class="code-keyword">def</span> <span class="code-function">forward</span>(self, question):
-        context = self.retrieve(question).passages
-        <span class="code-keyword">return</span> self.generate(context=context, question=question)
-
-<span class="code-comment"># 用 BootstrapFewShot 自动找最优示例</span>
-<span class="code-keyword">from</span> dspy.teleprompt <span class="code-keyword">import</span> BootstrapFewShot
-optimized = BootstrapFewShot(metric=answer_exact_match).compile(RAG(), trainset=train_data)
-<span class="code-comment"># 自动选择 Few-shot 示例 + 优化 prompt</span></code></pre>
-          </div>
-        </div>
-
-        <div class="card" style="margin-bottom: 20px;">
-          <h3>实验 4.3：Composio 工具生态</h3>
-          <p style="color: var(--text-2); margin-bottom: 12px;"><strong>目标：</strong>集成 100+ 现成工具（Gmail、Slack、Calendar 等），一行代码调用。</p>
-          <div class="code-block">
-            <div class="code-header">
-              <div class="code-dots"><span></span><span></span><span></span></div>
-              <span>composio_integration.py</span>
-            </div>
-            <pre><code><span class="code-keyword">from</span> composio_langchain <span class="code-keyword">import</span> ComposioToolSet, Action
-<span class="code-keyword">from</span> langchain_openai <span class="code-keyword">import</span> ChatOpenAI
-<span class="code-keyword">from</span> langgraph.prebuilt <span class="code-keyword">import</span> create_react_agent
-
-toolset = ComposioToolSet()
-tools = toolset.get_actions(actions=[Action.GMAIL_SEND_EMAIL, Action.SLACK_SEND_MESSAGE])
-agent = create_react_agent(ChatOpenAI(model=<span class="code-string">"gpt-4o"</span>), tools)
-
-<span class="code-comment"># Agent 自动选择: 给老板发邮件 / 在 Slack 频道提醒 / 创建日历事件</span>
-response = agent.invoke({<span class="code-string">"messages"</span>: [(<span class="code-string">"user"</span>, <span class="code-string">"给团队发个明早 9 点的会议提醒"</span>)]})</code></pre>
-          </div>
+        <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">
+          <strong>真实应用：</strong>输入主题 → 3 个 Agent 协作（研究、写稿、审校）→ 输出文章。<br>
+          学会角色化协作、任务编排。
+        </p>
+        <div class="tag-cloud">
+          <span class="tag">CrewAI</span>
+          <span class="tag">多 Agent</span>
+          <span class="tag">协作</span>
         </div>
       </div>
 
-      <!-- Lab 05 -->
-      <div class="tab-panel" id="lab5">
-        <div class="section-head" style="text-align: left; margin-bottom: 40px;">
-          <span class="eyebrow">实验 05</span>
-          <h2 style="margin-top: 16px;">完整项目：<span class="hl-2">从需求到交付</span></h2>
-          <p class="section-subtitle">完整的端到端项目，包含架构、开发、测试、部署。</p>
+      <div class="card">
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div class="badge badge-pink">2 小时</div>
+          <h3 style="margin: 0;">实验 2.4 · AutoGen 对话式编程助手</h3>
         </div>
-
-        <div class="grid grid-2" style="gap: 20px;">
-          <div class="card">
-            <h3 style="margin-bottom: 8px;">🛒 项目 5.1：智能购物比价助手</h3>
-            <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 12px;">
-              多 Agent 协作：搜索 Agent + 价格比对 Agent + 评价分析 Agent + 最终推荐 Agent。
-            </p>
-            <div class="tag-cloud">
-              <span class="tag">多 Agent</span>
-              <span class="tag">CrewAI</span>
-              <span class="tag">工具集成</span>
-              <span class="tag">2-3 周</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3 style="margin-bottom: 8px;">📚 项目 5.2：公司文档问答 Agent</h3>
-            <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 12px;">
-              RAG + 权限管理：多源索引、引用追溯、用户角色、回答"哪些文档被引用了"。
-            </p>
-            <div class="tag-cloud">
-              <span class="tag">RAG</span>
-              <span class="tag">LlamaIndex</span>
-              <span class="tag">权限</span>
-              <span class="tag">3 周</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3 style="margin-bottom: 8px;">🔬 项目 5.3：自动化研究助手</h3>
-            <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 12px;">
-              Plan-and-Execute：根据课题自动检索文献、组织摘要、生成综述初稿。
-            </p>
-            <div class="tag-cloud">
-              <span class="tag">Plan-Execute</span>
-              <span class="tag">LangGraph</span>
-              <span class="tag">文献检索</span>
-              <span class="tag">3-4 周</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3 style="margin-bottom: 8px;">💼 项目 5.4：销售自动化</h3>
-            <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 12px;">
-              线索管理：自动分析邮件、安排会议、同步 CRM、生成跟进消息。
-            </p>
-            <div class="tag-cloud">
-              <span class="tag">工具链</span>
-              <span class="tag">CRM 集成</span>
-              <span class="tag">4 周</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3 style="margin-bottom: 8px;">💻 项目 5.5：编程助手 Agent</h3>
-            <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 12px;">
-              GitHub 集成：理解 issue、写代码、跑测试、创建 PR。
-            </p>
-            <div class="tag-cloud">
-              <span class="tag">代码 Agent</span>
-              <span class="tag">DevOps</span>
-              <span class="tag">4-6 周</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3 style="margin-bottom: 8px;">🎓 项目 5.6：教育辅导 Agent</h3>
-            <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 12px;">
-              个性化教学：诊断学生薄弱点、生成定制题目、跟踪学习进度。
-            </p>
-            <div class="tag-cloud">
-              <span class="tag">教学</span>
-              <span class="tag">个性化</span>
-              <span class="tag">长期记忆</span>
-              <span class="tag">4 周</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cta-banner" style="margin-top: 40px;">
-          <h2 style="font-size: 1.8rem;">项目 5.7：<span class="hl">自己设计的 Agent</span></h2>
-          <p>这是 Phase 5 的最终任务。挑选你真正关心的需求，从头搭建一个完整的大型 Agent 项目。</p>
-          <a href="blueprint.html" class="btn btn-primary">查看项目蓝图 →</a>
+        <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">
+          <strong>真实应用：</strong>用户 + 工程师 + 评审员三方对话解决代码问题。<br>
+          体验微软风格的对话驱动开发。
+        </p>
+        <div class="tag-cloud">
+          <span class="tag">AutoGen</span>
+          <span class="tag">对话</span>
+          <span class="tag">代码助手</span>
         </div>
       </div>
 
+      <div class="card">
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div class="badge badge-amber">3 小时</div>
+          <h3 style="margin: 0;">实验 2.5 · LlamaIndex 文档问答深度版</h3>
+        </div>
+        <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">
+          <strong>真实应用：</strong>1000+ 份 PDF 的企业知识库精准问答。<br>
+          掌握高级索引、混合检索、引用追溯。
+        </p>
+        <div class="tag-cloud">
+          <span class="tag">LlamaIndex</span>
+          <span class="tag">高级 RAG</span>
+          <span class="tag">企业</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div class="badge badge-purple">1.5 小时</div>
+          <h3 style="margin: 0;">实验 2.6 · Smolagents 轻量级自定义</h3>
+        </div>
+        <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">
+          <strong>真实应用：</strong>从零搭一个属于自己的代码 Agent。<br>
+          看懂所有框架背后的统一抽象。
+        </p>
+        <div class="tag-cloud">
+          <span class="tag">Smolagents</span>
+          <span class="tag">极简</span>
+          <span class="tag">底层原理</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Lab 03-05 保留原有内容 ========== -->
+<section class="section" id="lab03">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Lab 03 · 系统设计</span>
+      <h2 class="section-title">从玩具到<span class="hl-3">生产级</span></h2>
+      <p class="section-subtitle">让 Agent 像一个真实软件产品被开发、测试、部署、监控。</p>
+    </div>
+
+    <div class="card" style="margin-bottom: 20px;">
+      <h3>实验 3.1 · 长期记忆 Chatbot</h3>
+      <p style="color: var(--text-2); margin-bottom: 12px;"><strong>真实应用：</strong>和你聊过天的 Bot，能记住你的偏好、说过的话、过去提的问题。</p>
+      <ul style="color: var(--text-2); padding-left: 22px;">
+        <li>短期记忆：会话上下文</li>
+        <li>长期记忆：向量数据库 + 摘要</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-bottom: 20px;">
+      <h3>实验 3.2 · Plan-and-Execute 规划器</h3>
+      <p style="color: var(--text-2); margin-bottom: 12px;"><strong>真实应用：</strong>输入"调研 AI Agent 行业现状"→ 自动规划 5 个步骤 → 逐个执行 → 输出报告。</p>
+    </div>
+
+    <div class="card" style="margin-bottom: 20px;">
+      <h3>实验 3.3 · 可观测性集成</h3>
+      <p style="color: var(--text-2); margin-bottom: 12px;"><strong>真实应用：</strong>为你的 Agent 接入 LangFuse / LangSmith，看到每一次工具调用、每一次 token 消耗。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="lab04" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Lab 04 · 评估优化</span>
+      <h2 class="section-title">让 Agent 跑得<span class="hl-2">又好又省</span></h2>
+      <p class="section-subtitle">评估体系 + 成本控制 + 性能优化。</p>
+    </div>
+
+    <div class="card" style="margin-bottom: 20px;">
+      <h3>实验 4.1 · RAGAS 评估你的知识库</h3>
+      <p style="color: var(--text-2); margin-bottom: 12px;"><strong>真实应用：</strong>系统化评估你的 RAG Agent，避免"看起来能跑但答得不准"。</p>
+    </div>
+
+    <div class="card" style="margin-bottom: 20px;">
+      <h3>实验 4.2 · DSPy 自动 Prompt 优化</h3>
+      <p style="color: var(--text-2); margin-bottom: 12px;"><strong>真实应用：</strong>用程序化方式搜索最优 Prompt 和 Few-shot 示例，而不是手工调。</p>
+    </div>
+
+    <div class="card" style="margin-bottom: 20px;">
+      <h3>实验 4.3 · 工具生态（Composio）</h3>
+      <p style="color: var(--text-2); margin-bottom: 12px;"><strong>真实应用：</strong>一行代码接入 100+ 现成工具（Gmail / Slack / Calendar / Notion …）。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="lab05">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Lab 05 · 完整项目</span>
+      <h2 class="section-title">从 0 交付一个<span class="hl">生产级大型 Agent</span></h2>
+      <p class="section-subtitle">综合运用所有能力,完成一个完整、可部署、可开源的项目。</p>
+    </div>
+
+    <div class="grid grid-2" style="gap: 20px;">
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">🛒 项目 5.1 · 智能购物比价助手</h3>
+        <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 12px;">
+          多 Agent 协作：搜索 Agent + 价格比对 Agent + 评价分析 Agent + 最终推荐 Agent。
+        </p>
+        <div class="tag-cloud"><span class="tag">多 Agent</span><span class="tag">CrewAI</span><span class="tag">2-3 周</span></div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">📚 项目 5.2 · 公司文档问答 Agent</h3>
+        <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 12px;">
+          RAG + 权限管理：多源索引、引用追溯、用户角色、回答"哪些文档被引用了"。
+        </p>
+        <div class="tag-cloud"><span class="tag">RAG</span><span class="tag">LlamaIndex</span><span class="tag">3 周</span></div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">🔬 项目 5.3 · 自动化研究助手</h3>
+        <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 12px;">
+          Plan-and-Execute：根据课题自动检索文献、组织摘要、生成综述初稿。
+        </p>
+        <div class="tag-cloud"><span class="tag">Plan-Execute</span><span class="tag">LangGraph</span><span class="tag">3-4 周</span></div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">💼 项目 5.4 · 销售自动化</h3>
+        <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 12px;">
+          线索管理：自动分析邮件、安排会议、同步 CRM、生成跟进消息。
+        </p>
+        <div class="tag-cloud"><span class="tag">工具链</span><span class="tag">CRM 集成</span><span class="tag">4 周</span></div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">💻 项目 5.5 · 编程助手 Agent</h3>
+        <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 12px;">
+          GitHub 集成：理解 issue、写代码、跑测试、创建 PR。
+        </p>
+        <div class="tag-cloud"><span class="tag">代码 Agent</span><span class="tag">DevOps</span><span class="tag">4-6 周</span></div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">🎓 项目 5.6 · 教育辅导 Agent</h3>
+        <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 12px;">
+          个性化教学：诊断学生薄弱点、生成定制题目、跟踪学习进度。
+        </p>
+        <div class="tag-cloud"><span class="tag">教学</span><span class="tag">个性化</span><span class="tag">4 周</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -753,44 +1121,49 @@ response = agent.invoke({<span class="code-string">"messages"</span>: [(<span cl
     <div class="section-head">
       <span class="eyebrow">实战心法</span>
       <h2 class="section-title">动手的<span class="hl-2">正确姿势</span></h2>
-      <p class="section-subtitle">这不仅是教程,而是一套方法论。</p>
     </div>
 
     <div class="grid grid-3">
       <div class="card">
-        <h3 style="margin-bottom: 14px;">🧩 1. 先跑通，再理解</h3>
+        <h3 style="margin-bottom: 14px;">🧩 1. 先用它，再造它</h3>
         <p style="color: var(--text-2); font-size: 0.92rem;">
-          拿到代码先完整跑起来。不需要完全理解每一行。先看到效果，建立信心。
+          最容易犯的错是"我先来读完整本框架文档"。
+          拿到代码先完整跑起来，建立信心。
         </p>
       </div>
       <div class="card">
-        <h3 style="margin-bottom: 14px;">🔬 2. 拆参数观测</h3>
+        <h3 style="margin-bottom: 14px;">🔬 2. 改两行就开始改</h3>
         <p style="color: var(--text-2); font-size: 0.92rem;">
-          把模型换成更弱的、温度调高、prompt 改坏 —— 观察输出变化。实验是最好的老师。
+          跑通后立刻改一处。改 prompt / 改 model / 改 temperature。
+          看输出变化 → 比读 10 篇教程有用。
         </p>
       </div>
       <div class="card">
-        <h3 style="margin-bottom: 14px;">📝 3. 记笔记</h3>
+        <h3 style="margin-bottom: 14px;">📝 3. 记自己的笔记</h3>
         <p style="color: var(--text-2); font-size: 0.92rem;">
-          每个实验后写一段复盘：这个项目解决什么问题、设计亮点是什么、我能改进哪里。
+          每个项目后写：这个项目解决什么、设计亮点、我能改进哪。
+          笔记比代码更值钱。
         </p>
       </div>
       <div class="card">
-        <h3 style="margin-bottom: 14px;">🛠 4. 改它、扩展它</h3>
+        <h3 style="margin-bottom: 14px;">🧪 4. 真实问题优先</h3>
         <p style="color: var(--text-2); font-size: 0.92rem;">
-          每个实验都至少改动一处：加新工具、换不同场景、改成不同领域。把代码变成自己的。
+          不要为"学技术"而学。先找到一个生活中困扰你的真实问题，
+          把它作为项目驱动。
         </p>
       </div>
       <div class="card">
-        <h3 style="margin-bottom: 14px;">🧪 5. 加测试</h3>
+        <h3 style="margin-bottom: 14px;">👥 5. 找同伴</h3>
         <p style="color: var(--text-2); font-size: 0.92rem;">
-          测试不是为了找 bug。是为了让代码思维可固化。一旦有测试，重构就不再可怕。
+          加入社区，与同路人交流。
+          遇到卡点时,有人帮你 debug 胜过自己琢磨一周。
         </p>
       </div>
       <div class="card">
         <h3 style="margin-bottom: 14px;">🚀 6. 发布它</h3>
         <p style="color: var(--text-2); font-size: 0.92rem;">
-          GitHub 公开仓库、写 README、加 demo。发布这一步是和自己学习的承诺。
+          GitHub 公开仓库、写 README、加 demo。
+          这是你对自己学习的承诺。
         </p>
       </div>
     </div>
@@ -800,7 +1173,7 @@ response = agent.invoke({<span class="code-string">"messages"</span>: [(<span cl
 <section class="section-sm">
   <div class="container">
     <div class="cta-banner">
-      <h2>动手做完实验，<span class="hl">下一步</span></h2>
+      <h2>动手做完实验,<span class="hl">下一步</span></h2>
       <p>准备好挑战完整大型 Agent 项目的搭建。蓝图页面提供了详细的设计模板和代码骨架。</p>
       <a href="blueprint.html" class="btn btn-primary btn-lg">查看 Agent 蓝图 →</a>
     </div>
@@ -844,7 +1217,6 @@ response = agent.invoke({<span class="code-string">"messages"</span>: [(<span cl
   </div>
 </footer>
 
-<script src="js/main.js"></script>
 <!-- ========== Analytics ========== -->
 <script src="js/analytics.js"></script>
 <!-- ========== END Analytics ========== -->
