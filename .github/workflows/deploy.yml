@@ -1,53 +1,58 @@
 name: 🚀 Deploy to GitHub Pages
 
 on:
-  # 两种触发方式：手动推送 main 或手动触发
   push:
     branches: [main, master]
   workflow_dispatch:
 
-# 必要的权限：允许 GitHub Actions 写 Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 防止并发部署
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # ============================================================
-  # Job 1: 构建
-  # ============================================================
   build:
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🔧 Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+      - name: 🔧 Setup Pages
+        uses: actions/configure-pages@v4
 
-      - name: 📦 Copy site files
+      - name: 📦 Copy all site files
         run: |
-          echo "📂 Copying site files..."
           mkdir -p public
-          cp index.html knowledge.html path.html projects.html workshop.html blueprint.html resources.html public/
+
+          # 复制所有 HTML 页面
+          cp index.html knowledge.html path.html projects.html \
+             workshop.html blueprint.html resources.html public/
+
+          # 复制资源目录
           cp -r css js public/
+
+          # 复制 SEO 资产
+          cp sitemap.xml robots.txt humans.txt site.webmanifest public/
+          cp favicon.svg og-image.png public/
+          cp favicon-16x16.png favicon-32x32.png public/
+          cp favicon-180x180.png apple-touch-icon.png public/
+          cp favicon-192x192.png favicon-512x512.png public/
+
+          echo "📂 部署文件清单:"
           ls -la public/
+          echo ""
+          echo "📂 部署目录树:"
+          find public/ -type f | sort
 
       - name: 📤 Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './public'
 
-  # ============================================================
-  # Job 2: 部署到 GitHub Pages
-  # ============================================================
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -59,16 +64,3 @@ jobs:
       - name: 🌐 Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  # ============================================================
-  # Job 3: 部署成功通知
-  # ============================================================
-  notify:
-    needs: deploy
-    runs-on: ubuntu-latest
-    if: success()
-    steps:
-      - name: ✅ Deployment summary
-        run: |
-          echo "🎉 Agent Academy 已成功部署到 GitHub Pages!"
-          echo "🌍 站点地址: ${{ needs.deploy.outputs.page_url }}"
