@@ -1,0 +1,15 @@
+/* TEAM */
+Made with love by: Roloria
+Contact: See GitHub profile
+From: The Internet
+
+/* SITE */
+Last update: 2026/07/25
+Standards: HTML5, CSS3, ES2022
+Components: Vanilla JS, Mermaid
+Software: VS Code, Chrome DevTools
+Language: Chinese (zh-CN)
+
+/* THANKS */
+To: All AI Agent pioneers and learners
+For: Making this field as exciting as it should be

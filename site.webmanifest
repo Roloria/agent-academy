@@ -1,0 +1,26 @@
+{
+  "name": "Agent Academy - AI Agent 学习平台",
+  "short_name": "Agent Academy",
+  "description": "系统化学习 AI Agent 的完整旅程 · 从认知到独立搭建大型 Agent 项目",
+  "start_url": "/agent-academy/",
+  "scope": "/agent-academy/",
+  "display": "standalone",
+  "background_color": "#05060a",
+  "theme_color": "#7c5cff",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "/agent-academy/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/agent-academy/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity", "developer"]
+}

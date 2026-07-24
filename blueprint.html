@@ -8,6 +8,120 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- ========== SEO & Social ========== -->
+<meta name="description" content="完整大型 Agent 项目蓝图:五层架构(UX/编排/Agent/工具/基础设施)、核心模块设计、目录结构、生产级 pyproject.toml 依赖、Docker/Nginx 部署方案。" />
+<meta name="keywords" content="Agent 架构, 大型项目蓝图, Agent 部署, LangGraph 状态机, 多 Agent 系统设计" />
+<meta name="author" content="Roloria" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="googlebot" content="index, follow" />
+<meta name="theme-color" content="#7c5cff" />
+<meta name="color-scheme" content="dark light" />
+<meta name="application-name" content="Agent Academy" />
+<meta name="apple-mobile-web-app-title" content="Agent Academy" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="mobile-web-app-capable" content="yes" />
+
+<!-- 多语言 -->
+<link rel="alternate" hreflang="zh-CN" href="https://roloria.github.io/agent-academy/blueprint.html" />
+<link rel="alternate" hreflang="x-default" href="https://roloria.github.io/agent-academy/blueprint.html" />
+
+<!-- 规范化 URL -->
+<link rel="canonical" href="https://roloria.github.io/agent-academy/blueprint.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="大型 Agent 项目蓝图 · 五层架构 + 模块设计" />
+<meta property="og:description" content="完整大型 Agent 项目蓝图:五层架构(UX/编排/Agent/工具/基础设施)、核心模块设计、目录结构、生产级 pyproject.toml 依赖、Docker/Nginx 部署方案。" />
+<meta property="og:url" content="https://roloria.github.io/agent-academy/blueprint.html" />
+<meta property="og:site_name" content="Agent Academy" />
+<meta property="og:image" content="https://roloria.github.io/agent-academy/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Agent Academy - 系统化学习 AI Agent" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:locale" content="zh_CN" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@roloria" />
+<meta name="twitter:creator" content="@roloria" />
+<meta name="twitter:title" content="大型 Agent 项目蓝图 · 五层架构 + 模块设计" />
+<meta name="twitter:description" content="完整大型 Agent 项目蓝图:五层架构(UX/编排/Agent/工具/基础设施)、核心模块设计、目录结构、生产级 pyproject.toml 依赖、Docker/Nginx 部署方案。" />
+<meta name="twitter:image" content="https://roloria.github.io/agent-academy/og-image.png" />
+<meta name="twitter:image:alt" content="Agent Academy - 系统化学习 AI Agent" />
+
+<!-- Favicon & PWA -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
+
+<!-- Sitemap & RSS -->
+<link rel="sitemap" type="application/xml" href="sitemap.xml" />
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Agent Academy",
+  "alternateName": "Agent Academy · AI Agent 学习平台",
+  "url": "https://roloria.github.io/agent-academy/",
+  "description": "系统化学习 AI Agent 的完整旅程 · 从认知到独立搭建大型 Agent 项目",
+  "inLanguage": "zh-CN",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://roloria.github.io/agent-academy/projects.html?search={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Agent 蓝图 · Agent Academy",
+  "description": "完整大型 Agent 项目蓝图:五层架构(UX/编排/Agent/工具/基础设施)、核心模块设计、目录结构、生产级 pyproject.toml 依赖、Docker/Nginx 部署方案。",
+  "provider": {
+    "@type": "Organization",
+    "name": "Agent Academy",
+    "sameAs": "https://github.com/Roloria/agent-academy"
+  },
+  "url": "https://roloria.github.io/agent-academy/blueprint.html",
+  "image": "https://roloria.github.io/agent-academy/og-image.png",
+  "inLanguage": "zh-CN",
+  "isAccessibleForFree": true,
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "courseWorkload": "P12W"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://roloria.github.io/agent-academy/"},
+    {"@type": "ListItem", "position": 6, "name": "Agent 蓝图", "item": "https://roloria.github.io/agent-academy/blueprint.html"}
+  ]
+}
+</script>
+<!-- ========== END SEO ========== -->
+
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/components.css">
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
@@ -713,5 +827,9 @@ COPY main.py api.py ./
 
 <script src="js/main.js"></script>
 <script>mermaid.initialize({startOnLoad:true, theme:'dark', themeVariables:{primaryColor:'#7c5cff', primaryTextColor:'#fff', primaryBorderColor:'#7c5cff', lineColor:'#00d4ff', secondaryColor:'#11141d', tertiaryColor:'#1f2433', fontFamily:'Inter'}});</script>
+<!-- ========== Analytics ========== -->
+<script src="js/analytics.js"></script>
+<!-- ========== END Analytics ========== -->
+
 </body>
 </html>

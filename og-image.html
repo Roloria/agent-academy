@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px;
+    background: #05060a;
+    background-image:
+      radial-gradient(ellipse at top left, rgba(124, 92, 255, 0.4) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(0, 212, 255, 0.3) 0%, transparent 50%),
+      radial-gradient(ellipse at center, rgba(255, 110, 199, 0.15) 0%, transparent 70%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'PingFang SC', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* 网格背景 */
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(124, 92, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124, 92, 255, 0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.5;
+  }
+
+  .container {
+    position: relative;
+    padding: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 100px;
+    background: rgba(124, 92, 255, 0.15);
+    border: 2px solid rgba(124, 92, 255, 0.4);
+    color: #00d4ff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+  }
+
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  .logo-icon {
+    width: 60px; height: 60px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #7c5cff 0%, #00d4ff 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px;
+    font-weight: 900;
+    box-shadow: 0 10px 40px rgba(124, 92, 255, 0.5);
+  }
+
+  h1 {
+    font-size: 88px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 30px;
+  }
+  h1 .grad1 {
+    background: linear-gradient(135deg, #7c5cff 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h1 .grad2 {
+    background: linear-gradient(135deg, #00ffa3 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subtitle {
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    line-height: 1.5;
+    max-width: 1000px;
+    margin-bottom: 30px;
+  }
+
+  .stats {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+  }
+  .stat {
+    text-align: left;
+  }
+  .stat-num {
+    font-size: 56px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #7c5cff 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 8px;
+  }
+
+  .url {
+    position: absolute;
+    bottom: 60px;
+    right: 80px;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: monospace;
+  }
+
+  /* 装饰圆点 */
+  .decoration {
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124, 92, 255, 0.3), transparent 70%);
+    filter: blur(40px);
+  }
+</style>
+</head>
+<body>
+  <div class="decoration"></div>
+  <div class="container">
+    <div>
+      <span class="badge">🎓 AI AGENT 学习平台</span>
+      <div class="logo">
+        <div class="logo-icon">A</div>
+        <span>Agent Academy</span>
+      </div>
+      <h1>
+        从 <span class="grad1">认知重塑</span> 到<br>
+        <span class="grad2">独立搭建大型 Agent</span>
+      </h1>
+      <p class="subtitle">
+        五阶段完整学习路径 · 120+ 精选项目 · 40+ 动手实验 · 25 篇必读论文
+      </p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">5</div>
+        <div class="stat-label">学习阶段</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">120+</div>
+        <div class="stat-label">精选项目</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">40+</div>
+        <div class="stat-label">动手实验</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1</div>
+        <div class="stat-label">完整项目交付</div>
+      </div>
+    </div>
+  </div>
+  <div class="url">roloria.github.io/agent-academy</div>
+</body>
+</html>

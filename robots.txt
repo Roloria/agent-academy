@@ -1,0 +1,12 @@
+# 🤖 Agent Academy 机器人友好配置
+User-agent: *
+Allow: /
+
+# 让所有爬虫能访问全部内容
+Disallow:
+
+# 站点地图位置
+Sitemap: https://roloria.github.io/agent-academy/sitemap.xml
+
+# 友好的爬虫引导
+# 搜索引擎来索引吧, 这是开源学习资源,希望让更多人看到!
