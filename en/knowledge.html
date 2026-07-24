@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knowledge · Agent Academy</title>
+<meta name="description" content="Systematically build your AI Agent cognitive framework: from LLM fundamentals to Agent architecture, from reasoning paradigms to tool calling.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/components.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='18' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span><span>Agent Academy</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="knowledge.html" class="nav-link active">Knowledge</a>
+      <a href="path.html" class="nav-link">Path</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="workshop.html" class="nav-link">Workshop</a>
+      <a href="blueprint.html" class="nav-link">Blueprint</a>
+      <a href="resources.html" class="nav-link">Resources</a>
+      <a href="../index.html" class="nav-link" style="opacity:.7">中文</a>
+    </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow"><span class="pulse-dot"></span><span>Phase 1 · Cognitive Foundation</span></div>
+    <h1>The Agent <span class="hl">Mind Map</span></h1>
+    <p class="hero-subtitle">
+      Before writing the first line of Agent code, build a complete cognitive framework. This includes LLM principles, Agent paradigms, key concepts, plus a readable, reproducible, thinkable knowledge system.
+    </p>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Knowledge Panorama</span>
+      <h2 class="section-title">The learner's <span class="hl-2">mental model</span> panorama</h2>
+      <p class="section-subtitle">See the connections between knowledge nodes at a glance. Choose where to dive based on your progress.</p>
+    </div>
+    <div class="knowledge-graph">
+      <pre class="mermaid">
+graph TD
+  Start([👤 Start here]) --> A[🤖 What is an LLM?]
+  A --> B[📝 Prompt Engineering]
+  A --> C[🔬 Transformer & Attention]
+  B --> D[🛠️ Function Calling]
+  D --> E[🤖 Agent Paradigms]
+  C --> F[🧠 Reasoning]
+  F --> E
+  E --> G[🌊 ReAct Loop]
+  E --> H[📋 Plan-and-Execute]
+  E --> I[👥 Multi-Agent]
+  G --> J[💾 Memory Systems]
+  H --> J
+  I --> J
+  J --> K[🧰 Tools & Orchestration]
+  K --> L[📚 RAG]
+  L --> M[🌐 Project Blueprint]
+  K --> M
+  I --> M
+  M --> N([🎯 Deliver Large Agent])
+
+  classDef critical fill:#7c5cff,stroke:#00d4ff,color:#fff,stroke-width:2px;
+  classDef important fill:#00d4ff,stroke:#00ffa3,color:#000;
+  classDef useful fill:#00ffa3,stroke:#7c5cff,color:#000;
+  classDef final fill:#ff6ec7,stroke:#ffb84d,color:#fff,stroke-width:3px;
+
+  class A,B,D,E critical;
+  class G,H,I,J important;
+  class C,F,K,L useful;
+  class M,N final;
+      </pre>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Core Concepts</span>
+      <h2 class="section-title">Understanding the <span class="hl">basic elements</span> of an Agent</h2>
+      <p class="section-subtitle">From the LLM "brain", to tools, memory, and planning — dissect each key Agent capability.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="knowledge-card">
+        <span class="badge badge-purple">Foundation 01</span>
+        <h3>Large Language Models (LLMs)</h3>
+        <p>The Agent's "brain". Based on the Transformer architecture, learns statistical patterns from massive text, generates the next token autoregressively.</p>
+        <ul class="knowledge-keypoints">
+          <li>Evolution from GPT-3 to GPT-4o / Claude / Gemini</li>
+          <li>Tokens, context window, temperature, Top-p</li>
+          <li>Hallucinations and boundaries: what LLMs can't do</li>
+        </ul>
+      </div>
+
+      <div class="knowledge-card">
+        <span class="badge badge-cyan">Foundation 02</span>
+        <h3>Prompt Engineering</h3>
+        <p>Steering LLM output through carefully constructed instructions. The "art" of talking to LLMs.</p>
+        <ul class="knowledge-keypoints">
+          <li>Zero-shot / Few-shot / Chain-of-Thought</li>
+          <li>System Prompt role and best practices</li>
+          <li>Structured Output and JSON mode</li>
+        </ul>
+      </div>
+
+      <div class="knowledge-card">
+        <span class="badge badge-green">Foundation 03</span>
+        <h3>Function Calling</h3>
+        <p>Lets LLMs break beyond pure text, calling external APIs, querying databases, executing code. The source of Agent "action capability".</p>
+        <ul class="knowledge-keypoints">
+          <li>OpenAI Function Calling / Tool Use</li>
+          <li>Tool description writing specifications</li>
+          <li>Multi-tool selection and parameter generation</li>
+        </ul>
+      </div>
+
+      <div class="knowledge-card">
+        <span class="badge badge-pink">Core 04</span>
+        <h3>Reasoning</h3>
+        <p>More than pattern matching. LLMs "reason" between tokens via CoT, Self-Consistency, Tree-of-Thoughts.</p>
+        <ul class="knowledge-keypoints">
+          <li>CoT / ReAct / Self-Refine</li>
+          <li>Inference-time Compute</li>
+          <li>o1/o3 reasoning model paradigm shift</li>
+        </ul>
+      </div>
+
+      <div class="knowledge-card">
+        <span class="badge badge-amber">Core 05</span>
+        <h3>Memory</h3>
+        <p>Short-term conversation buffer, long-term fact storage, vector semantic memory — key to Agent continuous evolution.</p>
+        <ul class="knowledge-keypoints">
+          <li>Short-term: in-context conversation</li>
+          <li>Long-term: vector DB + knowledge graph</li>
+          <li>Episodic, semantic, procedural memory</li>
+        </ul>
+      </div>
+
+      <div class="knowledge-card">
+        <span class="badge badge-purple">Core 06</span>
+        <h3>Planning</h3>
+        <p>Decompose complex tasks into executable steps, choose appropriate tools, handle exceptions during execution and dynamically adjust plans.</p>
+        <ul class="knowledge-keypoints">
+          <li>Plan-and-Execute mode</li>
+          <li>Task Decomposition</li>
+          <li>Reflection and Re-planning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Architecture Paradigms</span>
+      <h2 class="section-title">Mainstream Agent <span class="hl-2">running paradigms</span></h2>
+      <p class="section-subtitle">Understand each paradigm's design motivation, use cases, and typical implementations.</p>
+    </div>
+
+    <div data-tab-group>
+      <div class="tabs">
+        <div class="tab active" data-tab="tab-react">ReAct Loop</div>
+        <div class="tab" data-tab="tab-plan">Plan-and-Execute</div>
+        <div class="tab" data-tab="tab-multi">Multi-Agent</div>
+        <div class="tab" data-tab="tab-graph">Graph (LangGraph)</div>
+      </div>
+
+      <div class="tab-panel active" id="tab-react">
+        <div class="grid grid-2" style="align-items: start;">
+          <div>
+            <h3 style="margin-bottom: 16px;">ReAct: <span class="hl">Think - Act - Observe</span> Loop</h3>
+            <p style="color: var(--text-2); margin-bottom: 18px;">
+              The most classic Agent paradigm. Each loop: the model first thinks (Thought) about current state, decides the next action, executes, observes the result, and enters the next loop until the task is complete.
+            </p>
+            <div class="steps">
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>Thought: Reasoning</h4>
+                  <p>LLM analyzes current state, decides what to do next. This determines the Agent's "intelligence".</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>Action: Acting</h4>
+                  <p>Choose tools, generate parameters, call external systems. The Agent's "action capability".</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>Observation</h4>
+                  <p>Receive tool return results as input for the next loop.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>Loop or Terminate</h4>
+                  <p>If task is complete, output the final answer; otherwise return to Thought to continue.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="notice notice-info" style="margin-bottom: 20px;">
+              <span class="notice-icon">i</span>
+              <div>
+                <strong>Key Insight</strong>
+                <p>ReAct's "thought quality" directly determines Agent upper limit. This is why OpenAI o1/o3 reasoning models continue to lead in large tool-call scenarios.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-plan">
+        <div class="grid grid-2" style="align-items: start;">
+          <div>
+            <h3 style="margin-bottom: 16px;">Plan-and-Execute: <span class="hl-2">Plan first, then execute</span></h3>
+            <p style="color: var(--text-2); margin-bottom: 18px;">
+              Suitable for complex, decomposable tasks. First use LLM to generate a complete execution plan, then execute step by step. Typical representatives: BabyAGI, AutoGPT, LangGraph planner.
+            </p>
+            <div class="component-stack">
+              <div class="component"><div class="component-name">🎯 Planner</div><div class="component-desc">Decompose tasks, generate steps</div></div>
+              <div class="component"><div class="component-name">⚙️ Executor</div><div class="component-desc">Execute plan steps one by one</div></div>
+              <div class="component"><div class="component-name">🪞 Replanner</div><div class="component-desc">Adjust plan based on execution feedback</div></div>
+            </div>
+            <ul class="knowledge-keypoints">
+              <li>More suitable for complex tasks requiring long chains of reasoning</li>
+              <li>Cached plan results save tokens</li>
+              <li>Easier to debug: plan is readable</li>
+              <li>Failure rollback is more controllable</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-multi">
+        <h3 style="margin-bottom: 16px;">Multi-Agent Collaboration: <span class="hl-3">Divide and Conquer</span></h3>
+        <p style="color: var(--text-2); margin-bottom: 18px;">
+          Hand complex tasks to multiple specialized Agents who collaborate, debate, supervise. CrewAI, AutoGen, MetaGPT are representatives.
+        </p>
+        <div class="component-stack">
+          <div class="component"><div class="component-name">👔 Manager Agent</div><div class="component-desc">Assign tasks, supervise progress</div></div>
+          <div class="component"><div class="component-name">🧑‍💻 Engineer Agent</div><div class="component-desc">Focus on implementing specific tasks</div></div>
+          <div class="component"><div class="component-name">🧐 Reviewer Agent</div><div class="component-desc">Quality checks and feedback</div></div>
+        </div>
+        <div class="notice notice-warning" style="margin-top: 20px;">
+          <span class="notice-icon">!</span>
+          <div>
+            <strong>Trade-off Warning</strong>
+            <p>Multi-Agent isn't always better. It increases token costs and complexity. Single Agent is more efficient when tasks are clear.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-graph">
+        <h3 style="margin-bottom: 16px;">Graph Orchestration: <span class="hl">Stateful Agent composition</span></h3>
+        <p style="color: var(--text-2); margin-bottom: 18px;">
+          LangGraph abstracts Agents as directed graphs (DAG) with nodes as actions and edges as conditions. Naturally supports state management, human intervention, parallel branches.
+        </p>
+        <h4 style="margin: 16px 0 10px;">Core Advantages</h4>
+        <ul class="knowledge-keypoints">
+          <li><strong style="color:var(--text-0)">Explicit state</strong>: Each node shares global state, can be checkpointed</li>
+          <li><strong style="color:var(--text-0)">Conditional branches</strong>: Determine next step based on state</li>
+          <li><strong style="color:var(--text-0)">Native loops</strong>: Graph structure allows nodes to return to themselves</li>
+          <li><strong style="color:var(--text-0)">Human-in-the-loop</strong>: Can pause and wait for human input</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-sm">
+    <div class="section-head">
+      <span class="eyebrow">Self-Check</span>
+      <h2 class="section-title">Have you truly <span class="hl">mastered</span> it?</h2>
+      <p class="section-subtitle">Complete the checklist below. If anything is uncertain, return to the relevant section.</p>
+    </div>
+
+    <div class="card" style="padding: 36px;">
+      <h3 style="margin-bottom: 24px; font-size: 1.3rem;">🧠 Phase 1 Self-Check List</h3>
+      <ul class="checklist">
+        <li>
+          <div class="checklist-icon">✓</div>
+          <div>
+            <div class="item-title">Can explain what an AI Agent is to a non-technical person in one paragraph</div>
+            <div class="item-desc">Not "an LLM that calls tools", but an autonomous system with perception, reasoning, action, and memory.</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">✓</div>
+          <div>
+            <div class="item-title">Can distinguish LLM, Agent, AI Assistant, AI Workflow differences</div>
+            <div class="item-desc">The core of an Agent is "autonomous decision-making on what to do", while LLM is just "a model that's called".</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">✓</div>
+          <div>
+            <div class="item-title">Can describe ReAct, Plan-and-Execute, Multi-Agent paradigm differences and use cases</div>
+            <div class="item-desc">Choose the most appropriate paradigm for specific tasks with reasons.</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">✓</div>
+          <div>
+            <div class="item-title">Can independently design a high-quality Tool description (with parameter schema)</div>
+            <div class="item-desc">Tool description is key input for LLM decisions, treat it like API documentation.</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">✓</div>
+          <div>
+            <div class="item-title">Understand Function Calling's internal flow (user input to tool return)</div>
+            <div class="item-desc">Not just "calling an API", but how the model parses, generates parameters, and routes back to context.</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">✓</div>
+          <div>
+            <div class="item-title">Know the essential difference between short-term and long-term memory and how to implement</div>
+            <div class="item-desc">Short-term memory = context window content; long-term memory = persistent vector/structured data.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <p style="color: var(--text-2); margin-bottom: 20px;">List complete? Move on to the next phase:</p>
+      <a href="path.html" class="btn btn-primary btn-lg">Phase 2 · Skills & Tools →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Foundation is <span class="hl">solid</span></h2>
+      <p>In Phase 2 you'll learn mainstream Agent frameworks, master tools and orchestration capabilities.</p>
+      <a href="path.html" class="btn btn-primary btn-lg">View Complete Learning Path</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 18px;">
+          <span class="logo-mark">A</span><span>Agent Academy</span>
+        </div>
+        <p style="color: var(--text-2); font-size: 0.92rem; line-height: 1.7; max-width: 360px;">
+          A complete, executable AI Agent learning blueprint.
+        </p>
+      </div>
+      <div><h5>Path</h5><ul>
+        <li><a href="knowledge.html">Knowledge</a></li>
+        <li><a href="path.html">5-Phase Path</a></li>
+        <li><a href="workshop.html">Workshop</a></li>
+        <li><a href="blueprint.html">Blueprint</a></li>
+      </ul></div>
+      <div><h5>Resources</h5><ul>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resources.html">Papers</a></li>
+        <li><a href="resources.html#books">Books</a></li>
+        <li><a href="resources.html#community">Community</a></li>
+      </ul></div>
+      <div><h5>About</h5><ul>
+        <li><a href="../README.md">Methodology</a></li>
+        <li><a href="../CONTRIBUTING.md">Contributing</a></li>
+        <li><a href="#">Changelog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Agent Academy</span>
+      <span><a href="../index.html" style="opacity:.7">🇨🇳 中文版</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>mermaid.initialize({startOnLoad:true, theme:'dark', themeVariables:{primaryColor:'#7c5cff', primaryTextColor:'#fff', primaryBorderColor:'#7c5cff', lineColor:'#00d4ff', secondaryColor:'#11141d', tertiaryColor:'#1f2433', fontFamily:'Inter'}});</script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Source Projects · Agent Academy</title>
+<meta name="description" content="120+ curated top AI Agent GitHub projects, organized by category and maturity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='18' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span><span>Agent Academy</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="knowledge.html" class="nav-link">Knowledge</a>
+      <a href="path.html" class="nav-link">Path</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="workshop.html" class="nav-link">Workshop</a>
+      <a href="blueprint.html" class="nav-link">Blueprint</a>
+      <a href="resources.html" class="nav-link">Resources</a>
+      <a href="../index.html" class="nav-link" style="opacity:.7">中文</a>
+    </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow"><span class="pulse-dot"></span><span>120+ Curated GitHub Projects · Continuously Updated</span></div>
+    <h1>AI Agent <span class="hl">Open Source Library</span></h1>
+    <p class="hero-subtitle">
+      Not a simple GitHub list. We've hand-picked the most worthy projects from thousands, categorized by class, maturity, and learning curve. Each project has a core explanation and learning path suggestion.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Project Library</span>
+      <h2 class="section-title">Filter by <span class="hl-2">category</span> and <span class="hl-2">maturity</span></h2>
+      <p class="section-subtitle">Filter by category, tech stack, or maturity. Search directly by name or description.</p>
+    </div>
+
+    <div class="filter-bar" data-filter-group>
+      <input type="text" class="search-input" placeholder="🔍 Search projects or descriptions..." data-search data-target="#projects-list">
+      <div class="filter-pills">
+        <span class="filter-pill active" data-filter="all" data-target="#projects-list">All</span>
+        <span class="filter-pill" data-filter="framework" data-target="#projects-list">🛠 Framework</span>
+        <span class="filter-pill" data-filter="multiagent" data-target="#projects-list">👥 Multi-Agent</span>
+        <span class="filter-pill" data-filter="rag" data-target="#projects-list">📚 RAG</span>
+        <span class="filter-pill" data-filter="tool" data-target="#projects-list">🧰 Tool</span>
+        <span class="filter-pill" data-filter="product" data-target="#projects-list">🎯 Product</span>
+        <span class="filter-pill" data-filter="eval" data-target="#projects-list">📊 Eval</span>
+        <span class="filter-pill" data-filter="research" data-target="#projects-list">🔬 Research</span>
+      </div>
+    </div>
+
+    <div id="projects-list" class="grid grid-3">
+
+      <div class="project-card" data-tags="framework" data-name="LangChain" data-desc="Industry standard LLM framework chain composition tool calling">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #1c3c3c, #2d5d5d);">🦜</div>
+          <div>
+            <div class="project-name">LangChain</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">langchain-ai/langchain</div>
+          </div>
+        </div>
+        <p class="project-desc">Industry-standard framework: chain composition, tool integration, memory, RAG all in one. Richest ecosystem.</p>
+        <div class="project-meta"><span>⭐ 94k+</span><span style="color: var(--brand-4);">● Very active</span><span>Python/JS</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/langchain-ai/langchain">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="framework multiagent" data-name="LangGraph" data-desc="Graph stateful Agent orchestration LangChain team stateful interruptible">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #2d2d3d, #4a4a5e);">🐝</div>
+          <div>
+            <div class="project-name">LangGraph</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">langchain-ai/langgraph</div>
+          </div>
+        </div>
+        <p class="project-desc">Abstract Agent as directed graph: state checkpoint, human-in-the-loop, loop branches. Modern Agent construction.</p>
+        <div class="project-meta"><span>⭐ 6k+</span><span style="color: var(--brand-4);">● Very active</span><span>Python/JS</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/langchain-ai/langgraph">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="framework multiagent" data-name="CrewAI" data-desc="Multi-agent role collaboration process simple Python">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #1a3a3a, #3a5e5e);">👥</div><div><div class="project-name">CrewAI</div><div style="font-size: 0.82rem; color: var(--text-3);">crewAIInc/crewAI</div></div></div>
+        <p class="project-desc">Role-based multi-Agent framework. Each Agent has role, goal, tools, backstory.</p>
+        <div class="project-meta"><span>⭐ 25k+</span><span style="color: var(--brand-4);">● Active</span><span>Python</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/crewAIInc/crewAI">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="framework multiagent" data-name="AutoGen" data-desc="Microsoft multi-agent dialogue framework group chat human-in-the-loop enterprise">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #2c3e50, #34495e);">🤖</div><div><div class="project-name">AutoGen</div><div style="font-size: 0.82rem; color: var(--text-3);">microsoft/autogen</div></div></div>
+        <p class="project-desc">Microsoft's dialogue-driven multi-Agent: group chat, human-in-loop, termination conditions.</p>
+        <div class="project-meta"><span>⭐ 32k+</span><span style="color: var(--brand-4);">● Active</span><span>Python/.NET</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/microsoft/autogen">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="framework rag" data-name="LlamaIndex" data-desc="RAG data framework rich index structures complementary LangChain">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #4a3a2a, #6b4e3a);">🦙</div><div><div class="project-name">LlamaIndex</div><div style="font-size: 0.82rem; color: var(--text-3);">run-llama/llama_index</div></div></div>
+        <p class="project-desc">Data ingestion and RAG framework: rich index structures, complex data source integration.</p>
+        <div class="project-meta"><span>⭐ 36k+</span><span style="color: var(--brand-4);">● Very active</span><span>Python/TS</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/run-llama/llama_index">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="framework" data-name="OpenAI Agents SDK" data-desc="OpenAI official Agent SDK Handoffs Guardrails native Swarm upgrade">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #10a37f, #1a7f64);">⚡</div><div><div class="project-name">OpenAI Agents SDK</div><div style="font-size: 0.82rem; color: var(--text-3);">openai/openai-agents-python</div></div></div>
+        <p class="project-desc">OpenAI's official SDK (upgrade from Swarm): Handoffs, Guardrails, Tracing native.</p>
+        <div class="project-meta"><span>⭐ 7k+</span><span style="color: var(--brand-4);">● Very active</span><span>Python</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/openai/openai-agents-python">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="framework" data-name="Smolagents" data-desc="Hugging Face minimal Agent library code Agent educational">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #ff9e2c, #ffb84d);">🤗</div><div><div class="project-name">Smolagents</div><div style="font-size: 0.82rem; color: var(--text-3);">huggingface/smolagents</div></div></div>
+        <p class="project-desc">HF minimal Agent library, perfect for learning Agent fundamentals.</p>
+        <div class="project-meta"><span>⭐ 10k+</span><span style="color: var(--brand-4);">● Active</span><span>Python</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/huggingface/smolagents">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="framework research" data-name="DSPy" data-desc="Programmatic LLM pipeline auto-optimize prompt compiler-style">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #6366f1, #818cf8);">⚙️</div><div><div class="project-name">DSPy</div><div style="font-size: 0.82rem; color: var(--text-3);">stanfordnlp/dspy</div></div></div>
+        <p class="project-desc">Stanford's revolutionary "prompt compiler". Program LLM pipelines, auto-optimize prompts and models.</p>
+        <div class="project-meta"><span>⭐ 22k+</span><span style="color: var(--brand-4);">● Active</span><span>Python</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/stanfordnlp/dspy">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="framework" data-name="Pydantic AI" data-desc="Pydantic team type-safe Agent FastAPI style">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #ff5722, #ff7043);">🐍</div><div><div class="project-name">Pydantic AI</div><div style="font-size: 0.82rem; color: var(--text-3);">pydantic/pydantic-ai</div></div></div>
+        <p class="project-desc">Pydantic team: type-safe Agent, FastAPI style, Pythonic.</p>
+        <div class="project-meta"><span>⭐ 5k+</span><span style="color: var(--brand-4);">● Active</span><span>Python</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/pydantic/pydantic-ai">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="eval rag" data-name="RAGAS" data-desc="RAG-specific eval framework faithfulness answer-relevancy context-precision">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #9c27b0, #ba68c8);">📏</div><div><div class="project-name">RAGAS</div><div style="font-size: 0.82rem; color: var(--text-3);">explodinggradients/ragas</div></div></div>
+        <p class="project-desc">RAG-specific eval framework with faithfulness, answer relevance, context precision metrics.</p>
+        <div class="project-meta"><span>⭐ 8k+</span><span style="color: var(--brand-4);">● Active</span><span>Python</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/explodinggradients/ragas">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="eval" data-name="LangSmith LangFuse" data-desc="Agent tracing monitoring debug eval commercial open-source">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #ffd54f, #ffb84d);">🔭</div><div><div class="project-name">LangSmith / LangFuse</div><div style="font-size: 0.82rem; color: var(--text-3);">langchain-ai + langfuse</div></div></div>
+        <p class="project-desc">Observability for Agent systems. LangSmith commercial, LangFuse OSS, both provide trace, eval, prompt mgmt.</p>
+        <div class="project-meta"><span>⭐ 8k+ + 12k+</span><span style="color: var(--brand-4);">● Very active</span><span>TS/Python</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/langfuse/langfuse">→ LangFuse</a></div>
+      </div>
+
+      <div class="project-card" data-tags="framework" data-name="Semantic Kernel" data-desc="Microsoft NET Python LLM orchestration enterprise integration">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">🔮</div><div><div class="project-name">Semantic Kernel</div><div style="font-size: 0.82rem; color: var(--text-3);">microsoft/semantic-kernel</div></div></div>
+        <p class="project-desc">Microsoft's .NET ecosystem LLM orchestration framework. Native integration with enterprise systems.</p>
+        <div class="project-meta"><span>⭐ 22k+</span><span style="color: var(--brand-4);">● Active</span><span>.NET / Python</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/microsoft/semantic-kernel">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="framework tool product" data-name="Flowise" data-desc="Visual drag-drop LangChain nodes low-code Agent">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #00d4ff, #00ffa3);">🎨</div><div><div class="project-name">Flowise</div><div style="font-size: 0.82rem; color: var(--text-3);">FlowiseAI/Flowise</div></div></div>
+        <p class="project-desc">LangChain's visual drag-drop interface. Non-developers can also build Agents.</p>
+        <div class="project-meta"><span>⭐ 37k+</span><span style="color: var(--brand-4);">● Active</span><span>TypeScript</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/FlowiseAI/Flowise">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="research" data-name="MemGPT" data-desc="Hierarchical memory Agent long-term paging">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #4a148c, #7b1fa2);">🧠</div><div><div class="project-name">MemGPT</div><div style="font-size: 0.82rem; color: var(--text-3);">letta-ai/letta</div></div></div>
+        <p class="project-desc">Revolutionary hierarchical memory: helps LLMs break context window limits with true long-term memory. Now renamed to Letta.</p>
+        <div class="project-meta"><span>⭐ 14k+</span><span style="color: var(--brand-4);">● Active</span><span>Python</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/letta-ai/letta">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="multiagent framework" data-name="MetaGPT" data-desc="Multi-Agent simulating software company role-based SOP">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #00897b, #26a69a);">🏢</div><div><div class="project-name">MetaGPT</div><div style="font-size: 0.82rem; color: var(--text-3);">geekan/MetaGPT</div></div></div>
+        <p class="project-desc">Abstract multi-Agent as software company: PM, architect, engineer, QA collaborative flow.</p>
+        <div class="project-meta"><span>⭐ 45k+</span><span style="color: var(--brand-4);">● Active</span><span>Python</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/geekan/MetaGPT">→ GitHub</a></div>
+      </div>
+
+      <div class="project-card" data-tags="product" data-name="OpenHands (formerly OpenDevin)" data-desc="AI software engineer coding Agent multi-step">
+        <div class="project-head"><div class="project-icon" style="background: linear-gradient(135deg, #311b92, #5e35b1);">🧑‍💻</div><div><div class="project-name">OpenHands</div><div style="font-size: 0.82rem; color: var(--text-3);">All-Hands-AI/OpenHands</div></div></div>
+        <p class="project-desc">Open-source Devin: Agent-driven software engineer that resolves GitHub issues, writes code, tests, debugs.</p>
+        <div class="project-meta"><span>⭐ 32k+</span><span style="color: var(--brand-4);">● Very active</span><span>Python</span></div>
+        <div class="project-links"><a class="project-link" href="https://github.com/All-Hands-AI/OpenHands">→ GitHub</a></div>
+      </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; color: var(--text-3); font-size: 0.9rem;">
+      <p>Featured 16 projects · More curated projects on <a href="resources.html" style="color:var(--brand-2)">Resources</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="more" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Selection Decision</span>
+      <h2 class="section-title">What to choose <span class="hl">when</span></h2>
+      <p class="section-subtitle">Not the newest or the most popular — the right one for your specific scenario.</p>
+    </div>
+
+    <div style="overflow-x: auto;">
+      <table class="compare-table">
+        <thead>
+          <tr><th>Scenario</th><th>First Choice</th><th>Alternative</th><th>Key Consideration</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>General Agent apps</strong></td><td><span class="badge badge-purple">LangGraph</span></td><td>OpenAI Agents SDK / Pydantic AI</td><td>Stateful, debuggable, production-trusted</td></tr>
+          <tr><td><strong>Multi-Agent role collaboration</strong></td><td><span class="badge badge-green">CrewAI</span></td><td>AutoGen / MetaGPT</td><td>Intuitive API, clear roles</td></tr>
+          <tr><td><strong>Dialogue/multi-Agent group chat</strong></td><td><span class="badge badge-pink">AutoGen</span></td><td>CrewAI</td><td>Termination conditions, observable dialogue</td></tr>
+          <tr><td><strong>RAG-dominant apps</strong></td><td><span class="badge badge-amber">LlamaIndex</span></td><td>LangChain + independent Agent layer</td><td>Rich indexes, retrieval strategies</td></tr>
+          <tr><td><strong>OpenAI ecosystem integration</strong></td><td><span class="badge badge-cyan">OpenAI Agents SDK</span></td><td>LangChain OpenAI integration</td><td>Native Tracing, Handoffs</td></tr>
+          <tr><td><strong>Learning / education</strong></td><td><span class="badge badge-purple">Smolagents</span></td><td>BabyAGI</td><td>Few lines, easy to read</td></tr>
+          <tr><td><strong>Prompt auto-optimization</strong></td><td><span class="badge badge-pink">DSPy</span></td><td>Manual iteration</td><td>Academically rigorous, quantifiable</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+      <span>© 2026 Agent Academy · <a href="../index.html" style="opacity:.7">🇨🇳 中文版</a></span>
+      <span><a href="index.html">← Home</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

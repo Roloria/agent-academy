@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources · Agent Academy</title>
+<meta name="description" content="Curated AI Agent papers, courses, books, communities. Continuously updated.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='18' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark">A</span><span>Agent Academy</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="knowledge.html" class="nav-link">Knowledge</a>
+      <a href="path.html" class="nav-link">Path</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="workshop.html" class="nav-link">Workshop</a>
+      <a href="blueprint.html" class="nav-link">Blueprint</a>
+      <a href="resources.html" class="nav-link active">Resources</a>
+      <a href="../index.html" class="nav-link" style="opacity:.7">中文</a>
+    </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow"><span class="pulse-dot"></span><span>Continuously Updated · 2026 Summer Edition</span></div>
+    <h1>Resource Hub</h1>
+    <p class="hero-subtitle">
+      Papers, courses, books, communities, podcasts, newsletters — we curate every worthwhile piece of content, organized by learning stage, sorted by time, archived by topic.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="papers">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Must-Read Papers</span>
+      <h2 class="section-title">25 papers that <span class="hl">shaped</span> the Agent field</h2>
+      <p class="section-subtitle">In learning order. Each has a summary, reading value, and recommendation.</p>
+    </div>
+
+    <div data-tab-group>
+      <div class="tabs">
+        <div class="tab active" data-tab="papers-found">Foundational</div>
+        <div class="tab" data-tab="papers-react">ReAct Series</div>
+        <div class="tab" data-tab="papers-memory">Memory & Retrieval</div>
+        <div class="tab" data-tab="papers-multi">Multi-Agent</div>
+        <div class="tab" data-tab="papers-eval">Evaluation</div>
+      </div>
+
+      <div class="tab-panel active" id="papers-found">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="badge badge-purple" style="margin-bottom: 10px;">2022 · ReAct</div>
+            <h3 style="margin-bottom: 8px;">ReAct: Synergizing Reasoning and Acting in Language Models</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Princeton / Google · Yao et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">For the first time systematically proposed the "think-act-observe" loop. The foundational work of Agent paradigms.</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2210.03629" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-cyan" style="margin-bottom: 10px;">2020 · CoT</div>
+            <h3 style="margin-bottom: 8px;">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Google · Wei et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">Revealed that "think step by step" significantly improves LLM performance on complex reasoning.</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2201.11903" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-green" style="margin-bottom: 10px;">2017 · Transformer</div>
+            <h3 style="margin-bottom: 8px;">Attention Is All You Need</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Google · Vaswani et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">The original Transformer paper. The foundation of all modern LLMs and Agents.</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/1706.03762" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-pink" style="margin-bottom: 10px;">2020 · RAG</div>
+            <h3 style="margin-bottom: 8px;">Retrieval-Augmented Generation for Large Language Models</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Meta AI · Lewis et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">Foundational RAG work: enables LLMs to access external knowledge bases.</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2005.11401" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-amber" style="margin-bottom: 10px;">2023 · Function Calling</div>
+            <h3 style="margin-bottom: 8px;">GPT-4 Technical Report</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">OpenAI</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">Function Calling capability description, foundation of modern Agent tool calling.</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2303.08774" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-purple" style="margin-bottom: 10px;">2023 · Tree of Thoughts</div>
+            <h3 style="margin-bottom: 8px;">Tree of Thoughts: Deliberate Problem Solving with LLMs</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Princeton · Yao et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">Extends CoT to tree structure with backtracking and branching exploration.</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2305.10601" class="project-link">arXiv →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="papers-react">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="badge badge-purple" style="margin-bottom: 10px;">2023 · Reflexion</div>
+            <h3 style="margin-bottom: 8px;">Reflexion: Language Agents with Verbal Reinforcement Learning</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Northeastern · Shinn et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">Lets Agents self-improve by "reflecting on failure". Source of Self-Refine, Reflexion modes.</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2303.11381" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-cyan" style="margin-bottom: 10px;">2024 · o1</div>
+            <h3 style="margin-bottom: 8px;">OpenAI o1 / Learning to Reason with LLMs</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">OpenAI</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">Inference-time compute revolution: more thinking tokens = better performance.</p>
+            <div style="margin-top: 14px;"><a href="https://openai.com/index/learning-to-reason-with-llms/" class="project-link">Article →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="papers-memory">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="badge badge-cyan" style="margin-bottom: 10px;">2023 · MemGPT</div>
+            <h3 style="margin-bottom: 8px;">MemGPT: Towards LLMs as Operating Systems</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">UC Berkeley · Packer et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">Revolutionary hierarchical memory: Agent as OS with layered memory tiers.</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2310.08560" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-purple" style="margin-bottom: 10px;">2024 · GraphRAG</div>
+            <h3 style="margin-bottom: 8px;">From Local to Global: A Graph RAG Approach</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Microsoft Research</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">Combines knowledge graphs with RAG for global questions.</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2404.16130" class="project-link">arXiv →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="papers-multi">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="badge badge-green" style="margin-bottom: 10px;">2023 · AutoGen</div>
+            <h3 style="margin-bottom: 8px;">AutoGen: Enabling Next-Gen LLM Apps via Multi-Agent Conversation</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Microsoft · Wu et al.</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2308.08155" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-purple" style="margin-bottom: 10px;">2023 · MetaGPT</div>
+            <h3 style="margin-bottom: 8px;">MetaGPT: Meta Programming for Multi-Agent Collaboration</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Hong et al.</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2308.00352" class="project-link">arXiv →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="papers-eval">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="badge badge-amber" style="margin-bottom: 10px;">2023 · AgentBench</div>
+            <h3 style="margin-bottom: 8px;">AgentBench: Evaluating LLMs as Agents</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Tsinghua · Liu et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">Most authoritative Agent evaluation benchmark: multi-scenario, multi-task.</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2310.02928" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-green" style="margin-bottom: 10px;">2024 · SWE-bench</div>
+            <h3 style="margin-bottom: 8px;">SWE-bench: Can LMs Resolve Real-World GitHub Issues?</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem;">De facto standard for evaluating coding Agents, based on real GitHub issues.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);" id="courses">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Courses & Books</span>
+      <h2 class="section-title">Systematic <span class="hl-2">learning resources</span></h2>
+    </div>
+    <div class="grid grid-3">
+      <a href="https://www.deeplearning.ai/short-courses/" target="_blank" class="card" style="cursor: pointer;">
+        <div style="font-size: 2.2rem; margin-bottom: 14px;">🎓</div>
+        <h3>DeepLearning.AI Short Courses</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem;">Andrew Ng's team: LangChain, Function Calling, Agent short courses (1-2 hours each).</p>
+        <span class="badge badge-cyan">Free · Short</span>
+      </a>
+      <a href="https://www.coursera.org/specializations/generative-ai-with-llms" target="_blank" class="card" style="cursor: pointer;">
+        <div style="font-size: 2.2rem; margin-bottom: 14px;">📘</div>
+        <h3>Generative AI with LLMs</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem;">DeepLearning.AI + AWS. 3-week course covering LLM and Agent fundamentals.</p>
+        <span class="badge badge-purple">Systematic</span>
+      </a>
+      <a href="https://huggingface.co/learn" target="_blank" class="card" style="cursor: pointer;">
+        <div style="font-size: 2.2rem; margin-bottom: 14px;">🤗</div>
+        <h3>Hugging Face Learn</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem;">Free NLP/Agent courses. From Transformer basics to Smolagents practice.</p>
+        <span class="badge badge-green">Free</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="books">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Recommended Books</span>
+      <h2 class="section-title">Books worth <span class="hl-3">repeated reading</span></h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="resource-card">
+        <div class="resource-thumb">📕</div>
+        <div class="resource-body"><h4>Designing Data-Intensive Applications</h4><p style="font-size: 0.92rem; color: var(--text-2);">Martin Kleppmann. Classic bible of data system design.</p><div class="meta">📚 Engineering · O&apos;Reilly</div></div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-thumb">📗</div>
+        <div class="resource-body"><h4>AI Agents in Action</h4><p>Michael Lanham · Manning 2025. A practical book specifically on AI Agent design.</p><div class="meta">📚 Agent Practice · Manning</div></div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-thumb">📘</div>
+        <div class="resource-body"><h4>Prompt Engineering for LLMs</h4><p>John Berryman et al. Deep-dive on prompt engineering essentials.</p><div class="meta">📚 Prompt · O&apos;Reilly</div></div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-thumb">📙</div>
+        <div class="resource-body"><h4>Building LLM Applications</h4><p>O&apos;Reilly short books covering RAG, Agent, Embeddings.</p><div class="meta">📚 LLM Engineering</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);" id="community">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Community</span>
+      <h2 class="section-title">Find your <span class="hl">learning peers</span></h2>
+    </div>
+    <div class="feature-grid">
+      <div class="card"><h3 style="margin-bottom: 8px;">💬 LangChain Discord</h3><p style="color: var(--text-2); font-size: 0.88rem;">Most active English-speaking Agent developer community.</p><div style="margin-top: 12px;"><a href="https://discord.gg/langchain" class="project-link">Join →</a></div></div>
+      <div class="card"><h3 style="margin-bottom: 8px;">🐦 Twitter/X AI Circle</h3><p style="color: var(--text-2); font-size: 0.88rem;">Follow @hwchase17, @yann_lecun, @karpathy and other top practitioners.</p></div>
+      <div class="card"><h3 style="margin-bottom: 8px;">🇨🇳 Chinese Communities</h3><p style="color: var(--text-2); font-size: 0.88rem;">AI Agent topics on Jike, Zhihu, Juejin. WeChat Reading academic accounts.</p></div>
+      <div class="card"><h3 style="margin-bottom: 8px;">📺 YouTube Channels</h3><p style="color: var(--text-2); font-size: 0.88rem;">Sam Witteveen, James Briggs, Dave Ebbelaar for high-quality Agent tutorials.</p></div>
+      <div class="card"><h3 style="margin-bottom: 8px;">📮 r/LocalLLaMA</h3><p style="color: var(--text-2); font-size: 0.88rem;">Reddit's local LLM and Agent sub-community.</p></div>
+      <div class="card"><h3 style="margin-bottom: 8px;">🏗 OpenAI Developer Forum</h3><p style="color: var(--text-2); font-size: 0.88rem;">OpenAI's official forum for Function Calling, Assistants API questions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="newsletter">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Newsletter</span>
+      <h2 class="section-title">Stay on the <span class="hl-3">cutting edge</span></h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h3>📰 Import AI</h3><p style="color: var(--text-2); font-size: 0.88rem;">Jack Clark · Weekly curated AI events and papers.</p></div>
+      <div class="card"><h3>📰 TLDR AI</h3><p style="color: var(--text-2); font-size: 0.88rem;">5 minutes of this week's AI news. Minimalist style.</p></div>
+      <div class="card"><h3>📰 LangChain Newsletter</h3><p style="color: var(--text-2); font-size: 0.88rem;">Official updates, new features, user stories.</p></div>
+      <div class="card"><h3>📰 AlphaSignal</h3><p style="color: var(--text-2); font-size: 0.88rem;">Deep dives on latest AI papers and OSS projects.</p></div>
+      <div class="card"><h3>📰 The Rundown AI</h3><p style="color: var(--text-2); font-size: 0.88rem;">Comprehensive daily, from news to tools.</p></div>
+      <div class="card"><h3>📰 Ahead of AI</h3><p style="color: var(--text-2); font-size: 0.88rem;">Sebastian Raschka · Academic deep dives.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+      <span>© 2026 Agent Academy · <a href="../index.html" style="opacity:.7">🇨🇳 中文版</a></span>
+      <span><a href="index.html">← Home</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playground · Agent Academy</title>
+<meta name="description" content="Build and test AI Agents directly in your browser with your own API keys. No installation needed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='18' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+
+<style>
+.pg-wrap { display: grid; grid-template-columns: 380px 1fr; gap: 20px; height: calc(100vh - 80px); min-height: 600px; max-width: 1600px; margin: 0 auto; padding: 0 32px 32px; }
+.pg-config { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 18px; }
+.pg-chat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); display: flex; flex-direction: column; overflow: hidden; }
+.pg-section { border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+.pg-section:last-child { border-bottom: none; padding-bottom: 0; }
+.pg-section-title { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-3); margin-bottom: 10px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; }
+.pg-input, .pg-select, .pg-textarea { width: 100%; padding: 10px 14px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text-0); font-size: 0.9rem; font-family: inherit; }
+.pg-input:focus, .pg-select:focus, .pg-textarea:focus { border-color: var(--brand-1); outline: none; }
+.pg-textarea { resize: vertical; min-height: 80px; line-height: 1.5; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
+.pg-input-key { font-family: 'JetBrains Mono', monospace; }
+.pg-label { display: block; font-size: 0.82rem; color: var(--text-2); margin-bottom: 6px; font-weight: 500; }
+.pg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.pg-slider-wrap { display: flex; align-items: center; gap: 10px; }
+.pg-slider { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; background: var(--bg-3); border-radius: 2px; outline: none; }
+.pg-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; background: var(--brand-1); border-radius: 50%; cursor: pointer; }
+.pg-slider::-moz-range-thumb { width: 16px; height: 16px; background: var(--brand-1); border-radius: 50%; cursor: pointer; border: none; }
+.pg-slider-val { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--brand-2); min-width: 36px; text-align: right; }
+.pg-tool-item { display: flex; align-items: flex-start; gap: 8px; padding: 8px 10px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; font-size: 0.85rem; }
+.pg-tool-item.enabled { border-color: var(--brand-1); background: rgba(124, 92, 255, 0.05); }
+.pg-tool-item input[type="checkbox"] { margin-top: 2px; accent-color: var(--brand-1); }
+.pg-tool-name { font-weight: 600; color: var(--text-0); }
+.pg-tool-desc { color: var(--text-3); font-size: 0.78rem; margin-top: 2px; }
+.pg-status { display: flex; align-items: center; gap: 6px; font-size: 0.82rem; padding: 6px 10px; border-radius: 8px; background: var(--bg-2); }
+.pg-status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-3); }
+.pg-status-dot.ready { background: var(--brand-4); box-shadow: 0 0 8px var(--brand-4); }
+.pg-status-dot.error { background: var(--brand-6); }
+.pg-status-dot.busy { background: var(--brand-5); animation: pulse 1s infinite; }
+.pg-messages { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+.pg-empty { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 20px; color: var(--text-3); }
+.pg-empty-icon { font-size: 4rem; margin-bottom: 16px; opacity: 0.4; }
+.pg-empty h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--text-1); }
+.pg-msg { display: flex; gap: 12px; animation: fadeInUp 0.3s; }
+.pg-msg.user { flex-direction: row-reverse; }
+.pg-msg-avatar { flex-shrink: 0; width: 32px; height: 32px; border-radius: 8px; display: grid; place-items: center; font-size: 0.9rem; font-weight: 700; }
+.pg-msg.user .pg-msg-avatar { background: var(--grad-1); color: white; }
+.pg-msg.assistant .pg-msg-avatar { background: var(--bg-3); color: var(--brand-2); border: 1px solid var(--border); }
+.pg-msg-bubble { max-width: 75%; padding: 12px 16px; border-radius: 14px; font-size: 0.95rem; line-height: 1.6; }
+.pg-msg.user .pg-msg-bubble { background: var(--grad-1); color: white; border-bottom-right-radius: 4px; }
+.pg-msg.assistant .pg-msg-bubble { background: var(--bg-3); color: var(--text-0); border-bottom-left-radius: 4px; }
+.pg-msg-meta { font-size: 0.72rem; color: var(--text-4); margin-top: 6px; font-family: 'JetBrains Mono', monospace; }
+.pg-input-area { border-top: 1px solid var(--border); padding: 16px 20px; background: var(--bg-1); }
+.pg-input-row { display: flex; gap: 10px; align-items: flex-end; }
+.pg-input-field { flex: 1; padding: 12px 16px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px; color: var(--text-0); font-family: inherit; font-size: 0.95rem; resize: none; min-height: 50px; max-height: 200px; line-height: 1.5; }
+.pg-input-field:focus { outline: none; border-color: var(--brand-1); }
+.pg-send-btn { padding: 12px 18px; background: var(--grad-1); border: none; border-radius: 12px; color: white; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all var(--tx-fast); white-space: nowrap; }
+.pg-send-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(124, 92, 255, 0.5); }
+.pg-send-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.pg-stats-bar { display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; border-top: 1px solid var(--border); background: var(--bg-1); font-size: 0.75rem; color: var(--text-3); font-family: 'JetBrains Mono', monospace; }
+.pg-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 20px; }
+.pg-modal-overlay.open { display: flex; }
+.pg-modal { background: var(--bg-1); border: 1px solid var(--border-strong); border-radius: var(--radius-xl); padding: 36px; max-width: 540px; width: 100%; max-height: 90vh; overflow-y: auto; }
+.pg-modal h2 { margin-bottom: 16px; }
+.pg-presets { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.pg-preset-btn { padding: 6px 12px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 100px; font-size: 0.78rem; color: var(--text-2); cursor: pointer; transition: all var(--tx-fast); }
+.pg-preset-btn:hover { background: var(--surface-strong); color: var(--text-0); border-color: var(--brand-1); }
+.pg-streaming::after { content: '▌'; color: var(--brand-2); animation: blink 1s steps(2) infinite; margin-left: 2px; }
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 900px) { .pg-wrap { grid-template-columns: 1fr; height: auto; } .pg-config { max-height: 400px; } .pg-chat { height: 600px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark">A</span><span>Agent Academy</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="knowledge.html" class="nav-link">Knowledge</a>
+      <a href="path.html" class="nav-link">Path</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="workshop.html" class="nav-link">Workshop</a>
+      <a href="blueprint.html" class="nav-link">Blueprint</a>
+      <a href="resources.html" class="nav-link">Resources</a>
+      <a href="playground.html" class="nav-link active">Playground</a>
+      <a href="../index.html" class="nav-link" style="opacity:.7">中文</a>
+    </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div style="background: rgba(124, 92, 255, 0.1); border-bottom: 1px solid rgba(124, 92, 255, 0.2); padding: 10px 32px; text-align: center; font-size: 0.85rem; color: var(--text-2); display: flex; align-items: center; justify-content: center; gap: 8px;">
+  🔒 Your API key is stored <strong style="color: var(--brand-2)">locally in your browser</strong> only — never sent to any server
+  <button onclick="document.getElementById('setupModal').classList.add('open');" style="margin-left: 16px; padding: 4px 12px; background: var(--brand-1); border: none; border-radius: 6px; color: white; font-size: 0.78rem; cursor: pointer;">
+    ⚙️ Settings
+  </button>
+</div>
+
+<div class="pg-wrap">
+
+  <aside class="pg-config">
+    <div class="pg-section">
+      <div class="pg-section-title">
+        <span>📡 Connection</span>
+        <button onclick="document.getElementById('setupModal').classList.add('open');" style="padding: 4px 10px; background: transparent; border: 1px solid var(--border); border-radius: 6px; color: var(--text-2); font-size: 0.78rem; cursor: pointer;">Configure</button>
+      </div>
+      <div id="statusBox" class="pg-status">
+        <span class="pg-status-dot"></span>
+        <span id="statusText">Not configured</span>
+      </div>
+    </div>
+
+    <div class="pg-section">
+      <div class="pg-section-title">⚙️ Model Parameters</div>
+      <label class="pg-label">Model</label>
+      <select id="modelSelect" class="pg-select">
+        <option value="gpt-4o-mini">GPT-4o mini (Recommended)</option>
+      </select>
+      <label class="pg-label" style="margin-top: 12px;">Temperature</label>
+      <div class="pg-slider-wrap">
+        <input type="range" id="temperature" class="pg-slider" min="0" max="2" step="0.1" value="0.7">
+        <span id="temperatureVal" class="pg-slider-val">0.7</span>
+      </div>
+      <label class="pg-label" style="margin-top: 12px;">Max Tokens</label>
+      <input type="number" id="maxTokens" class="pg-input" value="2048" min="100" max="32000">
+    </div>
+
+    <div class="pg-section">
+      <div class="pg-section-title">
+        <span>💬 System Prompt</span>
+        <button onclick="resetSystemPrompt()" style="padding: 3px 8px; background: transparent; border: 1px solid var(--border); border-radius: 5px; color: var(--text-2); font-size: 0.72rem; cursor: pointer;">Reset</button>
+      </div>
+      <div class="pg-presets">
+        <span class="pg-preset-btn" onclick="setSystemPrompt('You are a helpful AI assistant. Always respond in clear, concise English.')">General Assistant</span>
+        <span class="pg-preset-btn" onclick="setSystemPrompt('You are a senior Python teacher. Explain concepts with simple examples and end each turn with a practice exercise.')">Python Teacher</span>
+        <span class="pg-preset-btn" onclick="setSystemPrompt('You are a code reviewer. Audit the user code for: bugs, performance issues, readability, and security.')">Code Reviewer</span>
+        <span class="pg-preset-btn" onclick="setSystemPrompt('You are a Socratic tutor. Never give direct answers — guide the user to discover the answer through questions.')">Socratic Tutor</span>
+        <span class="pg-preset-btn" onclick="setAgentPrompt()">🤖 Agent Mode</span>
+      </div>
+      <textarea id="systemPrompt" class="pg-textarea" rows="6" placeholder="Define your agent's role, capabilities, and style..."></textarea>
+    </div>
+
+    <div class="pg-section">
+      <div class="pg-section-title">
+        <span>🧰 Built-in Tools</span>
+        <span id="toolsCount" style="color: var(--brand-2);">0 enabled</span>
+      </div>
+      <div id="toolsList"></div>
+      <div class="notice notice-info" style="margin-top: 12px; padding: 10px 14px;">
+        <span class="notice-icon">i</span>
+        <div>
+          <strong style="font-size: 0.85rem;">About tool calling</strong>
+          <p style="font-size: 0.78rem; margin-top: 2px;">Enable "Agent Mode" prompt + tools, and the agent can autonomously call tools to solve problems.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pg-section">
+      <div class="pg-section-title">💾 Session</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <button onclick="clearConversation()" style="padding: 8px 14px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text-2); font-size: 0.82rem; cursor: pointer;">🗑 Clear</button>
+        <button onclick="exportConversation()" style="padding: 8px 14px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text-2); font-size: 0.82rem; cursor: pointer;">⬇ Export</button>
+        <button onclick="savePreset()" style="padding: 8px 14px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text-2); font-size: 0.82rem; cursor: pointer;">⭐ Save</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="pg-chat">
+    <div class="pg-messages" id="messages">
+      <div class="pg-empty" id="emptyState">
+        <div class="pg-empty-icon">💬</div>
+        <h3>Configure your API to start chatting</h3>
+        <p>Fill in your API key in the upper right, choose a model and prompt, then click Send.</p>
+        <p style="margin-top: 12px; font-size: 0.85rem;">✨ <strong style="color:var(--brand-2)">Tip</strong>: you can browse this page without configuring a key, but you can't initiate conversations yet</p>
+      </div>
+    </div>
+
+    <div class="pg-input-area">
+      <div class="pg-input-row">
+        <textarea id="userInput" class="pg-input-field" placeholder="Type your question. Shift+Enter for new line, Enter to send..."></textarea>
+        <button id="sendBtn" class="pg-send-btn" onclick="handleSend()">
+          <span>Send</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="pg-stats-bar">
+      <span id="statProvider">Not connected</span>
+      <span id="statTokens">Tokens: 0</span>
+      <span id="statTime">Latency: -</span>
+    </div>
+  </main>
+</div>
+
+<div class="pg-modal-overlay" id="setupModal">
+  <div class="pg-modal">
+    <h2 style="font-size: 1.6rem;">⚙️ Configure API</h2>
+    <p style="color: var(--text-2); margin-bottom: 24px;">
+      Enter your own API key to start the conversation. Keys are stored <strong style="color:var(--brand-2)">locally in your browser</strong> only — never sent to any server.
+    </p>
+    <label class="pg-label">API Provider</label>
+    <select id="providerSelect" class="pg-select" onchange="updateProvider()">
+      <option value="openai">OpenAI (ChatGPT, GPT-4)</option>
+      <option value="deepseek">DeepSeek (Fast in China, cheap)</option>
+      <option value="anthropic">Anthropic Claude</option>
+      <option value="ollama">Ollama (Local)</option>
+      <option value="openrouter">OpenRouter (aggregator)</option>
+      <option value="groq">Groq (ultra-fast)</option>
+      <option value="custom">Custom OpenAI-compatible endpoint</option>
+    </select>
+    <label class="pg-label" style="margin-top: 16px;">API Key</label>
+    <input type="password" id="apiKey" class="pg-input pg-input-key" placeholder="sk-... or equivalent">
+    <label class="pg-label" id="baseUrlLabel" style="margin-top: 16px; display: none;">Custom Base URL</label>
+    <input type="text" id="baseUrl" class="pg-input" placeholder="https://api.example.com/v1" style="display: none;">
+    <div style="margin-top: 16px; padding: 14px; background: var(--bg-2); border-radius: 10px; font-size: 0.85rem; color: var(--text-2);">
+      💡 <strong style="color:var(--text-0)">Recommended sources</strong><br>
+      · <a href="https://platform.openai.com/api-keys" target="_blank" style="color:var(--brand-2)">OpenAI</a> · $5 free for new users<br>
+      · <a href="https://platform.deepseek.com" target="_blank" style="color:var(--brand-2)">DeepSeek</a><br>
+      · <a href="https://openrouter.ai" target="_blank" style="color:var(--brand-2)">OpenRouter</a> · one key, many models<br>
+      · <a href="https://ollama.com" target="_blank" style="color:var(--brand-2)">Ollama</a> · fully local & free
+    </div>
+    <div style="margin-top: 24px; display: flex; gap: 10px; justify-content: space-between;">
+      <button onclick="clearAllSettings()" style="padding: 10px 18px; background: transparent; border: 1px solid var(--brand-6); border-radius: 10px; color: var(--brand-6); font-size: 0.88rem; cursor: pointer;">🗑 Clear All Keys</button>
+      <div style="display: flex; gap: 10px;">
+        <button onclick="document.getElementById('setupModal').classList.remove('open');" style="padding: 10px 18px; background: var(--bg-3); border: 1px solid var(--border); border-radius: 10px; color: var(--text-1); font-size: 0.88rem; cursor: pointer;">Cancel</button>
+        <button onclick="saveSettings()" style="padding: 10px 22px; background: var(--grad-1); border: none; border-radius: 10px; color: white; font-weight: 600; font-size: 0.92rem; cursor: pointer;">Save & Connect</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/analytics.js"></script>
+<script src="../js/playground.js"></script>
+</body>
+</html>

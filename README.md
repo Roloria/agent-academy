@@ -9,6 +9,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/Roloria/agent-academy?style=for-the-badge&logo=github&color=7c5cff)](https://github.com/Roloria/agent-academy/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Roloria/agent-academy?style=for-the-badge&logo=github&color=00d4ff)](https://github.com/Roloria/agent-academy/network/members)
 [![License](https://img.shields.io/badge/license-MIT-00ffa3?style=for-the-badge)](LICENSE)
+[![🇬🇧 English Version](https://img.shields.io/badge/🇬🇧-English_Version-ff6ec7?style=for-the-badge)](README_EN.md)
 
 **五阶段学习周期 · 120+ 精选 GitHub 项目 · 40+ 动手实验 · 25 篇必读论文 · 完整大型项目蓝图**
 

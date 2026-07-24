@@ -28,22 +28,33 @@ jobs:
         run: |
           mkdir -p public
 
-          # 复制所有 HTML 页面
+          # 中文版页面 (根路径)
           cp index.html knowledge.html path.html projects.html \
              workshop.html playground.html blueprint.html resources.html public/
 
-          # 复制资源目录
+          # 英文版页面 (en/ 子目录)
+          mkdir -p public/en
+          cp en/*.html public/en/
+
+          # 资源目录
           cp -r css js public/
 
-          # 复制 SEO 资产
+          # SEO 资产 (根目录访问)
           cp sitemap.xml robots.txt humans.txt site.webmanifest public/
           cp favicon.svg og-image.png public/
           cp favicon-16x16.png favicon-32x32.png public/
           cp favicon-180x180.png apple-touch-icon.png public/
           cp favicon-192x192.png favicon-512x512.png public/
 
+          # SEO 资产 (en/ 也需要)
+          cp sitemap.xml public/en/sitemap.xml
+          cp robots.txt public/en/robots.txt
+
           echo "📂 部署文件清单:"
           ls -la public/
+          echo ""
+          echo "📂 en/ 子目录:"
+          ls -la public/en/
 
       - name: 📤 Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

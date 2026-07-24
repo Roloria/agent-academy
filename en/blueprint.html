@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Blueprint · Agent Academy</title>
+<meta name="description" content="Complete blueprint for a large-scale Agent project: architecture, modules, deployment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/components.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='18' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span><span>Agent Academy</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="knowledge.html" class="nav-link">Knowledge</a>
+      <a href="path.html" class="nav-link">Path</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="workshop.html" class="nav-link">Workshop</a>
+      <a href="blueprint.html" class="nav-link active">Blueprint</a>
+      <a href="resources.html" class="nav-link">Resources</a>
+      <a href="../index.html" class="nav-link" style="opacity:.7">中文</a>
+    </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow"><span class="pulse-dot"></span><span>Phase 5 · Final Delivery Goal</span></div>
+    <h1>Large-Scale Agent <span class="hl">Project Blueprint</span></h1>
+    <p class="hero-subtitle">
+      What should a complete large-scale Agent system look like? A battle-tested architecture blueprint, module design, code skeletons, and engineering practices.
+      Copy it, modify it, surpass it.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Overall Architecture</span>
+      <h2 class="section-title">A complete Agent system<br>is built from <span class="hl">these layers</span></h2>
+      <p class="section-subtitle">From UX layer to infrastructure, each has clear responsibilities and interfaces.</p>
+    </div>
+
+    <div class="architecture-showcase">
+      <h3>Five-Layer Architecture: From User to Infrastructure</h3>
+      <p class="description">Layered architecture separates concerns. Each layer can be tested, replaced, and extended independently.</p>
+
+      <pre class="mermaid">
+graph TB
+  subgraph UX["🎨 Layer 1 · User Experience"]
+    UI1[Web UI]
+    UI2[CLI]
+    UI3[API Endpoints]
+  end
+
+  subgraph ORCH["⚙️ Layer 2 · Orchestration"]
+    O1[LangGraph State Machine]
+    O2[Planner / Executor]
+    O3[Workflow Engine]
+  end
+
+  subgraph AGENT["🤖 Layer 3 · Agents"]
+    A1[Master Agent]
+    A2[Sub-Agent A]
+    A3[Sub-Agent B]
+    A4[Specialist Agent]
+  end
+
+  subgraph TOOLS["🔧 Layer 4 · Tools & Memory"]
+    T1[Tool Registry]
+    T2[Tool Implementations<br>SearchAPI / Database / Code]
+    M1[Short-term Memory]
+    M2[Long-term Memory<br>VectorDB + KG]
+  end
+
+  subgraph INFRA["🏗️ Layer 5 · Infrastructure"]
+    I1[LLM Provider<br>OpenAI / Anthropic / Local]
+    I2[Observability<br>LangFuse / LangSmith]
+    I3[Storage<br>Postgres + Redis]
+    I4[Eval Pipeline]
+  end
+
+  UX --> ORCH
+  ORCH --> AGENT
+  AGENT --> TOOLS
+  TOOLS --> INFRA
+
+  classDef ux fill:#7c5cff,stroke:#00d4ff,color:#fff,stroke-width:2px;
+  classDef orch fill:#00d4ff,stroke:#00ffa3,color:#000,stroke-width:2px;
+  classDef agent fill:#00ffa3,stroke:#7c5cff,color:#000,stroke-width:2px;
+  classDef tools fill:#ff6ec7,stroke:#ffb84d,color:#fff,stroke-width:2px;
+  classDef infra fill:#ffb84d,stroke:#ff5e7a,color:#000,stroke-width:2px;
+
+  class UX,UI1,UI2,UI3 ux;
+  class ORCH,O1,O2,O3 orch;
+  class AGENT,A1,A2,A3,A4 agent;
+  class TOOLS,T1,T2,M1,M2 tools;
+  class INFRA,I1,I2,I3,I4 infra;
+      </pre>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Project Skeleton</span>
+      <h2 class="section-title">A complete Agent project's <span class="hl-2">directory structure</span></h2>
+      <p class="section-subtitle">Translate the five-layer architecture into code. Clear, maintainable, extensible.</p>
+    </div>
+
+    <div class="grid grid-2" style="gap: 24px;">
+      <div>
+        <h3 style="margin-bottom: 14px;">📂 Project Structure</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span>Project Layout</span>
+          </div>
+          <pre><code>my_agent/
+├── 📁 src/
+│   ├── 📁 agents/
+│   │   ├── base.py              # Agent abstract base
+│   │   ├── master.py            # Master Agent
+│   │   ├── researcher.py        # Sub-Agent
+│   │   └── reviewer.py          # Reviewer Agent
+│   ├── 📁 orchestration/
+│   │   ├── graph.py             # LangGraph definition
+│   │   ├── state.py             # State Schema
+│   │   └── router.py            # Routing logic
+│   ├── 📁 tools/
+│   │   ├── registry.py          # Tool registry
+│   │   ├── search.py            # Search tool
+│   │   ├── database.py          # DB tool
+│   │   └── code_exec.py         # Code execution
+│   ├── 📁 memory/
+│   │   ├── short_term.py
+│   │   ├── long_term.py
+│   │   └── hybrid.py
+│   ├── 📁 prompts/
+│   │   ├── master.yaml
+│   │   ├── researcher.yaml
+│   │   └── reviewer.yaml
+│   ├── 📁 llm/
+│   │   ├── providers.py
+│   │   └── config.py
+│   └── 📁 observability/
+│       ├── tracing.py
+│       └── metrics.py
+├── 📁 tests/
+│   ├── unit/
+│   ├── integration/
+│   └── eval/
+├── 📁 configs/
+│   ├── dev.yaml
+│   └── prod.yaml
+├── 📁 data/
+├── 📁 notebooks/                # Exploratory experiments
+├── 📄 main.py                   # CLI entry
+├── 📄 api.py                    # FastAPI service
+├── 📄 Dockerfile
+├── 📄 pyproject.toml
+└── 📄 README.md</code></pre>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom: 14px;">📦 pyproject.toml Core Dependencies</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span>pyproject.toml</span>
+          </div>
+          <pre><code>[project]
+name = <span class="code-string">"my-agent"</span>
+version = <span class="code-string">"0.1.0"</span>
+requires-python = <span class="code-string">">=3.11"</span>
+
+dependencies = [
+    <span class="code-string">"langchain>=0.3"</span>,
+    <span class="code-string">"langgraph>=0.2"</span>,
+    <span class="code-string">"langchain-openai>=0.2"</span>,
+    <span class="code-string">"langchain-anthropic>=0.2"</span>,
+
+    <span class="code-string">"llama-index>=0.12"</span>,
+
+    <span class="code-string">"chromadb>=0.5"</span>,
+
+    <span class="code-string">"tiktoken"</span>,
+    <span class="code-string">"tenacity"</span>,       <span class="code-comment"># retries</span>
+
+    <span class="code-string">"langfuse>=2.0"</span>,  <span class="code-comment"># observability</span>
+
+    <span class="code-string">"pydantic>=2.7"</span>,  <span class="code-comment"># data validation</span>
+    <span class="code-string">"pydantic-settings>=2.3"</span>,
+
+    <span class="code-string">"fastapi>=0.115"</span>,
+    <span class="code-string">"uvicorn>=0.32"</span>,
+
+    <span class="code-string">"structlog>=24.4"</span>,
+    <span class="code-string">"rich>=13.9"</span>,
+
+    <span class="code-string">"redis>=5.0"</span>,
+    <span class="code-string">"sqlalchemy>=2.0"</span>,
+]
+
+[project.optional-dependencies]
+dev = [
+    <span class="code-string">"pytest>=8.3"</span>,
+    <span class="code-string">"pytest-asyncio>=0.24"</span>,
+    <span class="code-string">"pytest-cov>=5"</span>,
+    <span class="code-string">"ruff>=0.6"</span>,
+    <span class="code-string">"mypy>=1.11"</span>,
+    <span class="code-string">"ipython>=8.27"</span>,
+    <span class="code-string">"gradio>=5.0"</span>,
+]</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Deployment</span>
+      <h2 class="section-title">Take your Agent <span class="hl-3">live</span></h2>
+      <p class="section-subtitle">Multiple deployment paths from single-machine to cloud.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 style="margin-bottom: 12px;">🖥 Local Prototype</h3>
+        <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 14px;">
+          Fastest feedback loop. Development phase and single-user demos.
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li style="padding: 5px 0;">▸ Run <code>python main.py</code></li>
+          <li style="padding: 5px 0;">▸ Gradio at localhost:7860</li>
+          <li style="padding: 5px 0;">▸ Single Agent, no concurrency</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom: 12px;">🐳 Docker Container</h3>
+        <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 14px;">
+          Consistent environment, easy distribution. Teams and small-scale production.
+        </p>
+        <div class="code-block" style="margin-top: 8px;">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span>Dockerfile</span>
+          </div>
+          <pre><code><span class="code-keyword">FROM</span> python:3.11-slim
+WORKDIR /app
+COPY pyproject.toml poetry.lock ./
+RUN pip install poetry && \
+    poetry install --no-dev
+COPY src/ ./src/
+COPY main.py api.py ./
+
+<span class="code-keyword">CMD</span> [<span class="code-string">"uvicorn"</span>, <span class="code-string">"api:app"</span>, \
+     <span class="code-string">"--host"</span>, <span class="code-string">"0.0.0.0"</span>, \
+     <span class="code-string">"--port"</span>, <span class="code-string">"8000"</span>]</code></pre>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom: 12px;">☁️ Cloud Deployment</h3>
+        <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 14px;">
+          Scalable, high-availability. Production environments.
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li style="padding: 6px 0;">▸ <strong>Railway / Fly.io</strong>: simple deploy</li>
+          <li style="padding: 6px 0;">▸ <strong>AWS / GCP</strong>: fully controllable</li>
+          <li style="padding: 6px 0;">▸ <strong>Modal / Replicate</strong>: GPU inference</li>
+          <li style="padding: 6px 0;">▸ <strong>Anyscale / Modal</strong>: auto-scaling</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+      <span>© 2026 Agent Academy · <a href="../index.html" style="opacity:.7">🇨🇳 中文版</a></span>
+      <span><a href="index.html">← Home</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>mermaid.initialize({startOnLoad:true, theme:'dark', themeVariables:{primaryColor:'#7c5cff', primaryTextColor:'#fff', primaryBorderColor:'#7c5cff', lineColor:'#00d4ff', secondaryColor:'#11141d', tertiaryColor:'#1f2433', fontFamily:'Inter'}});</script>
+</body>
+</html>
