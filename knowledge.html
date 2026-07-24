@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>知识体系 · Agent Academy</title>
+<meta name="description" content="系统化建立 AI Agent 的认知框架：从 LLM 原理到 Agent 架构，从推理范式到工具调用。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/components.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='18' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span><span>Agent Academy</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">首页</a>
+      <a href="knowledge.html" class="nav-link">知识体系</a>
+      <a href="path.html" class="nav-link">学习路径</a>
+      <a href="projects.html" class="nav-link">开源项目</a>
+      <a href="workshop.html" class="nav-link">实战工坊</a>
+      <a href="blueprint.html" class="nav-link">Agent 蓝图</a>
+      <a href="resources.html" class="nav-link">资源中心</a>
+      <a href="path.html#get-started" class="nav-cta">开始学习 →</a>
+    </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- 页面 Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow"><span class="pulse-dot"></span><span>认知基础 · Phase 1</span></div>
+    <h1>Agent 的<span class="hl">心智地图</span></h1>
+    <p class="hero-subtitle">
+      在写第一行 Agent 代码之前，先建立完整的认知框架。这里包含 LLM 原理、Agent 范式、关键概念，
+      以及可读、可复现、可思考的知识体系。
+    </p>
+  </div>
+</section>
+
+<!-- 知识图谱 -->
+<section class="section-sm">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">知识全景</span>
+      <h2 class="section-title">学习者<span class="hl-2">心智模型</span>全景</h2>
+      <p class="section-subtitle">不同知识节点之间的关联一目了然。你可以根据当前进度选择性深入。</p>
+    </div>
+    <div class="knowledge-graph">
+      <pre class="mermaid">
+graph TD
+  Start([👤 从这里开始]) --> A[🤖 什么是 LLM?]
+  A --> B[📝 提示工程基础]
+  A --> C[🔬 Transformer 注意力]
+  B --> D[🛠️ Function Calling]
+  D --> E[🤖 Agent 范式]
+  C --> F[🧠 推理能力]
+  F --> E
+  E --> G[🌊 ReAct 循环]
+  E --> H[📋 Plan-and-Execute]
+  E --> I[👥 多 Agent 协作]
+  G --> J[💾 记忆系统]
+  H --> J
+  I --> J
+  J --> K[🧰 工具与编排]
+  K --> L[📚 RAG 检索增强]
+  L --> M[🌐 项目蓝图]
+  K --> M
+  I --> M
+  M --> N([🎯 交付大型 Agent])
+
+  classDef critical fill:#7c5cff,stroke:#00d4ff,color:#fff,stroke-width:2px;
+  classDef important fill:#00d4ff,stroke:#00ffa3,color:#000;
+  classDef useful fill:#00ffa3,stroke:#7c5cff,color:#000;
+  classDef final fill:#ff6ec7,stroke:#ffb84d,color:#fff,stroke-width:3px;
+
+  class A,B,D,E critical;
+  class G,H,I,J important;
+  class C,F,K,L useful;
+  class M,N final;
+      </pre>
+    </div>
+  </div>
+</section>
+
+<!-- 核心概念卡片 -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">核心概念</span>
+      <h2 class="section-title">理解 Agent 的<span class="hl">基本元素</span></h2>
+      <p class="section-subtitle">从 LLM 这个"大脑"开始，到工具、记忆、规划——逐一拆解 Agent 的关键能力。</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="knowledge-card">
+        <span class="badge badge-purple">基石 01</span>
+        <h3>大型语言模型 (LLM)</h3>
+        <p>Agent 的"大脑"。基于 Transformer 架构，从海量文本中学习统计规律，并通过自回归方式生成下一个 token。</p>
+        <ul class="knowledge-keypoints">
+          <li>从 GPT-3 到 GPT-4o/Claude/Gemini 的演进</li>
+          <li>Token、上下文窗口、温度、Top-p 等关键参数</li>
+          <li>幻觉现象与边界：知道 LLM 不能做什么</li>
+        </ul>
+      </div>
+
+      <div class="knowledge-card">
+        <span class="badge badge-cyan">基石 02</span>
+        <h3>提示工程 (Prompt Engineering)</h3>
+        <p>通过精心构造的文本指令，引导 LLM 输出更准确、更可靠的响应。这是与 LLM 交互的"语言艺术"。</p>
+        <ul class="knowledge-keypoints">
+          <li>Zero-shot / Few-shot / Chain-of-Thought</li>
+          <li>System Prompt 的角色与最佳实践</li>
+          <li>Structured Output 与 JSON 模式</li>
+        </ul>
+      </div>
+
+      <div class="knowledge-card">
+        <span class="badge badge-green">基石 03</span>
+        <h3>工具调用 (Function Calling)</h3>
+        <p>让 LLM 突破纯文本限制，可以调用外部 API、查询数据库、执行代码。Agent "行动能力"的来源。</p>
+        <ul class="knowledge-keypoints">
+          <li>OpenAI Function Calling / Tool Use</li>
+          <li>工具描述的编写规范</li>
+          <li>多工具选择与参数生成</li>
+        </ul>
+      </div>
+
+      <div class="knowledge-card">
+        <span class="badge badge-pink">核心 04</span>
+        <h3>推理 (Reasoning)</h3>
+        <p>不只是模式匹配。LLM 通过 Chain-of-Thought、Self-Consistency、Tree-of-Thoughts 等方法在 token 间"推理"。</p>
+        <ul class="knowledge-keypoints">
+          <li>CoT / ReAct / Self-Refine</li>
+          <li>推理时计算 (Inference-time Compute)</li>
+          <li>o1/o3 类推理模型的范式转变</li>
+        </ul>
+      </div>
+
+      <div class="knowledge-card">
+        <span class="badge badge-amber">核心 05</span>
+        <h3>记忆 (Memory)</h3>
+        <p>短期对话缓冲、长期事实存储、向量语义记忆——Agent 持续进化的关键。</p>
+        <ul class="knowledge-keypoints">
+          <li>短期记忆：上下文窗口内的对话</li>
+          <li>长期记忆：向量数据库 + 知识图谱</li>
+          <li>情景记忆、语义记忆、程序性记忆</li>
+        </ul>
+      </div>
+
+      <div class="knowledge-card">
+        <span class="badge badge-purple">核心 06</span>
+        <h3>规划 (Planning)</h3>
+        <p>把复杂任务拆解为可执行步骤，选择合适的工具，处理执行中的异常并动态调整计划。</p>
+        <ul class="knowledge-keypoints">
+          <li>Plan-and-Execute 模式</li>
+          <li>任务分解 (Task Decomposition)</li>
+          <li>反思与重规划 (Re-planning)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Agent 范式详解 -->
+<section class="section" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">架构范式</span>
+      <h2 class="section-title">主流 Agent <span class="hl-2">运行范式</span></h2>
+      <p class="section-subtitle">理解每种范式的设计动机、适用场景和典型实现。</p>
+    </div>
+
+    <div data-tab-group>
+      <div class="tabs">
+        <div class="tab active" data-tab="tab-react">ReAct 循环</div>
+        <div class="tab" data-tab="tab-plan">Plan-and-Execute</div>
+        <div class="tab" data-tab="tab-multi">多 Agent 协作</div>
+        <div class="tab" data-tab="tab-graph">图编排 (LangGraph)</div>
+      </div>
+
+      <div class="tab-panel active" id="tab-react">
+        <div class="grid grid-2" style="align-items: start;">
+          <div>
+            <h3 style="margin-bottom: 16px;">ReAct：<span class="hl">思考 - 行动 - 观察</span>循环</h3>
+            <p style="color: var(--text-2); margin-bottom: 18px;">
+              最经典的 Agent 范式。模型在每一轮循环中：先思考 (Thought) 当前状况，决定下一步行动 (Action)，
+              执行后观察结果 (Observation)，再进入下一轮循环，直到任务完成。
+            </p>
+            <div class="steps">
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>Thought: 思考</h4>
+                  <p>LLM 分析当前状态，决定下一步要做什么。这一步决定了 Agent 的"智能性"。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>Action: 行动</h4>
+                  <p>选择工具、生成参数、调用外部系统。这是 Agent 的"动手能力"。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>Observation: 观察</h4>
+                  <p>接收工具返回的结果，作为下一轮循环的输入。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>循环 / 终止</h4>
+                  <p>判断任务完成则输出最终答案；否则回到 Thought 继续循环。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="code-block">
+              <div class="code-header">
+                <div class="code-dots"><span></span><span></span><span></span></div>
+                <span>react_agent.py</span>
+              </div>
+              <pre><code><span class="code-comment"># 极简 ReAct 实现</span>
+<span class="code-keyword">def</span> <span class="code-function">react_agent</span>(query, max_steps=<span class="code-string">8</span>):
+    history = <span class="code-string">f"问题: {query}\n"</span>
+    <span class="code-keyword">for</span> step <span class="code-keyword">in</span> range(max_steps):
+        <span class="code-comment"># 1. Thought</span>
+        thought = llm(f<span class="code-string">"{history}\n思考下一步:"</span>)
+        <span class="code-comment"># 2. Action</span>
+        action = parse_action(thought)
+        <span class="code-comment"># 3. Observation</span>
+        observation = tools[action.tool](**action.args)
+        history += <span class="code-string">f"思考: {thought}\n行动: {action}\n观察: {observation}\n"</span>
+        <span class="code-comment"># 4. 判断完成</span>
+        <span class="code-keyword">if</span> action.tool == <span class="code-string">"Finish"</span>:
+            <span class="code-keyword">return</span> observation
+    <span class="code-keyword">return</span> <span class="code-string">"未完成"</span></code></pre>
+            </div>
+            <div class="notice notice-info" style="margin-top: 18px;">
+              <span class="notice-icon">i</span>
+              <div>
+                <strong>关键洞察</strong>
+                <p>ReAct 的"思考"质量直接决定 Agent 上限。这是为什么 OpenAI o1/o3 类推理模型在大工具调用场景也持续领先。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-plan">
+        <div class="grid grid-2" style="align-items: start;">
+          <div>
+            <h3 style="margin-bottom: 16px;">Plan-and-Execute：<span class="hl-2">先规划，后执行</span></h3>
+            <p style="color: var(--text-2); margin-bottom: 18px;">
+              适合复杂、可分解任务。先用 LLM 生成完整执行计划，再逐项执行。
+              典型代表：BabyAGI、AutoGPT、LangGraph 的规划器。
+            </p>
+            <div class="component-stack">
+              <div class="component">
+                <div class="component-name">🎯 Planner</div>
+                <div class="component-desc">负责拆解任务、生成步骤</div>
+              </div>
+              <div class="component">
+                <div class="component-name">⚙️ Executor</div>
+                <div class="component-desc">逐项执行计划的具体步骤</div>
+              </div>
+              <div class="component">
+                <div class="component-name">🪞 Replanner</div>
+                <div class="component-desc">根据执行反馈调整计划</div>
+              </div>
+            </div>
+            <ul class="knowledge-keypoints">
+              <li>更适合需要长链推理的复杂任务</li>
+              <li>可缓存规划结果，节省 token</li>
+              <li>易于调试：可读出完整计划</li>
+              <li>失败回滚更可控</li>
+            </ul>
+          </div>
+          <div>
+            <div class="code-block">
+              <div class="code-header">
+                <div class="code-dots"><span></span><span></span><span></span></div>
+                <span>plan_execute.py</span>
+              </div>
+              <pre><code><span class="code-comment"># Plan-and-Execute 模式</span>
+<span class="code-keyword">def</span> <span class="code-function">run</span>(task):
+    <span class="code-comment"># 阶段 1: 生成计划</span>
+    plan = planner.invoke(<span class="code-string">f"任务: {task}\n生成步骤:"</span>)
+    results = []
+    <span class="code-comment"># 阶段 2: 逐项执行</span>
+    <span class="code-keyword">for</span> step <span class="code-keyword">in</span> plan.steps:
+        result = executor.invoke(step, context=results)
+        results.append(result)
+        <span class="code-comment"># 阶段 3: 必要时重规划</span>
+        <span class="code-keyword">if</span> result.need_replan:
+            plan = replanner.invoke(plan, results)
+    <span class="code-keyword">return</span> results[-<span class="code-string">1</span>]</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-multi">
+        <div class="grid grid-2" style="align-items: start;">
+          <div>
+            <h3 style="margin-bottom: 16px;">多 Agent 协作：<span class="hl-3">分而治之</span></h3>
+            <p style="color: var(--text-2); margin-bottom: 18px;">
+              将复杂任务交给多个专门化 Agent，通过协作、辩论、监督完成。CrewAI、AutoGen、MetaGPT 是代表。
+            </p>
+            <h4 style="margin: 18px 0 10px;">典型协作模式</h4>
+            <div class="component-stack">
+              <div class="component">
+                <div class="component-name">👔 经理 Agent</div>
+                <div class="component-desc">分派任务、监督进度</div>
+              </div>
+              <div class="component">
+                <div class="component-name">🧑‍💻 工程师 Agent</div>
+                <div class="component-desc">专注实现具体任务</div>
+              </div>
+              <div class="component">
+                <div class="component-name">🧐 评审 Agent</div>
+                <div class="component-desc">质检与反馈</div>
+              </div>
+            </div>
+            <div class="notice notice-warning" style="margin-top: 20px;">
+              <span class="notice-icon">!</span>
+              <div>
+                <strong>权衡提示</strong>
+                <p>多 Agent 不总是更强。它增加 token 成本和复杂度。任务明确时单 Agent 更高效。</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <pre class="mermaid">
+graph LR
+  M[👔 Manager] -->|分派任务| E1[🧑‍💻 Engineer A]
+  M -->|分派任务| E2[🧑‍💻 Engineer B]
+  E1 -->|交付代码| R[🧐 Reviewer]
+  E2 -->|交付代码| R
+  R -->|反馈意见| E1
+  R -->|反馈意见| E2
+  R -->|汇总报告| M
+            </pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-graph">
+        <div class="grid grid-2" style="align-items: start;">
+          <div>
+            <h3 style="margin-bottom: 16px;">图编排：<span class="hl">状态化的 Agent 构造</span></h3>
+            <p style="color: var(--text-2); margin-bottom: 18px;">
+              LangGraph 将 Agent 抽象为有向图 (DAG)，节点是动作，边是条件。天然支持状态管理、人工干预、并行分支。
+            </p>
+            <h4 style="margin: 16px 0 10px;">核心优势</h4>
+            <ul class="knowledge-keypoints">
+              <li><strong style="color:var(--text-0)">状态显式</strong>：每个节点共享全局状态，可检查点</li>
+              <li><strong style="color:var(--text-0)">条件分支</strong>：根据状态决定下一步走向</li>
+              <li><strong style="color:var(--text-0)">循环天然支持</strong>：图结构允许节点回到自身</li>
+              <li><strong style="color:var(--text-0)">Human-in-the-loop</strong>：可暂停等待人工输入</li>
+            </ul>
+          </div>
+          <div>
+            <pre class="mermaid">
+stateDiagram-v2
+  [*] --> 输入
+  输入 --> 分析: query
+  分析 --> 规划: 任务明确
+  分析 --> 澄清: 信息不足
+  澄清 --> 分析: 再次分析
+  规划 --> 执行
+  执行 --> 评估
+  评估 --> 完成: 通过
+  评估 --> 重规划: 未通过
+  重规划 --> 规划
+  完成 --> [*]
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 学习自检清单 -->
+<section class="section">
+  <div class="container container-sm">
+    <div class="section-head">
+      <span class="eyebrow">学习自检</span>
+      <h2 class="section-title">你是不是真的<span class="hl">掌握了</span>？</h2>
+      <p class="section-subtitle">完成下面的清单。如果有不确定的，回到对应章节复习。</p>
+    </div>
+
+    <div class="card" style="padding: 36px;">
+      <h3 style="margin-bottom: 24px; font-size: 1.3rem;">🧠 第一阶段自检清单</h3>
+      <ul class="checklist">
+        <li>
+          <div class="checklist-icon">✓</div>
+          <div>
+            <div class="item-title">能用一段话向非技术人员解释什么是 AI Agent</div>
+            <div class="item-desc">不是"能调用工具的 LLM"，而是包含感知、推理、行动、记忆的自主系统。</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">✓</div>
+          <div>
+            <div class="item-title">能区分 LLM、Agent、AI Assistant、AI Workflow 的差异</div>
+            <div class="item-desc">Agent 的核心是"自主决策做什么"，而 LLM 只是"被调用的模型"。</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">✓</div>
+          <div>
+            <div class="item-title">能说出 ReAct、Plan-and-Execute、多 Agent 三种范式的差异与适用场景</div>
+            <div class="item-desc">能针对具体任务选择最合适的范式，并说出理由。</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">✓</div>
+          <div>
+            <div class="item-title">能独立设计一个高质量的 Tool 描述（含参数 schema）</div>
+            <div class="item-desc">tool description 是 LLM 决策的关键输入，需要像写 API 文档一样对待。</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">✓</div>
+          <div>
+            <div class="item-title">理解 Function Calling 的内部流程（从用户输入到工具返回）</div>
+            <div class="item-desc">不只是"调个 API"，而是模型如何解析、参数如何生成、结果如何回到上下文。</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">✓</div>
+          <div>
+            <div class="item-title">知道短期记忆和长期记忆的本质区别与实现方式</div>
+            <div class="item-desc">短期记忆 = 上下文窗口内容；长期记忆 = 持久化的向量/结构化数据。</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <p style="color: var(--text-2); margin-bottom: 20px;">清单勾完，进入下一阶段学习：</p>
+      <a href="path.html" class="btn btn-primary btn-lg">进入 Phase 2 · 技能与工具栈 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>认知基础已<span class="hl">扎实</span></h2>
+      <p>接下来的 Phase 2，你将学习主流 Agent 框架，掌握工具与编排能力。</p>
+      <a href="path.html" class="btn btn-primary btn-lg">查看完整学习路径</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 18px;">
+          <span class="logo-mark">A</span><span>Agent Academy</span>
+        </div>
+        <p style="color: var(--text-2); font-size: 0.92rem; line-height: 1.7; max-width: 360px;">
+          一份完整、可执行、与时代同步的 AI Agent 学习蓝图。
+        </p>
+      </div>
+      <div><h5>学习路径</h5><ul>
+        <li><a href="knowledge.html">知识体系</a></li>
+        <li><a href="path.html">五阶段路径</a></li>
+        <li><a href="workshop.html">实战工坊</a></li>
+        <li><a href="blueprint.html">项目蓝图</a></li>
+      </ul></div>
+      <div><h5>资源</h5><ul>
+        <li><a href="projects.html">开源项目</a></li>
+        <li><a href="resources.html">论文与课程</a></li>
+        <li><a href="resources.html#books">推荐书目</a></li>
+        <li><a href="resources.html#community">社区</a></li>
+      </ul></div>
+      <div><h5>关于</h5><ul>
+        <li><a href="#">理念与方法</a></li>
+        <li><a href="#">贡献指南</a></li>
+        <li><a href="#">更新日志</a></li>
+        <li><a href="#">联系反馈</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Agent Academy</span>
+      <span>用 💜 为下一代构建者打造</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>mermaid.initialize({startOnLoad:true, theme:'dark', themeVariables:{primaryColor:'#7c5cff', primaryTextColor:'#fff', primaryBorderColor:'#7c5cff', lineColor:'#00d4ff', secondaryColor:'#11141d', tertiaryColor:'#1f2433', fontFamily:'Inter'}});</script>
+</body>
+</html>

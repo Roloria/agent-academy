@@ -1,0 +1,37 @@
+# ============================================================
+# Agent Academy - Docker Compose 一键部署
+# ============================================================
+version: '3.8'
+
+services:
+  agent-academy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: agent-academy:latest
+    container_name: agent-academy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      # 如需要 HTTPS，映射 443:443 并挂载证书
+      # - "443:443"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    # 如启用 HTTPS，取消注释以下挂载并修改 nginx 配置
+    # volumes:
+    #   - ./certs:/etc/nginx/certs:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge

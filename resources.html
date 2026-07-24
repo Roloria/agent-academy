@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>资源中心 · Agent Academy</title>
+<meta name="description" content="精选 AI Agent 相关论文、课程、书籍、社区。持续更新。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='18' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span><span>Agent Academy</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">首页</a>
+      <a href="knowledge.html" class="nav-link">知识体系</a>
+      <a href="path.html" class="nav-link">学习路径</a>
+      <a href="projects.html" class="nav-link">开源项目</a>
+      <a href="workshop.html" class="nav-link">实战工坊</a>
+      <a href="blueprint.html" class="nav-link">Agent 蓝图</a>
+      <a href="resources.html" class="nav-link">资源中心</a>
+      <a href="path.html#get-started" class="nav-cta">开始学习 →</a>
+    </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow"><span class="pulse-dot"></span><span>持续更新 · 2026 夏季版</span></div>
+    <h1>资源<span class="hl">中心</span></h1>
+    <p class="hero-subtitle">
+      论文、课程、书籍、社区、播客、Newsletter —— 我们精选了所有值得投入时间的内容，
+      按学习阶段组织、按时长分类、按主题归档。
+    </p>
+  </div>
+</section>
+
+<!-- 资源分类 -->
+<section class="section-sm">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">资源导航</span>
+      <h2 class="section-title">按类别<span class="hl-2">快速跳转</span></h2>
+    </div>
+
+    <div class="feature-grid">
+      <a href="#papers" class="card" style="cursor: pointer; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 14px;">📄</div>
+        <h3 style="margin-bottom: 10px;">必读论文</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem;">从 ReAct 到 o1 的 25 篇核心论文</p>
+        <span class="badge badge-purple" style="margin-top: 14px;">25 篇</span>
+      </a>
+
+      <a href="#courses" class="card" style="cursor: pointer; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 14px;">🎓</div>
+        <h3 style="margin-bottom: 10px;">在线课程</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem;">系统化的视频课程与短课系列</p>
+        <span class="badge badge-cyan" style="margin-top: 14px;">12 门</span>
+      </a>
+
+      <a href="#books" class="card" style="cursor: pointer; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 14px;">📚</div>
+        <h3 style="margin-bottom: 10px;">推荐书目</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem;">理论与工程实践的好书</p>
+        <span class="badge badge-green" style="margin-top: 14px;">8 本</span>
+      </a>
+
+      <a href="#community" class="card" style="cursor: pointer; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 14px;">👥</div>
+        <h3 style="margin-bottom: 10px;">社区交流</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem;">找到你的学习同伴</p>
+        <span class="badge badge-pink" style="margin-top: 14px;">10+ 社区</span>
+      </a>
+
+      <a href="#newsletter" class="card" style="cursor: pointer; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 14px;">📮</div>
+        <h3 style="margin-bottom: 10px;">Newsletter</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem;">每周跟进前沿动态</p>
+        <span class="badge badge-amber" style="margin-top: 14px;">8 个</span>
+      </a>
+
+      <a href="#podcast" class="card" style="cursor: pointer; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 14px;">🎙</div>
+        <h3 style="margin-bottom: 10px;">播客与视频</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem;">通勤路上的高质量内容</p>
+        <span class="badge badge-purple" style="margin-top: 14px;">12 个</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 必读论文 -->
+<section class="section" id="papers">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">必读论文</span>
+      <h2 class="section-title">25 篇<span class="hl">塑造 Agent 领域</span>的论文</h2>
+      <p class="section-subtitle">按学习顺序排列。每篇附摘要、阅读价值、推荐理由。</p>
+    </div>
+
+    <div data-tab-group>
+      <div class="tabs">
+        <div class="tab active" data-tab="papers-found">基石必读</div>
+        <div class="tab" data-tab="papers-react">ReAct 系列</div>
+        <div class="tab" data-tab="papers-memory">记忆与检索</div>
+        <div class="tab" data-tab="papers-multi">多 Agent</div>
+        <div class="tab" data-tab="papers-eval">评估</div>
+      </div>
+
+      <div class="tab-panel active" id="papers-found">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="badge badge-purple" style="margin-bottom: 10px;">2022 · ReAct</div>
+            <h3 style="margin-bottom: 8px;">ReAct: Synergizing Reasoning and Acting in Language Models</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Princeton / Google · Yao et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">首次系统化提出"思考-行动-观察"循环。这是 Agent 范式的奠基性工作。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2210.03629" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-cyan" style="margin-bottom: 10px;">2020 · CoT</div>
+            <h3 style="margin-bottom: 8px;">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Google · Wei et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">揭示了"一步一步思考"能显著提升 LLM 在复杂推理任务上的表现。Agent 推理能力的源头。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2201.11903" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-green" style="margin-bottom: 10px;">2017 · Transformer</div>
+            <h3 style="margin-bottom: 8px;">Attention Is All You Need</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Google · Vaswani et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">Transformer 架构的原始论文。所有现代 LLM 和 Agent 的根基。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/1706.03762" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-pink" style="margin-bottom: 10px;">2020 · RAG</div>
+            <h3 style="margin-bottom: 8px;">Retrieval-Augmented Generation for Large Language Models</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Meta AI · Lewis et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">RAG 的奠基性工作。让 LLM 能接入外部知识库,解决幻觉和时效性。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2005.11401" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-amber" style="margin-bottom: 10px;">2023 · Function Calling</div>
+            <h3 style="margin-bottom: 8px;">GPT-4 Technical Report</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">OpenAI</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">虽然不是论文,但 Function Calling 能力的官方描述,理解现代 Agent 工具调用的基础。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2303.08774" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-purple" style="margin-bottom: 10px;">2023 · Tree of Thoughts</div>
+            <h3 style="margin-bottom: 8px;">Tree of Thoughts: Deliberate Problem Solving with Large Language Models</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Princeton · Yao et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">把 CoT 拓展为树结构,允许回溯和分支探索。复杂推理任务的有效升级。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2305.10601" class="project-link">arXiv →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="papers-react">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="badge badge-purple" style="margin-bottom: 10px;">2023 · Reflexion</div>
+            <h3 style="margin-bottom: 8px;">Reflexion: Language Agents with Verbal Reinforcement Learning</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Northeastern · Shinn et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">让 Agent 通过"反思失败"来自我改进。是 Self-Refine、Reflexion 模式的开山之作。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2303.11381" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-cyan" style="margin-bottom: 10px;">2024 · OpenAI o1</div>
+            <h3 style="margin-bottom: 8px;">OpenAI o1 System Card / Learning to Reason with LLMs</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">OpenAI</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">推理时计算的革命。揭示了更多思考 token = 更好表现,为 Agent 提供了更强的"大脑"。</p>
+            <div style="margin-top: 14px;"><a href="https://openai.com/index/learning-to-reason-with-llms/" class="project-link">原文 →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-green" style="margin-bottom: 10px;">2024 · Auto-CoT</div>
+            <h3 style="margin-bottom: 8px;">Automatic Chain of Thought Prompting in Large Language Models</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Zhang et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">自动生成高质量 CoT 示例。让 prompt 工程自动化。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2210.02843" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-pink" style="margin-bottom: 10px;">2023 · ReAct 进阶</div>
+            <h3 style="margin-bottom: 8px;">ReAct Meets ActRe: Autonomous Annotations of Robotic Navigations</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem;">把 ReAct 模式应用到真实物理世界。Agent 不只在数字世界,可以操作机器人。</p>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-amber" style="margin-bottom: 10px;">2024 · ReST + Agent</div>
+            <h3 style="margin-bottom: 8px;">Self-Taught Reasoner (STaR) 及其系列</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem;">让 Agent 通过自我生成的推理数据持续改进。是 Agent 元学习的基础工作之一。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="papers-memory">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="badge badge-cyan" style="margin-bottom: 10px;">2023 · MemGPT</div>
+            <h3 style="margin-bottom: 8px;">MemGPT: Towards LLMs as Operating Systems</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">UC Berkeley · Packer et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">把 Agent 当作操作系统,内存分层。突破上下文窗口的革命性记忆方案。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2310.08560" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-purple" style="margin-bottom: 10px;">2024 · GraphRAG</div>
+            <h3 style="margin-bottom: 8px;">From Local to Global: A Graph RAG Approach</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Microsoft Research</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">把知识图谱与 RAG 结合,处理全局性问题。把"点检索"升级为"关系检索"。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2404.16130" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-green" style="margin-bottom: 10px;">2023 · Self-RAG</div>
+            <h3 style="margin-bottom: 8px;">Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem;">让 Agent 决定何时需要检索、是否需要重写查询、是否需要拒答。RAG 的智能化升级。</p>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-pink" style="margin-bottom: 10px;">2024 · CRAG</div>
+            <h3 style="margin-bottom: 8px;">Corrective RAG (CRAG)</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem;">带纠错机制的 RAG 系统。检索结果不准确时,自动触发 web 搜索补充。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="papers-multi">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="badge badge-green" style="margin-bottom: 10px;">2023 · AutoGen</div>
+            <h3 style="margin-bottom: 8px;">AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Microsoft · Wu et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">多 Agent 对话协作的开创性框架。展示了群聊、终止、人工参与的完整设计。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2308.08155" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-purple" style="margin-bottom: 10px;">2023 · MetaGPT</div>
+            <h3 style="margin-bottom: 8px;">MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Hong et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">把多 Agent 抽象为软件公司:产品经理、架构师、工程师、QA。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2308.00352" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-pink" style="margin-bottom: 10px;">2024 · CAMEL</div>
+            <h3 style="margin-bottom: 8px;">CAMEL: Communicative Agents for "Mind" Exploration of LLMs</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem;">角色扮演式多 Agent 协作。展示通过 Inception Prompting 让 Agent 高质量完成复杂任务。</p>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-cyan" style="margin-bottom: 10px;">2024 · Society of Mind</div>
+            <h3 style="margin-bottom: 8px;">Multi-Agent Collaboration Mechanisms: A Survey of LLMs</h3>
+            <p style="color: var-text-2); font-size: 0.92rem; margin-bottom: 12px;">Han et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">多 Agent 协作机制的综述论文。适合综述当前 SOTA 的人。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="papers-eval">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="badge badge-amber" style="margin-bottom: 10px;">2023 · AgentBench</div>
+            <h3 style="margin-bottom: 8px;">AgentBench: Evaluating LLMs as Agents</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 12px;">Tsinghua · Liu et al.</p>
+            <p style="color: var(--text-2); font-size: 0.92rem;">最权威的 Agent 通用评估基准。多场景、多任务的全面评测。</p>
+            <div style="margin-top: 14px;"><a href="https://arxiv.org/abs/2310.02928" class="project-link">arXiv →</a></div>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-green" style="margin-bottom: 10px;">2024 · SWE-bench</div>
+            <h3 style="margin-bottom: 8px;">SWE-bench: Can Language Models Resolve Real-World GitHub Issues?</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem;">评估代码 Agent 的事实标准。基于真实 GitHub issue,极具挑战性。</p>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-purple" style="margin-bottom: 10px;">2024 · RAGAS</div>
+            <h3 style="margin-bottom: 8px;">RAGAS: Automated Evaluation of Retrieval Augmented Generation</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem;">RAG 评估的事实标准。无需 ground truth 即可评估。</p>
+          </div>
+
+          <div class="card">
+            <div class="badge badge-cyan" style="margin-bottom: 10px;">2024 · LLM-as-Judge</div>
+            <h3 style="margin-bottom: 8px;">Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem;">用 LLM 评估 LLM 的方法论研究。奠定了 LLM Eval 的核心思路。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 课程与书籍 -->
+<section class="section" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);" id="courses">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">课程与书目</span>
+      <h2 class="section-title">系统化<span class="hl-2">学习资源</span></h2>
+      <p class="section-subtitle">短期突破找短课,长期沉淀看书。</p>
+    </div>
+
+    <div class="grid grid-3">
+      <a href="https://www.deeplearning.ai/short-courses/" target="_blank" class="card" style="cursor: pointer;">
+        <div style="font-size: 2.2rem; margin-bottom: 14px;">🎓</div>
+        <h3 style="margin-bottom: 8px;">DeepLearning.AI 短课</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem; margin-bottom: 14px;">Andrew Ng 团队出品。LangChain、Function Calling、Agent 等系列短课,每节 1-2 小时。</p>
+        <span class="badge badge-cyan">免费 · 短时</span>
+      </a>
+
+      <a href="https://www.coursera.org/specializations/generative-ai-with-llms" target="_blank" class="card" style="cursor: pointer;">
+        <div style="font-size: 2.2rem; margin-bottom: 14px;">📘</div>
+        <h3 style="margin-bottom: 8px;">Generative AI with LLMs</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem; margin-bottom: 14px;">DeepLearning.AI + AWS 联合出品。3 周课程,系统覆盖 LLM 与 Agent 基础。</p>
+        <span class="badge badge-purple">系统课</span>
+      </a>
+
+      <a href="https://huggingface.co/learn" target="_blank" class="card" style="cursor: pointer;">
+        <div style="font-size: 2.2rem; margin-bottom: 14px;">🤗</div>
+        <h3 style="margin-bottom: 8px;">Hugging Face Learn</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem; margin-bottom: 14px;">免费 NLP/Agent 课程。从 Transformer 基础到 Smolagents 实战。</p>
+        <span class="badge badge-green">免费</span>
+      </a>
+
+      <a href="https://www.udemy.com/courses/search/?q=langchain" target="_blank" class="card" style="cursor: pointer;">
+        <div style="font-size: 2.2rem; margin-bottom: 14px;">🎬</div>
+        <h3 style="margin-bottom: 8px;">Udemy 实战课</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem; margin-bottom: 14px;">多种 LangChain/LlamaIndex 实战课程。Udemy 打折时性价比高。</p>
+        <span class="badge badge-amber">实战</span>
+      </a>
+
+      <a href="https://www.anthropic.com/learn" target="_blank" class="card" style="cursor: pointer;">
+        <div style="font-size: 2.2rem; margin-bottom: 14px;">🧠</div>
+        <h3 style="margin-bottom: 8px;">Anthropic Academy</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem; margin-bottom: 14px;">Anthropic 官方 Prompt Engineering、Computer Use、Tool Use 系列课。</p>
+        <span class="badge badge-pink">官方</span>
+      </a>
+
+      <a href="https://platform.openai.com/docs" target="_blank" class="card" style="cursor: pointer;">
+        <div style="font-size: 2.2rem; margin-bottom: 14px;">⚡</div>
+        <h3 style="margin-bottom: 8px;">OpenAI Cookbook</h3>
+        <p style="color: var(--text-3); font-size: 0.88rem; margin-bottom: 14px;">官方示例库。Function Calling、Structured Output、Embeddings 等核心代码示例。</p>
+        <span class="badge badge-cyan">代码示例</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 推荐书目 -->
+<section class="section" id="books">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">推荐书目</span>
+      <h2 class="section-title">值得<span class="hl-3">反复研读</span>的书</h2>
+      <p class="section-subtitle">不是书越多越好。这些书对我们设计 Agent Academy 产生了深远影响。</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="resource-card">
+        <div class="resource-thumb">📕</div>
+        <div class="resource-body">
+          <h4>Designing Data-Intensive Applications</h4>
+          <p style="font-size: 0.92rem; color: var(--text-2); margin-bottom: 12px;">Martin Kleppmann · 经典的数据系统设计圣经。任何大规模 Agent 系统都受益于这本书。</p>
+          <div class="meta">📚 工程基础 · O&apos;Reilly</div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-thumb">📗</div>
+        <div class="resource-body">
+          <h4>AI Agents in Action</h4>
+          <p>Michael Lanham · Manning 2025 · 专门讲 AI Agent 设计的实战书。</p>
+          <div class="meta">📚 Agent 实战 · Manning</div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-thumb">📘</div>
+        <div class="resource-body">
+          <h4>Prompt Engineering for LLMs</h4>
+          <p>John Berryman 等 · 深入浅出讲清楚 Prompt Engineering 的全部核心。</p>
+          <div class="meta">📚 Prompt · O&apos;Reilly</div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-thumb">📙</div>
+        <div class="resource-body">
+          <h4>Building LLM Applications</h4>
+          <p>Various · O&apos;Reilly 系列短书,覆盖 RAG、Agent、Embeddings 等专题。</p>
+          <div class="meta">📚 LLM 工程 · O&apos;Reilly</div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-thumb">📓</div>
+        <div class="resource-body">
+          <h4>Clean Architecture</h4>
+          <p>Robert C. Martin · Agent 系统的工程实践必读。分层架构、依赖倒置。</p>
+          <div class="meta">📚 软件工程 · Prentice Hall</div>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-thumb">📔</div>
+        <div class="resource-body">
+          <h4>Patterns of Application Architecture</h4>
+          <p>Martin Fowler 等 · 软件架构模式全集。设计大型 Agent 系统的参考。</p>
+          <div class="meta">📚 架构 · Addison-Wesley</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 社区交流 -->
+<section class="section" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);" id="community">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">社区交流</span>
+      <h2 class="section-title">找到你的<span class="hl">学习同伴</span></h2>
+      <p class="section-subtitle">独自学习很容易放弃。加入社区让成长加速。</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">💬 LangChain Discord</h3>
+        <p style="color: var(--text-2); font-size: 0.88rem;">最活跃的英文 Agent 开发者社区。创始人 Harrison Chase 常驻。</p>
+        <div style="margin-top: 12px;"><a href="https://discord.gg/langchain" class="project-link">加入 →</a></div>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">🐦 Twitter/X AI 圈</h3>
+        <p style="color: var(--text-2); font-size: 0.88rem;">关注 @hwchase17, @yann_lecun, @karpathy 等顶级实践者。</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">🇨🇳 国内社区</h3>
+        <p style="color: var(--text-2); font-size: 0.88rem;">即刻、知乎、掘金的 AI Agent 话题区。WeChat Reading 的相关学术号。</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">📺 YouTube 频道</h3>
+        <p style="color: var(--text-2); font-size: 0.88rem;">Sam Witteveen, James Briggs, Dave Ebbelaar 等频道持续更新高质量 Agent 实战。</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">📮 r/LocalLLaMA</h3>
+        <p style="color: var(--text-2); font-size: 0.88rem;">Reddit 的本地 LLM 与 Agent 子社区。开源、本地化 Agent 趋势首发地。</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">🏗 OpenAI Developer Forum</h3>
+        <p style="color: var(--text-2); font-size: 0.88rem;">OpenAI 官方论坛。Function Calling、Assistants API 等核心能力的问题都能找到答案。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter 与持续追踪 -->
+<section class="section" id="newsletter">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Newsletter</span>
+      <h2 class="section-title">每周跟着<span class="hl-3">前沿动态</span></h2>
+      <p class="section-subtitle">领域变化太快,订阅高质量 Newsletter 是最有效的跟进方式。</p>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">📰 Import AI</h3>
+        <p style="color: var(--text-2); font-size: 0.88rem;">Jack Clark · 每周精选 AI 领域最重要的事件与论文。</p>
+        <div class="tag-cloud" style="margin-top: 12px;">
+          <span class="tag">周更</span>
+          <span class="tag">深度</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">📰 TLDR AI</h3>
+        <p style="color: var(--text-2); font-size: 0.88rem;">5 分钟读懂本周 AI 重大新闻。极简风格。</p>
+        <div class="tag-cloud" style="margin-top: 12px;">
+          <span class="tag">日更</span>
+          <span class="tag">简明</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">📰 LangChain Newsletter</h3>
+        <p style="color: var(--text-2); font-size: 0.88rem;">LangChain 团队的官方更新,新功能发布、用户案例分享。</p>
+        <div class="tag-cloud" style="margin-top: 12px;">
+          <span class="tag">月更</span>
+          <span class="tag">官方</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">📰 AlphaSignal</h3>
+        <p style="color: var(--text-2); font-size: 0.88rem;">深度解读最新 AI 论文和开源项目。Agent 占比越来越多。</p>
+        <div class="tag-cloud" style="margin-top: 12px;">
+          <span class="tag">周更</span>
+          <span class="tag">论文</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">📰 The Rundown AI</h3>
+        <p style="color: var(--text-2); font-size: 0.88rem;">综合性 AI 日报,从新闻到工具到 prompt 模板都覆盖。</p>
+        <div class="tag-cloud" style="margin-top: 12px;">
+          <span class="tag">日更</span>
+          <span class="tag">综合</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom: 8px;">📰 Ahead of AI</h3>
+        <p style="color: var(--text-2); font-size: 0.88rem;">Sebastian Raschka · 学术视角的深度解读。</p>
+        <div class="tag-cloud" style="margin-top: 12px;">
+          <span class="tag">月更</span>
+          <span class="tag">学术</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 学习追踪建议 -->
+<section class="section">
+  <div class="container container-sm">
+    <div class="section-head">
+      <span class="eyebrow">学习节奏</span>
+      <h2 class="section-title">如何<span class="hl">持续跟进</span>前沿</h2>
+      <p class="section-subtitle">Agent 领域每周都有新东西。一套可持续的跟踪节奏比突击学习更重要。</p>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-bottom: 18px;">📅 推荐的每周学习节奏</h3>
+      <ul class="checklist">
+        <li>
+          <div class="checklist-icon">M</div>
+          <div>
+            <div class="item-title">周一：扫一遍上周 AI 重大新闻 (TLDR AI, 15 min)</div>
+            <div class="item-desc">保持对"发生了什么"的基本感知,知道业界在讨论什么。</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">W</div>
+          <div>
+            <div class="item-title">周三：精读一篇值得深入的论文 / 文档 (45 min)</div>
+            <div class="item-desc">优先与你当前正在做的项目相关的。写下自己的理解和疑问。</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">F</div>
+          <div>
+            <div class="item-title">周五：动手实验 1 小时</div>
+            <div class="item-desc">把本周学到的一个新东西,动手用在自己的项目里。</div>
+          </div>
+        </li>
+        <li>
+          <div class="checklist-icon">S</div>
+          <div>
+            <div class="item-title">周末：复盘本周 + 设计下周小目标 (30 min)</div>
+            <div class="item-desc">知道自己在什么位置、要去哪里。比埋头学习更重要。</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>资源足够多了，<span class="hl">关键是行动</span></h2>
+      <p>选择一条路径、分配时间、开始动手。这是 Agent 学习的唯一门槛。</p>
+      <a href="path.html" class="btn btn-primary btn-lg">回到学习路径 →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 18px;">
+          <span class="logo-mark">A</span><span>Agent Academy</span>
+        </div>
+        <p style="color: var(--text-2); font-size: 0.92rem; line-height: 1.7; max-width: 360px;">
+          一份完整、可执行、与时代同步的 AI Agent 学习蓝图。
+        </p>
+      </div>
+      <div><h5>学习路径</h5><ul>
+        <li><a href="knowledge.html">知识体系</a></li>
+        <li><a href="path.html">五阶段路径</a></li>
+        <li><a href="workshop.html">实战工坊</a></li>
+        <li><a href="blueprint.html">项目蓝图</a></li>
+      </ul></div>
+      <div><h5>资源</h5><ul>
+        <li><a href="projects.html">开源项目</a></li>
+        <li><a href="resources.html">论文与课程</a></li>
+        <li><a href="resources.html#books">推荐书目</a></li>
+        <li><a href="resources.html#community">社区</a></li>
+      </ul></div>
+      <div><h5>关于</h5><ul>
+        <li><a href="#">理念与方法</a></li>
+        <li><a href="#">贡献指南</a></li>
+        <li><a href="#">更新日志</a></li>
+        <li><a href="#">联系反馈</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Agent Academy</span>
+      <span>用 💜 为下一代构建者打造</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

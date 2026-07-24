@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent 蓝图 · Agent Academy</title>
+<meta name="description" content="完整大型 Agent 项目的架构蓝图：模块设计、代码骨架、部署方案。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/components.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='18' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span><span>Agent Academy</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">首页</a>
+      <a href="knowledge.html" class="nav-link">知识体系</a>
+      <a href="path.html" class="nav-link">学习路径</a>
+      <a href="projects.html" class="nav-link">开源项目</a>
+      <a href="workshop.html" class="nav-link">实战工坊</a>
+      <a href="blueprint.html" class="nav-link">Agent 蓝图</a>
+      <a href="resources.html" class="nav-link">资源中心</a>
+      <a href="path.html#get-started" class="nav-cta">开始学习 →</a>
+    </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow"><span class="pulse-dot"></span><span>Phase 5 · 最终交付目标</span></div>
+    <h1>大型 Agent <span class="hl">项目蓝图</span></h1>
+    <p class="hero-subtitle">
+      完整的大型 Agent 系统应该长什么样？这里提供一套经过验证的架构蓝图、模块设计、代码骨架和工程实践。
+      复制它、改造它、超越它。
+    </p>
+  </div>
+</section>
+
+<!-- 总览架构 -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">总览架构</span>
+      <h2 class="section-title">一个完整的 Agent 系统<br><span class="hl">由这些层次构成</span></h2>
+      <p class="section-subtitle">从用户体验层到基础设施，每一层都有清晰的职责和接口。</p>
+    </div>
+
+    <div class="architecture-showcase">
+      <h3>五层架构：从用户到基础设施</h3>
+      <p class="description">分层架构让关注点分离，每一层可以被独立测试、独立替换、独立扩展。</p>
+
+      <pre class="mermaid">
+graph TB
+  subgraph UX["🎨 第一层 · 用户体验层"]
+    UI1[Web UI]
+    UI2[CLI]
+    UI3[API 端点]
+  end
+
+  subgraph ORCH["⚙️ 第二层 · 编排层"]
+    O1[LangGraph 状态机]
+    O2[Planner / Executor]
+    O3[工作流引擎]
+  end
+
+  subgraph AGENT["🤖 第三层 · Agent 层"]
+    A1[Master Agent]
+    A2[Sub-Agent A]
+    A3[Sub-Agent B]
+    A4[Specialist Agent]
+  end
+
+  subgraph TOOLS["🔧 第四层 · 工具与记忆层"]
+    T1[工具注册中心]
+    T2[工具实现<br>SearchAPI / Database / Code]
+    M1[短期记忆]
+    M2[长期记忆<br>VectorDB + KG]
+  end
+
+  subgraph INFRA["🏗️ 第五层 · 基础设施层"]
+    I1[LLM Provider<br>OpenAI / Anthropic / 本地]
+    I2[Observability<br>LangFuse / LangSmith]
+    I3[Storage<br>Postgres + Redis]
+    I4[Eval Pipeline]
+  end
+
+  UX --> ORCH
+  ORCH --> AGENT
+  AGENT --> TOOLS
+  TOOLS --> INFRA
+
+  classDef ux fill:#7c5cff,stroke:#00d4ff,color:#fff,stroke-width:2px;
+  classDef orch fill:#00d4ff,stroke:#00ffa3,color:#000,stroke-width:2px;
+  classDef agent fill:#00ffa3,stroke:#7c5cff,color:#000,stroke-width:2px;
+  classDef tools fill:#ff6ec7,stroke:#ffb84d,color:#fff,stroke-width:2px;
+  classDef infra fill:#ffb84d,stroke:#ff5e7a,color:#000,stroke-width:2px;
+
+  class UX,UI1,UI2,UI3 ux;
+  class ORCH,O1,O2,O3 orch;
+  class AGENT,A1,A2,A3,A4 agent;
+  class TOOLS,T1,T2,M1,M2 tools;
+  class INFRA,I1,I2,I3,I4 infra;
+      </pre>
+    </div>
+  </div>
+</section>
+
+<!-- 分层详解 -->
+<section class="section" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">分层详解</span>
+      <h2 class="section-title">每一层<span class="hl-2">的核心职责</span></h2>
+      <p class="section-subtitle">详细分解每一层应该包含什么模块、提供什么接口、解决什么问题。</p>
+    </div>
+
+    <div data-tab-group>
+      <div class="tabs">
+        <div class="tab active" data-tab="layer1">🎨 用户层</div>
+        <div class="tab" data-tab="layer2">⚙️ 编排层</div>
+        <div class="tab" data-tab="layer3">🤖 Agent 层</div>
+        <div class="tab" data-tab="layer4">🔧 工具层</div>
+        <div class="tab" data-tab="layer5">🏗️ 基础设施</div>
+      </div>
+
+      <!-- 第一层 -->
+      <div class="tab-panel active" id="layer1">
+        <div class="grid grid-2" style="gap: 20px;">
+          <div class="card">
+            <h3>Web UI（推荐 Gradio / Streamlit）</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem;">快速搭建可视化聊天界面。展示 Agent 的思考过程、工具调用、token 用量。</p>
+            <div class="code-block" style="margin-top: 14px;">
+              <div class="code-header">
+                <div class="code-dots"><span></span><span></span><span></span></div>
+                <span>app.py (Gradio)</span>
+              </div>
+              <pre><code><span class="code-keyword">import</span> gradio <span class="code-keyword">as</span> gr
+
+<span class="code-keyword">def</span> <span class="code-function">chat</span>(message, history):
+    events = []  <span class="code-comment"># 流式输出</span>
+    <span class="code-keyword">for</span> event <span class="code-keyword">in</span> agent.stream({<span class="code-string">"input"</span>: message}):
+        events.append(event)
+    <span class="code-keyword">return</span> format_events(events)
+
+ui = gr.ChatInterface(
+    chat,
+    title=<span class="code-string">"我的 Agent"</span>,
+    examples=[<span class="code-string">"总结这篇文章"</span>, <span class="code-string">"对比价格"</span>]
+).launch()</code></pre>
+            </div>
+          </div>
+          <div class="card">
+            <h3>FastAPI 后端 API</h3>
+            <p style="color: var(--text-2); font-size: 0.92rem;">提供 RESTful/SSE/WebSocket 接口，让其他系统能调用你的 Agent。</p>
+            <div class="code-block" style="margin-top: 14px;">
+              <div class="code-header">
+                <div class="code-dots"><span></span><span></span><span></span></div>
+                <span>api.py</span>
+              </div>
+              <pre><code><span class="code-keyword">from</span> fastapi <span class="code-keyword">import</span> FastAPI
+<span class="code-keyword">from</span> fastapi.responses <span class="code-keyword">import</span> StreamingResponse
+
+app = FastAPI()
+
+<span class="code-string">@app.post("/agent/invoke")</span>
+<span class="code-keyword">async def</span> <span class="code-function">invoke</span>(request: AgentRequest):
+    result = <span class="code-keyword">await</span> agent.ainvoke(request.dict())
+    <span class="code-keyword">return</span> result
+
+<span class="code-string">@app.post("/agent/stream")</span>
+<span class="code-keyword">async def</span> <span class="code-function">stream</span>(request: AgentRequest):
+    <span class="code-keyword">return</span> StreamingResponse(
+        agent.astream(request.dict()),
+        media_type=<span class="code-string">"text/event-stream"</span>
+    )</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第二层 -->
+      <div class="tab-panel" id="layer2">
+        <div class="card">
+          <h3>LangGraph 状态机</h3>
+          <p style="color: var(--text-2); margin-bottom: 14px;">用 LangGraph 把整个 Agent 系统抽象为有向图。每一个节点是一个动作，边是条件路由。</p>
+
+          <pre class="mermaid">
+stateDiagram-v2
+  [*] --> 接收输入: 请求
+  接收输入 --> 解析意图
+  解析意图 --> 路由分发
+  路由分发 --> 单Agent处理: 简单任务
+  路由分发 --> 多Agent协同: 复杂任务
+  单Agent处理 --> 自评估
+  多Agent协同 --> 自评估
+  自评估 --> 完成: 通过
+  自评估 --> 重规划: 未通过
+  重规划 --> 多Agent协同
+  完成 --> [*]
+          </pre>
+
+          <h4 style="margin: 20px 0 12px;">🎯 关键设计要点</h4>
+          <div class="component-stack">
+            <div class="component">
+              <div class="component-name">State Schema</div>
+              <div class="component-desc">TypedDict 严格定义状态</div>
+            </div>
+            <div class="component">
+              <div class="component-name">Checkpointer</div>
+              <div class="component-desc">支持中断恢复</div>
+            </div>
+            <div class="component">
+              <div class="component-name">Conditional Edges</div>
+              <div class="component-desc">基于状态动态路由</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第三层 -->
+      <div class="tab-panel" id="layer3">
+        <div class="card">
+          <h3>多 Agent 协作架构</h3>
+          <p style="color: var(--text-2); margin-bottom: 14px;">Master + Sub-Agents 模式。一个总控 Agent 负责任务分解和协调，专业子 Agent 处理各自领域。</p>
+
+          <pre class="mermaid">
+graph TD
+  U[用户请求] --> M[👔 Master Agent]
+  M --> P[📋 Plan]
+  P --> S[📡 Task Dispatcher]
+  S --> A1[🔍 Research Agent]
+  S --> A2[💻 Code Agent]
+  S --> A3[📊 Data Agent]
+  S --> A4[✍️ Writing Agent]
+  A1 --> R[🧐 Reviewer]
+  A2 --> R
+  A3 --> R
+  A4 --> R
+  R -->|"Pass"| F[🏁 Finalize]
+  R -->|"Fail"| M
+  F --> Resp[最终响应]
+
+  classDef master fill:#7c5cff,stroke:#fff,color:#fff,stroke-width:3px;
+  classDef agent fill:#00d4ff,stroke:#7c5cff,color:#000;
+  classDef reviewer fill:#ff6ec7,stroke:#7c5cff,color:#fff;
+  classDef flow fill:#00ffa3,stroke:#7c5cff,color:#000;
+
+  class M master;
+  class A1,A2,A3,A4,P,S agent;
+  class R reviewer;
+  class U,F,Resp flow;
+          </pre>
+        </div>
+
+        <div class="grid grid-2" style="gap: 20px; margin-top: 20px;">
+          <div class="card">
+            <h4>Master Agent 设计</h4>
+            <ul style="list-style: none; padding: 0; font-size: 0.9rem; color: var(--text-2);">
+              <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">✓ 接收用户原始请求</li>
+              <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">✓ 分解为子任务 DAG</li>
+              <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">✓ 选择合适的 Sub-Agent</li>
+              <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">✓ 综合多 Agent 结果</li>
+              <li style="padding: 8px 0;">✓ 进行最终质量检查</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Sub-Agent 设计原则</h4>
+            <ul style="list-style: none; padding: 0; font-size: 0.9rem; color: var(--text-2);">
+              <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">✓ 单一职责 (Single Responsibility)</li>
+              <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">✓ 独立的工具集</li>
+              <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">✓ 独立的 prompt / 系统提示</li>
+              <li style="padding: 8px 0; border-bottom: 1px solid var(--border);">✓ 可独立测试的接口</li>
+              <li style="padding: 8px 0;">✓ 可被复用、可被替换</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第四层 -->
+      <div class="tab-panel" id="layer4">
+        <div class="grid grid-2" style="gap: 20px;">
+          <div class="card">
+            <h3>工具注册与执行</h3>
+            <p style="color: var(--text-2); margin-bottom: 14px;">所有工具通过统一注册中心管理。每个工具有名称、描述、参数 schema、执行函数、异常处理。</p>
+            <div class="code-block">
+              <div class="code-header">
+                <div class="code-dots"><span></span><span></span><span></span></div>
+                <span>tools/registry.py</span>
+              </div>
+              <pre><code><span class="code-keyword">from</span> typing <span class="code-keyword">import</span> Callable
+<span class="code-keyword">import</span> inspect
+
+<span class="code-keyword">class</span> <span class="code-function">ToolRegistry</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):
+        self._tools: dict = {}
+
+    <span class="code-keyword">def</span> <span class="code-function">register</span>(self, name=<span class="code-keyword">None</span>):
+        <span class="code-keyword">def</span> <span class="code-function">decorator</span>(fn: Callable):
+            tool_name = name <span class="code-keyword">or</span> fn.__name__
+            self._tools[tool_name] = {
+                <span class="code-string">"name"</span>: tool_name,
+                <span class="code-string">"description"</span>: inspect.getdoc(fn),
+                <span class="code-string">"parameters"</span>: extract_schema(fn),
+                <span class="code-string">"function"</span>: fn
+            }
+            <span class="code-keyword">return</span> fn
+        <span class="code-keyword">return</span> decorator
+
+    <span class="code-keyword">def</span> <span class="code-function">to_openai_tools</span>(self):
+        <span class="code-keyword">return</span> [self._format_openai(t) <span class="code-keyword">for</span> t <span class="code-keyword">in</span> self._tools.values()]
+
+registry = ToolRegistry()
+
+<span class="code-string">@registry.register(name="search_github")</span>
+<span class="code-keyword">def</span> <span class="code-function">search_github</span>(query: str, max_results: int = <span class="code-string">5</span>) -> list:
+    <span class="code-string">"""在 GitHub 上搜索代码仓库。
+
+    Args:
+        query: 搜索关键词
+        max_results: 返回结果数, 默认 5
+    """</span>
+    response = requests.get(<span class="code-string">f"https://api.github.com/search/repositories?q={query}"</span>)
+    <span class="code-keyword">return</span> parse_repos(response.json(), max_results)</code></pre>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>记忆系统设计</h3>
+            <p style="color: var(--text-2); margin-bottom: 14px;">短期记忆存对话上下文,长期记忆用向量数据库 + 知识图谱。两者结合让 Agent 拥有"持续进化"的能力。</p>
+            <div class="component-stack">
+              <div class="component">
+                <div class="component-name">⚡ 短期记忆</div>
+                <div class="component-desc">Redis / 内存</div>
+              </div>
+              <div class="component">
+                <div class="component-name">🧠 语义记忆</div>
+                <div class="component-desc">ChromaDB / Qdrant</div>
+              </div>
+              <div class="component">
+                <div class="component-name">🕸 知识图谱</div>
+                <div class="component-desc">Neo4j / MemGraph</div>
+              </div>
+            </div>
+            <div class="code-block" style="margin-top: 14px;">
+              <div class="code-header">
+                <div class="code-dots"><span></span><span></span><span></span></div>
+                <span>memory.py</span>
+              </div>
+              <pre><code><span class="code-keyword">from</span> langchain.memory <span class="code-keyword">import</span> (
+    ConversationSummaryBufferMemory,
+    VectorStoreRetrieverMemory
+)
+
+<span class="code-keyword">class</span> <span class="code-function">HybridMemory</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self, llm, vector_store):
+        self.short_term = ConversationSummaryBufferMemory(
+            llm=llm, max_token_limit=<span class="code-string">2000</span>
+        )
+        self.long_term = VectorStoreRetrieverMemory(
+            retriever=vector_store.as_retriever(k=<span class="code-string">5</span>)
+        )</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第五层 -->
+      <div class="tab-panel" id="layer5">
+        <div class="grid grid-3">
+          <div class="card">
+            <h3 style="margin-bottom: 8px;">🔌 LLM Provider 抽象</h3>
+            <p style="color: var(--text-2); font-size: 0.9rem;">不绑定单一供应商。可插拔的 OpenAI/Anthropic/Google/本地模型。</p>
+            <div class="tag-cloud">
+              <span class="tag">OpenAI</span>
+              <span class="tag">Anthropic</span>
+              <span class="tag">Google</span>
+              <span class="tag">Ollama</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3 style="margin-bottom: 8px;">📊 可观测性</h3>
+            <p style="color: var(--text-2); font-size: 0.9rem;">完整 trace、token 监控、错误追踪。用户反馈闭环。</p>
+            <div class="tag-cloud">
+              <span class="tag">LangFuse</span>
+              <span class="tag">LangSmith</span>
+              <span class="tag">Phoenix</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3 style="margin-bottom: 8px;">💾 存储</h3>
+            <p style="color: var(--text-2); font-size: 0.9rem;">关系数据、向量数据、会话状态、缓存分层存储。</p>
+            <div class="tag-cloud">
+              <span class="tag">Postgres</span>
+              <span class="tag">Redis</span>
+              <span class="tag">S3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 项目骨架 -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">代码骨架</span>
+      <h2 class="section-title">一个完整 Agent 项目的<span class="hl-2">目录结构</span></h2>
+      <p class="section-subtitle">把上面五层架构落地为代码组织。清晰、可维护、可扩展。</p>
+    </div>
+
+    <div class="grid grid-2" style="gap: 24px;">
+      <div>
+        <h3 style="margin-bottom: 14px;">📂 项目结构</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span>Project Layout</span>
+          </div>
+          <pre><code>my_agent/
+├── 📁 src/
+│   ├── 📁 agents/
+│   │   ├── base.py              # Agent 抽象基类
+│   │   ├── master.py            # 主 Agent
+│   │   ├── researcher.py        # 子 Agent
+│   │   └── reviewer.py          # 评审 Agent
+│   ├── 📁 orchestration/
+│   │   ├── graph.py             # LangGraph 定义
+│   │   ├── state.py             # 状态 Schema
+│   │   └── router.py            # 路由逻辑
+│   ├── 📁 tools/
+│   │   ├── registry.py          # 工具注册中心
+│   │   ├── search.py            # 搜索工具
+│   │   ├── database.py          # 数据库工具
+│   │   └── code_exec.py         # 代码执行
+│   ├── 📁 memory/
+│   │   ├── short_term.py
+│   │   ├── long_term.py
+│   │   └── hybrid.py
+│   ├── 📁 prompts/
+│   │   ├── master.yaml
+│   │   ├── researcher.yaml
+│   │   └── reviewer.yaml
+│   ├── 📁 llm/
+│   │   ├── providers.py
+│   │   └── config.py
+│   └── 📁 observability/
+│       ├── tracing.py
+│       └── metrics.py
+├── 📁 tests/
+│   ├── unit/
+│   ├── integration/
+│   └── eval/
+├── 📁 configs/
+│   ├── dev.yaml
+│   └── prod.yaml
+├── 📁 data/
+├── 📁 notebooks/                # 探索性实验
+├── 📄 main.py                   # CLI 入口
+├── 📄 api.py                    # FastAPI 服务
+├── 📄 Dockerfile
+├── 📄 pyproject.toml
+└── 📄 README.md</code></pre>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom: 14px;">📦 pyproject.toml 核心依赖</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span>pyproject.toml</span>
+          </div>
+          <pre><code>[project]
+name = <span class="code-string">"my-agent"</span>
+version = <span class="code-string">"0.1.0"</span>
+requires-python = <span class="code-string">">=3.11"</span>
+
+dependencies = [
+    <span class="code-string">"langchain>=0.3"</span>,
+    <span class="code-string">"langgraph>=0.2"</span>,
+    <span class="code-string">"langchain-openai>=0.2"</span>,
+    <span class="code-string">"langchain-anthropic>=0.2"</span>,
+
+    <span class="code-string">"llama-index>=0.12"</span>,
+
+    <span class="code-string">"chromadb>=0.5"</span>,
+
+    <span class="code-string">"tiktoken"</span>,
+    <span class="code-string">"tenacity"</span>,       <span class="code-comment"># 重试</span>
+
+    <span class="code-string">"langfuse>=2.0"</span>,  <span class="code-comment"># 可观测性</span>
+
+    <span class="code-string">"pydantic>=2.7"</span>,  <span class="code-comment"># 数据验证</span>
+    <span class="code-string">"pydantic-settings>=2.3"</span>,
+
+    <span class="code-string">"fastapi>=0.115"</span>,
+    <span class="code-string">"uvicorn>=0.32"</span>,
+
+    <span class="code-string">"structlog>=24.4"</span>,
+    <span class="code-string">"rich>=13.9"</span>,
+
+    <span class="code-string">"redis>=5.0"</span>,
+    <span class="code-string">"sqlalchemy>=2.0"</span>,
+]
+
+[project.optional-dependencies]
+dev = [
+    <span class="code-string">"pytest>=8.3"</span>,
+    <span class="code-string">"pytest-asyncio>=0.24"</span>,
+    <span class="code-string">"pytest-cov>=5"</span>,
+    <span class="code-string">"ruff>=0.6"</span>,
+    <span class="code-string">"mypy>=1.11"</span>,
+    <span class="code-string">"ipython>=8.27"</span>,
+    <span class="code-string">"gradio>=5.0"</span>,
+]</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 部署方案 -->
+<section class="section" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">部署方案</span>
+      <h2 class="section-title">让 Agent <span class="hl-3">真正上线</span></h2>
+      <p class="section-subtitle">从单机到云端,有多种部署路径可选。</p>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 style="margin-bottom: 12px;">🖥 本地原型</h3>
+        <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 14px;">
+          最快的反馈循环。适合开发阶段和单用户演示。
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li style="padding: 5px 0;">▸ 直接运行 <code>python main.py</code></li>
+          <li style="padding: 5px 0;">▸ Gradio 启动 localhost:7860</li>
+          <li style="padding: 5px 0;">▸ 适合单用户、单 Agent</li>
+          <li style="padding: 5px 0;">▸ 无需考虑并发</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom: 12px;">🐳 Docker 容器</h3>
+        <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 14px;">
+          一致环境、易于分发。适合团队和小规模生产。
+        </p>
+        <div class="code-block" style="margin-top: 8px;">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span>Dockerfile</span>
+          </div>
+          <pre><code><span class="code-keyword">FROM</span> python:3.11-slim
+
+WORKDIR /app
+COPY pyproject.toml poetry.lock ./
+RUN pip install poetry && \
+    poetry install --no-dev
+COPY src/ ./src/
+COPY main.py api.py ./
+
+<span class="code-keyword">CMD</span> [<span class="code-string">"uvicorn"</span>, <span class="code-string">"api:app"</span>, \
+     <span class="code-string">"--host"</span>, <span class="code-string">"0.0.0.0"</span>, \
+     <span class="code-string">"--port"</span>, <span class="code-string">"8000"</span>]</code></pre>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom: 12px;">☁️ 云端部署</h3>
+        <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 14px;">
+          可扩展、高可用。适合生产环境。
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li style="padding: 6px 0;">▸ <strong>Railway / Fly.io</strong>: 简单部署</li>
+          <li style="padding: 6px 0;">▸ <strong>AWS / GCP</strong>: 完全可控</li>
+          <li style="padding: 6px 0;">▸ <strong>Modal / Replicate</strong>: GPU 推理</li>
+          <li style="padding: 6px 0;">▸ <strong>Vercel + Edge</strong>: 轻量前端</li>
+          <li style="padding: 6px 0;">▸ <strong>Anyscale / Modal</strong>: 弹状伸缩</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 完整项目建议 -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">项目建议</span>
+      <h2 class="section-title">挑选你的<span class="hl">终极项目</span></h2>
+      <p class="section-subtitle">不同基础、不同目标,推荐方向不同。</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card" style="border-color: var(--brand-1);">
+        <span class="badge badge-purple" style="margin-bottom: 12px;">🌱 第一次做大项目</span>
+        <h3 style="margin-bottom: 12px;">个人学习助理</h3>
+        <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 14px;">
+          为自己定制。学习你的偏好、追踪你的进度、推荐适合的资源。MVP 易做,扩展空间大。
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li>✓ 1-3 周可上线</li>
+          <li>✓ 强 RAG + 长期记忆</li>
+          <li>✓ Gradio UI 即够用</li>
+          <li>✓ 可开源展示技术栈</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="badge badge-cyan" style="margin-bottom: 12px;">💼 解决工作痛点</span>
+        <h3 style="margin-bottom: 12px;">团队效率 Agent</h3>
+        <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 14px;">
+          你工作中最浪费时间的一个流程?把它自动化。比如周报生成、客户邮件回复、数据汇总。
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li>✓ 解决真实问题</li>
+          <li>✓ 必带 CLI/API 接口</li>
+          <li>✓ 体现系统设计能力</li>
+          <li>✓ 上线即可见 ROI</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="badge badge-green" style="margin-bottom: 12px;">📚 展示学习深度</span>
+        <h3 style="margin-bottom: 12px;">垂直领域专家</h3>
+        <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 14px;">
+          选一个专业领域(法律、医疗、代码...),把它做到专业级别。深度检索 + 多 Agent 协作。
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li>✓ 体现领域建模能力</li>
+          <li>✓ 可申请专利 / 论文</li>
+          <li>✓ 评估体系容易建立</li>
+          <li>✓ 商业化空间大</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border-color: var(--brand-3);">
+        <span class="badge badge-pink" style="margin-bottom: 12px;">🎓 简历作品集</span>
+        <h3 style="margin-bottom: 12px;">开源框架扩展</h3>
+        <p style="color: var(--text-2); font-size: 0.92rem; margin-bottom: 14px;">
+          给 LangChain/CrewAI 等开源项目贡献一个实在的功能。展示工程能力和社区贡献。
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li>✓ 大幅提升简历</li>
+          <li>✓ 接触大型项目工程实践</li>
+          <li>✓ 认识领域顶级贡献者</li>
+          <li>✓ 可写 GitHub stars 故事</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>准备好了，<span class="hl">开始建项目</span></h2>
+      <p>把蓝图变成代码,把想法变成作品。期间遇到任何问题,资源中心和社区都有答案。</p>
+      <a href="resources.html" class="btn btn-primary btn-lg">查看资源中心 →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 18px;">
+          <span class="logo-mark">A</span><span>Agent Academy</span>
+        </div>
+        <p style="color: var(--text-2); font-size: 0.92rem; line-height: 1.7; max-width: 360px;">
+          一份完整、可执行、与时代同步的 AI Agent 学习蓝图。
+        </p>
+      </div>
+      <div><h5>学习路径</h5><ul>
+        <li><a href="knowledge.html">知识体系</a></li>
+        <li><a href="path.html">五阶段路径</a></li>
+        <li><a href="workshop.html">实战工坊</a></li>
+        <li><a href="blueprint.html">项目蓝图</a></li>
+      </ul></div>
+      <div><h5>资源</h5><ul>
+        <li><a href="projects.html">开源项目</a></li>
+        <li><a href="resources.html">论文与课程</a></li>
+        <li><a href="resources.html#books">推荐书目</a></li>
+        <li><a href="resources.html#community">社区</a></li>
+      </ul></div>
+      <div><h5>关于</h5><ul>
+        <li><a href="#">理念与方法</a></li>
+        <li><a href="#">贡献指南</a></li>
+        <li><a href="#">更新日志</a></li>
+        <li><a href="#">联系反馈</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Agent Academy</span>
+      <span>用 💜 为下一代构建者打造</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>mermaid.initialize({startOnLoad:true, theme:'dark', themeVariables:{primaryColor:'#7c5cff', primaryTextColor:'#fff', primaryBorderColor:'#7c5cff', lineColor:'#00d4ff', secondaryColor:'#11141d', tertiaryColor:'#1f2433', fontFamily:'Inter'}});</script>
+</body>
+</html>

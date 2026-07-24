@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Academy · 系统化学习 AI Agent 的完整旅程</title>
+<meta name="description" content="从认知基础到独立搭建大型 Agent 项目的一站式学习平台。整合 GitHub 顶级开源项目、权威论文、实践教程与完整蓝图。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='18' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ========== 导航栏 ========== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span>
+      <span>Agent Academy</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">首页</a>
+      <a href="knowledge.html" class="nav-link">知识体系</a>
+      <a href="path.html" class="nav-link">学习路径</a>
+      <a href="projects.html" class="nav-link">开源项目</a>
+      <a href="workshop.html" class="nav-link">实战工坊</a>
+      <a href="blueprint.html" class="nav-link">Agent 蓝图</a>
+      <a href="resources.html" class="nav-link">资源中心</a>
+      <a href="path.html#get-started" class="nav-cta">开始学习 →</a>
+    </div>
+    <div class="nav-toggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== Hero 区段 ========== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">
+      <span class="pulse-dot"></span>
+      <span>2025 · 系统化 AI Agent 学习平台 · 持续更新中</span>
+    </div>
+    <h1>
+      从 <span class="hl">认知重塑</span> 到<br>
+      <span class="text-gradient">独立搭建完整大型 Agent 项目</span>
+    </h1>
+    <p class="hero-subtitle">
+      Agent Academy 不是又一个零散教程集合。我们精心设计了一套 <strong style="color:var(--text-0)">完整的五阶段学习周期</strong>，
+      从心智模型、原理理解，到工具掌握、实战淬炼，最终交付一个生产级的 Agent 系统。
+      每一步都有精选的 GitHub 项目、权威论文、动手实验和评估标准。
+    </p>
+    <div class="hero-actions">
+      <a href="path.html" class="btn btn-primary btn-lg">
+        开始学习之旅
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M13 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="blueprint.html" class="btn btn-secondary btn-lg">
+        查看项目蓝图
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">5</span>
+        <span class="hero-stat-label">学习阶段</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">120+</span>
+        <span class="hero-stat-label">精选开源项目</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">40+</span>
+        <span class="hero-stat-label">实战动手实验</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">1</span>
+        <span class="hero-stat-label">完整大型项目交付</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 为什么不同 ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">为什么不一样</span>
+      <h2 class="section-title">不只是教程的<span class="hl">合集</span>，而是一份<span class="hl-2">学习蓝图</span></h2>
+      <p class="section-subtitle">
+        市面上充斥着碎片化的 Agent 教程。我们做了一件事：把它们的内在联系串起来，让学习者沿着一条清晰路径掌握 Agent 的全部要素。
+      </p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🧭</div>
+        <h3>从心智到代码</h3>
+        <p>
+          先建立认知框架（什么是 Agent、为什么需要、LLM 在其中扮演什么角色），再进入代码实现。
+          拒绝"上来就抄代码"的反学习路径。
+        </p>
+      </div>
+      <div class="feature-card icon-2">
+        <div class="feature-icon">🔬</div>
+        <h3>原理深度剖析</h3>
+        <p>
+          每个核心机制都配有论文摘要、原理解释和最小可复现实验。
+          你学到的不只是 "怎么用"，而是 "为什么这样设计"。
+        </p>
+      </div>
+      <div class="feature-card icon-3">
+        <div class="feature-icon">🛠️</div>
+        <h3>完整学习闭环</h3>
+        <p>
+          知识 → 实验 → 评估 → 优化 → 真实项目。五阶段闭环
+          设计，每一阶段的输出都是下一阶段的输入。
+        </p>
+      </div>
+      <div class="feature-card icon-4">
+        <div class="feature-icon icon-4">📦</div>
+        <h3>开源项目地图</h3>
+        <p>
+          120+ 个 GitHub 项目按类别、成熟度、学习曲线分类。
+          从玩具项目到生产框架，每一类都有精选推荐和上手指南。
+        </p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon icon-2">🎯</div>
+        <h3>最终交付目标</h3>
+        <p>
+          学习周期结束后，你将亲手搭建一个完整的、独立的大型 Agent 项目
+          —— 包含规划、记忆、工具、评估、部署的完整系统。
+        </p>
+      </div>
+      <div class="feature-card icon-3">
+        <div class="feature-icon icon-3">🌐</div>
+        <h3>持续更新生态</h3>
+        <p>
+          AI Agent 领域日新月异。我们持续跟踪顶级论文、明星项目和前沿范式，
+          确保内容与最新进展同步。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 五阶段路径预览 ========== -->
+<section class="section" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.03), transparent);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">五阶段学习周期</span>
+      <h2 class="section-title">从<span class="hl">零基础</span>到<span class="hl">独立构建</span></h2>
+      <p class="section-subtitle">
+        一条经过验证的完整路径。每一阶段的输出都可以直接检验，并通过实战项目串联起来。
+      </p>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card anim-on-scroll">
+        <div class="badge badge-purple" style="margin-bottom: 16px;">PHASE 1 · 入门</div>
+        <h3>认知与心智模型</h3>
+        <p style="color: var(--text-2); margin: 12px 0 18px; font-size: 0.94rem;">
+          理解 Agent 的本质、原理与边界。掌握 LLM、提示工程、工具调用等基石概念。
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li style="padding: 6px 0;">✓ LLM 基础与推理原理</li>
+          <li style="padding: 6px 0;">✓ Prompt Engineering 精要</li>
+          <li style="padding: 6px 0;">✓ Agent 范式 (ReAct / Plan-Execute)</li>
+          <li style="padding: 6px 0;">✓ 工具调用与函数调用机制</li>
+        </ul>
+        <div style="margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-4);">
+          ⏱ 预计 1-2 周
+        </div>
+      </div>
+
+      <div class="card anim-on-scroll">
+        <div class="badge badge-cyan" style="margin-bottom: 16px;">PHASE 2 · 核心</div>
+        <h3>技能与工具栈</h3>
+        <p style="color: var(--text-2); margin: 12px 0 18px; font-size: 0.94rem;">
+          掌握主流框架（LangChain、LangGraph、CrewAI、AutoGen），学会有目的地选型。
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li style="padding: 6px 0;">✓ LangChain & LangGraph 实战</li>
+          <li style="padding: 6px 0;">✓ 多 Agent 协作 (CrewAI/AutoGen)</li>
+          <li style="padding: 6px 0;">✓ 向量数据库与 RAG 集成</li>
+          <li style="padding: 6px 0;">✓ 记忆系统与会话管理</li>
+        </ul>
+        <div style="margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-4);">
+          ⏱ 预计 2-3 周
+        </div>
+      </div>
+
+      <div class="card anim-on-scroll">
+        <div class="badge badge-green" style="margin-bottom: 16px;">PHASE 3 · 建造</div>
+        <h3>完整项目搭建</h3>
+        <p style="color: var(--text-2); margin: 12px 0 18px; font-size: 0.94rem;">
+          把所有模块组合起来。从架构设计、模块开发、测试到部署，完整走一遍工程化流程。
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li style="padding: 6px 0;">✓ 需求分析与架构设计</li>
+          <li style="padding: 6px 0;">✓ Agent 核心循环实现</li>
+          <li style="padding: 6px 0;">✓ 工具注册与异常处理</li>
+          <li style="padding: 6px 0;">✓ 可观测性与日志系统</li>
+        </ul>
+        <div style="margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-4);">
+          ⏱ 预计 3-4 周
+        </div>
+      </div>
+
+      <div class="card anim-on-scroll">
+        <div class="badge badge-pink" style="margin-bottom: 16px;">PHASE 4 · 评估</div>
+        <h3>评估与优化</h3>
+        <p style="color: var(--text-2); margin: 12px 0 18px; font-size: 0.94rem;">
+          系统学习 Agent 评估方法论，建立监控体系，掌握提示、推理、控制等多维度优化技巧。
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li style="padding: 6px 0;">✓ 评估数据集与基准</li>
+          <li style="padding: 6px 0;">✓ 性能监控与成本控制</li>
+          <li style="padding: 6px 0;">✓ Prompt 与参数调优</li>
+          <li style="padding: 6px 0;">✓ 错误分析与闭环改进</li>
+        </ul>
+        <div style="margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-4);">
+          ⏱ 预计 2 周
+        </div>
+      </div>
+
+      <div class="card anim-on-scroll">
+        <div class="badge badge-amber" style="margin-bottom: 16px;">PHASE 5 · 交付</div>
+        <h3>独立大型 Agent 项目</h3>
+        <p style="color: var(--text-2); margin: 12px 0 18px; font-size: 0.94rem;">
+          综合运用所学，独立完成一个完整的大型 Agent 项目。开源、部署、上线，写入你的作品集。
+        </p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-3);">
+          <li style="padding: 6px 0;">✓ 从 0 设计架构蓝图</li>
+          <li style="padding: 6px 0;">✓ 模块化代码组织</li>
+          <li style="padding: 6px 0;">✓ 测试、文档、CI/CD</li>
+          <li style="padding: 6px 0;">✓ 部署上线与运维</li>
+        </ul>
+        <div style="margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-4);">
+          ⏱ 预计 4-6 周
+        </div>
+      </div>
+
+      <div class="card anim-on-scroll" style="background: var(--surface-strong); border-color: var(--brand-1);">
+        <div class="badge" style="margin-bottom: 16px; background: var(--grad-1); color: white;">最终目标</div>
+        <h3>交付你的 Agent</h3>
+        <p style="color: var(--text-2); margin: 12px 0 18px; font-size: 0.94rem;">
+          完整的大型 Agent 项目 ——
+          多 Agent 协作 + 工具生态 + 长期记忆 + 自评估 + 部署运维。可以写入简历或上线 SaaS。
+        </p>
+        <a href="blueprint.html" class="btn btn-primary" style="width: 100%; margin-top: 12px;">
+          查看完整蓝图 →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 当前热门项目 ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">GitHub 明星项目</span>
+      <h2 class="section-title">你将<span class="hl">深度研读</span>这些项目</h2>
+      <p class="section-subtitle">
+        我们从数千个 AI Agent 相关项目中精选出最值得投入时间学习的，按类别组织。
+      </p>
+    </div>
+
+    <div class="grid grid-4">
+      <a href="projects.html" class="card" style="cursor: pointer;">
+        <div style="font-size: 2rem; margin-bottom: 14px;">🦜</div>
+        <h4 style="margin-bottom: 8px;">LangChain</h4>
+        <p style="color: var(--text-3); font-size: 0.88rem; margin-bottom: 14px;">行业事实标准框架，94k+ stars</p>
+        <span class="badge badge-purple">框架基石</span>
+      </a>
+      <a href="projects.html" class="card" style="cursor: pointer;">
+        <div style="font-size: 2rem; margin-bottom: 14px;">🐝</div>
+        <h4 style="margin-bottom: 8px;">LangGraph</h4>
+        <p style="color: var(--text-3); font-size: 0.88rem; margin-bottom: 14px;">图结构构建有状态 Agent</p>
+        <span class="badge badge-cyan">状态化编排</span>
+      </a>
+      <a href="projects.html" class="card" style="cursor: pointer;">
+        <div style="font-size: 2rem; margin-bottom: 14px;">👥</div>
+        <h4 style="margin-bottom: 8px;">CrewAI</h4>
+        <p style="color: var(--text-3); font-size: 0.88rem; margin-bottom: 14px;">角色扮演多 Agent 协作</p>
+        <span class="badge badge-green">多 Agent</span>
+      </a>
+      <a href="projects.html" class="card" style="cursor: pointer;">
+        <div style="font-size: 2rem; margin-bottom: 14px;">🤖</div>
+        <h4 style="margin-bottom: 8px;">AutoGen</h4>
+        <p style="color: var(--text-3); font-size: 0.88rem; margin-bottom: 14px;">微软出品，多 Agent 对话框架</p>
+        <span class="badge badge-pink">企业级</span>
+      </a>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="projects.html" class="btn btn-secondary">查看全部 120+ 精选项目 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA Banner ========== -->
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner">
+      <h2 class="hl">学习就开始</h2>
+      <p>无论你是产品经理、开发者，还是想转型的研究者 —— 都能在这里找到一条从认知到实践的清晰路径。</p>
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="path.html" class="btn btn-primary btn-lg">查看完整学习路径</a>
+        <a href="knowledge.html" class="btn btn-secondary btn-lg">先建立认知基础</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 页脚 ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 18px;">
+          <span class="logo-mark">A</span>
+          <span>Agent Academy</span>
+        </div>
+        <p style="color: var(--text-2); font-size: 0.92rem; line-height: 1.7; max-width: 360px;">
+          一份完整、可执行、与时代同步的 AI Agent 学习蓝图。无论起点在哪，终点是交付一个完整的大型 Agent 项目。
+        </p>
+      </div>
+      <div>
+        <h5>学习路径</h5>
+        <ul>
+          <li><a href="knowledge.html">知识体系</a></li>
+          <li><a href="path.html">五阶段路径</a></li>
+          <li><a href="workshop.html">实战工坊</a></li>
+          <li><a href="blueprint.html">项目蓝图</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>资源</h5>
+        <ul>
+          <li><a href="projects.html">开源项目</a></li>
+          <li><a href="resources.html">论文与课程</a></li>
+          <li><a href="resources.html#books">推荐书目</a></li>
+          <li><a href="resources.html#community">社区</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>关于</h5>
+        <ul>
+          <li><a href="#">理念与方法</a></li>
+          <li><a href="#">贡献指南</a></li>
+          <li><a href="#">更新日志</a></li>
+          <li><a href="#">联系反馈</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Agent Academy · 与 AI Agent 共同进化</span>
+      <span>用 💜 为下一代构建者打造</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

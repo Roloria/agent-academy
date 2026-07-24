@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>开源项目库 · Agent Academy</title>
+<meta name="description" content="精选 120+ AI Agent 顶级 GitHub 开源项目，按类别和成熟度分类。每个项目都有官方链接、核心解读和学习路径建议。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='18' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span><span>Agent Academy</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">首页</a>
+      <a href="knowledge.html" class="nav-link">知识体系</a>
+      <a href="path.html" class="nav-link">学习路径</a>
+      <a href="projects.html" class="nav-link">开源项目</a>
+      <a href="workshop.html" class="nav-link">实战工坊</a>
+      <a href="blueprint.html" class="nav-link">Agent 蓝图</a>
+      <a href="resources.html" class="nav-link">资源中心</a>
+      <a href="path.html#get-started" class="nav-cta">开始学习 →</a>
+    </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow"><span class="pulse-dot"></span><span>120+ 精选 GitHub 项目 · 持续更新</span></div>
+    <h1>AI Agent <span class="hl">开源项目库</span></h1>
+    <p class="hero-subtitle">
+      不是简单的 GitHub 列表。我们从数千个项目中精选出最值得学习的，按类别、成熟度、学习曲线精心分类，
+      每一个项目都附有核心特性解读和学习路径建议。
+    </p>
+  </div>
+</section>
+
+<!-- 过滤栏 -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">项目库</span>
+      <h2 class="section-title">按<span class="hl-2">类别</span>和<span class="hl-2">成熟度</span>筛选</h2>
+      <p class="section-subtitle">可以按类别、技术栈、成熟度筛选。也可以直接搜索项目名或描述。</p>
+    </div>
+
+    <div class="filter-bar" data-filter-group>
+      <input type="text" class="search-input" placeholder="🔍 搜索项目名或描述..." data-search data-target="#projects-list">
+      <div class="filter-pills">
+        <span class="filter-pill active" data-filter="all" data-target="#projects-list">全部</span>
+        <span class="filter-pill" data-filter="framework" data-target="#projects-list">🛠 框架</span>
+        <span class="filter-pill" data-filter="multiagent" data-target="#projects-list">👥 多 Agent</span>
+        <span class="filter-pill" data-filter="rag" data-target="#projects-list">📚 RAG</span>
+        <span class="filter-pill" data-filter="tool" data-target="#projects-list">🧰 工具/插件</span>
+        <span class="filter-pill" data-filter="product" data-target="#projects-list">🎯 产品应用</span>
+        <span class="filter-pill" data-filter="eval" data-target="#projects-list">📊 评估/监控</span>
+        <span class="filter-pill" data-filter="research" data-target="#projects-list">🔬 学术/研究</span>
+      </div>
+    </div>
+
+    <!-- 项目列表 -->
+    <div id="projects-list" class="grid grid-3">
+
+      <!-- LangChain -->
+      <div class="project-card" data-tags="framework" data-name="LangChain" data-desc="行业事实标准 LLM 框架 链式组合 工具调用">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #1c3c3c, #2d5d5d);">🦜</div>
+          <div>
+            <div class="project-name">LangChain</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">langchain-ai/langchain</div>
+          </div>
+        </div>
+        <p class="project-desc">行业事实标准框架。链式组合、工具集成、记忆管理、RAG 一站式方案。生态最丰富。</p>
+        <div class="project-meta">
+          <span>⭐ 94k+</span>
+          <span>🍴 15k+</span>
+          <span style="color: var(--brand-4);">● 极活跃</span>
+          <span>Python/JS</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">框架基石</span>
+          <span class="tag">链式组合</span>
+          <span class="tag">LCEL</span>
+          <span class="tag">生态丰富</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/langchain-ai/langchain">→ GitHub</a>
+          <a class="project-link" href="https://python.langchain.com">→ 文档</a>
+        </div>
+      </div>
+
+      <!-- LangGraph -->
+      <div class="project-card" data-tags="framework multiagent" data-name="LangGraph" data-desc="图结构状态化 Agent 编排 LangChain 团队 有状态 可中断">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #2d2d3d, #4a4a5e);">🐝</div>
+          <div>
+            <div class="project-name">LangGraph</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">langchain-ai/langgraph</div>
+          </div>
+        </div>
+        <p class="project-desc">把 Agent 抽象成有向图。原生支持状态检查、人工干预、循环分支。"现代 Agent 构造方式"。</p>
+        <div class="project-meta">
+          <span>⭐ 6k+</span>
+          <span>🍴 1k+</span>
+          <span style="color: var(--brand-4);">● 极活跃</span>
+          <span>Python/JS</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">状态化</span>
+          <span class="tag">图编排</span>
+          <span class="tag">可中断</span>
+          <span class="tag">生产可用</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/langchain-ai/langgraph">→ GitHub</a>
+          <a class="project-link" href="https://langchain-ai.github.io/langgraph/">→ 文档</a>
+        </div>
+      </div>
+
+      <!-- CrewAI -->
+      <div class="project-card" data-tags="framework multiagent" data-name="CrewAI" data-desc="多 Agent 角色协作 流程化 易上手 Python">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #1a3a3a, #3a5e5e);">👥</div>
+          <div>
+            <div class="project-name">CrewAI</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">crewAIInc/crewAI</div>
+          </div>
+        </div>
+        <p class="project-desc">角色扮演式多 Agent 协作框架。每个 Agent 有角色、目标、工具、背景故事。流程编排直观。</p>
+        <div class="project-meta">
+          <span>⭐ 25k+</span>
+          <span>🍴 3k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">多 Agent</span>
+          <span class="tag">角色化</span>
+          <span class="tag">易上手</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/crewAIInc/crewAI">→ GitHub</a>
+          <a class="project-link" href="https://docs.crewai.com">→ 文档</a>
+        </div>
+      </div>
+
+      <!-- AutoGen -->
+      <div class="project-card" data-tags="framework multiagent" data-name="AutoGen" data-desc="微软 多 Agent 对话框架 群聊 人类参与 企业级">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #2c3e50, #34495e);">🤖</div>
+          <div>
+            <div class="project-name">AutoGen</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">microsoft/autogen</div>
+          </div>
+        </div>
+        <p class="project-desc">微软出品，对话驱动的多 Agent 框架。支持群聊、人工参与、可终止条件，企业特性强大。</p>
+        <div class="project-meta">
+          <span>⭐ 32k+</span>
+          <span>🍴 5k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>Python/.NET</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">微软</span>
+          <span class="tag">多 Agent</span>
+          <span class="tag">群聊</span>
+          <span class="tag">企业级</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/microsoft/autogen">→ GitHub</a>
+          <a class="project-link" href="https://microsoft.github.io/autogen/">→ 文档</a>
+        </div>
+      </div>
+
+      <!-- LlamaIndex -->
+      <div class="project-card" data-tags="framework rag" data-name="LlamaIndex" data-desc="RAG 数据框架 索引结构丰富 与 LangChain 互补">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #4a3a2a, #6b4e3a);">🦙</div>
+          <div>
+            <div class="project-name">LlamaIndex</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">run-llama/llama_index</div>
+          </div>
+        </div>
+        <p class="project-desc">专注于数据接入与 RAG 的框架。索引结构丰富，支持复杂的数据源接入与检索策略。</p>
+        <div class="project-meta">
+          <span>⭐ 36k+</span>
+          <span>🍴 5k+</span>
+          <span style="color: var(--brand-4);">● 极活跃</span>
+          <span>Python/TS</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">RAG</span>
+          <span class="tag">数据框架</span>
+          <span class="tag">互补 LangChain</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/run-llama/llama_index">→ GitHub</a>
+          <a class="project-link" href="https://docs.llamaindex.ai">→ 文档</a>
+        </div>
+      </div>
+
+      <!-- AutoGPT -->
+      <div class="project-card" data-tags="framework research" data-name="AutoGPT" data-desc="自主任务循环 经典 Agent 启发 历史意义">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #5a3a5a, #7a5a7a);">🚀</div>
+          <div>
+            <div class="project-name">AutoGPT</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">Significant-Gravitas/AutoGPT</div>
+          </div>
+        </div>
+        <p class="project-desc">让 Agent 概念走入大众视野的标志性项目。学习其设计哲学与历史意义大于实际生产使用。</p>
+        <div class="project-meta">
+          <span>⭐ 167k+</span>
+          <span>🍴 44k+</span>
+          <span style="color: var(--brand-5);">● 缓慢</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">里程碑</span>
+          <span class="tag">历史意义</span>
+          <span class="tag">Plan-Execute</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/Significant-Gravitas/AutoGPT">→ GitHub</a>
+        </div>
+      </div>
+
+      <!-- BabyAGI -->
+      <div class="project-card" data-tags="research" data-name="BabyAGI" data-desc="任务驱动自主 Agent 极简实现 学习型实验">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #3a3a3a, #555);">👶</div>
+          <div>
+            <div class="project-name">BabyAGI</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">yoheinakajima/babyagi</div>
+          </div>
+        </div>
+        <p class="project-desc">300 行代码实现的任务驱动自主 Agent。是理解 Plan-Execute 模式的最佳教材。</p>
+        <div class="project-meta">
+          <span>⭐ 2.4k+</span>
+          <span>🍴 400+</span>
+          <span style="color: var(--brand-3);">● 教学</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">教学</span>
+          <span class="tag">极简</span>
+          <span class="tag">Task-driven</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/yoheinakajima/babyagi">→ GitHub</a>
+        </div>
+      </div>
+
+      <!-- OpenAI Agents SDK -->
+      <div class="project-card" data-tags="framework" data-name="OpenAI Agents SDK" data-desc="OpenAI 官方 Agent SDK Handoffs Guardrails 原生 Swarm 升级">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #10a37f, #1a7f64);">⚡</div>
+          <div>
+            <div class="project-name">OpenAI Agents SDK</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">openai/openai-agents-python</div>
+          </div>
+        </div>
+        <p class="project-desc">OpenAI 官方出品,从 Swarm 升级而来。原生支持 Handoffs、Guardrails、Tracing。</p>
+        <div class="project-meta">
+          <span>⭐ 7k+</span>
+          <span style="color: var(--brand-4);">● 极活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">OpenAI 官方</span>
+          <span class="tag">生产级</span>
+          <span class="tag">Handoffs</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/openai/openai-agents-python">→ GitHub</a>
+        </div>
+      </div>
+
+      <!-- Anthropic Computer Use -->
+      <div class="project-card" data-tags="research" data-name="Anthropic Computer Use" data-desc="Claude 操作计算机 视觉 Agent 屏幕交互 安全挑战">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #c97451, #d49177);">🖥</div>
+          <div>
+            <div class="project-name">Claude Computer Use</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">anthropics/anthropic-quickstarts</div>
+          </div>
+        </div>
+        <p class="project-desc">Anthropic 的革命性尝试：让 Claude 像人一样操作计算机（鼠标、键盘、屏幕）。未来 Agent 形态。</p>
+        <div class="project-meta">
+          <span>⭐ 8k+</span>
+          <span style="color: var(--brand-5);">● 谨慎</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">前沿</span>
+          <span class="tag">视觉</span>
+          <span class="tag">计算机操作</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/anthropics/anthropic-quickstarts">→ GitHub</a>
+        </div>
+      </div>
+
+      <!-- Smolagents -->
+      <div class="project-card" data-tags="framework" data-name="Smolagents" data-desc="Hugging Face 极简 Agent 库 代码 Agent 教育">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #ff9e2c, #ffb84d);">🤗</div>
+          <div>
+            <div class="project-name">Smolagents</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">huggingface/smolagents</div>
+          </div>
+        </div>
+        <p class="project-desc">Hugging Face 出品，代码量极少的 Agent 库。特别适合学习 Agent 本质。</p>
+        <div class="project-meta">
+          <span>⭐ 10k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">极简</span>
+          <span class="tag">学习用</span>
+          <span class="tag">HF 生态</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/huggingface/smolagents">→ GitHub</a>
+        </div>
+      </div>
+
+      <!-- DSPy -->
+      <div class="project-card" data-tags="framework research" data-name="DSPy" data-desc="程序化 LLM 流水线 自动优化 prompt 编译器式">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #6366f1, #818cf8);">⚙️</div>
+          <div>
+            <div class="project-name">DSPy</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">stanfordnlp/dspy</div>
+          </div>
+        </div>
+        <p class="project-desc">斯坦福出品，革命性的"prompt 编译器"。将 LLM 流水线程序化，自动优化 prompt 和模型选择。</p>
+        <div class="project-meta">
+          <span>⭐ 22k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">自动优化</span>
+          <span class="tag">学术血统</span>
+          <span class="tag">Prompt 编译器</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/stanfordnlp/dspy">→ GitHub</a>
+        </div>
+      </div>
+
+      <!-- Agno (ex PhiData) -->
+      <div class="project-card" data-tags="framework" data-name="Agno" data-desc="轻量高性能 Agent 框架 多模态 团队协作">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #ff5e7a, #ff6ec7);">⚡</div>
+          <div>
+            <div class="project-name">Agno</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">agno-agi/agno</div>
+          </div>
+        </div>
+        <p class="project-desc">原 PhiData。轻量、高性能的多 Agent 框架。对比 LangGraph 更易上手，对比 CrewAI 更灵活。</p>
+        <div class="project-meta">
+          <span>⭐ 19k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">高性能</span>
+          <span class="tag">轻量</span>
+          <span class="tag">多模态</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/agno-agi/agno">→ GitHub</a>
+        </div>
+      </div>
+
+      <!-- Pydantic AI -->
+      <div class="project-card" data-tags="framework" data-name="Pydantic AI" data-desc="Pydantic 团队 类型安全 Agent FastAPI 风格">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #ff5722, #ff7043);">🐍</div>
+          <div>
+            <div class="project-name">Pydantic AI</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">pydantic/pydantic-ai</div>
+          </div>
+        </div>
+        <p class="project-desc">Pydantic 团队出品。类型安全的 Agent 框架，FastAPI 风格，对 Python 开发者最友好。</p>
+        <div class="project-meta">
+          <span>⭐ 5k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">类型安全</span>
+          <span class="tag">Pydantic</span>
+          <span class="tag">FastAPI 风格</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/pydantic/pydantic-ai">→ GitHub</a>
+        </div>
+      </div>
+
+      <!-- RAGAS -->
+      <div class="project-card" data-tags="eval rag" data-name="RAGAS" data-desc="RAG 专用评估框架 忠实度 答案相关性 上下文精度">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #9c27b0, #ba68c8);">📏</div>
+          <div>
+            <div class="project-name">RAGAS</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">explodinggradients/ragas</div>
+          </div>
+        </div>
+        <p class="project-desc">RAG 专用评估框架，提供忠实度、答案相关性、上下文精度等指标。RAG 优化的必备工具。</p>
+        <div class="project-meta">
+          <span>⭐ 8k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">RAG 评估</span>
+          <span class="tag">生产级</span>
+          <span class="tag">指标丰富</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/explodinggradients/ragas">→ GitHub</a>
+        </div>
+      </div>
+
+      <!-- LangSmith / LangFuse -->
+      <div class="project-card" data-tags="eval" data-name="LangSmith + LangFuse" data-desc="Agent 追踪监控 调试 评估 商业 + 开源">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #ffd54f, #ffb84d);">🔭</div>
+          <div>
+            <div class="project-name">LangSmith / LangFuse</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">langchain-ai + langfuse</div>
+          </div>
+        </div>
+        <p class="project-desc">Agent 系统的可观测性方案。LangSmith 商业、LangFuse 开源，都提供完整 trace、eval、prompt 管理。</p>
+        <div class="project-meta">
+          <span>⭐ 8k+ + 12k+</span>
+          <span style="color: var(--brand-4);">● 极活跃</span>
+          <span>TS/Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">可观测性</span>
+          <span class="tag">调试</span>
+          <span class="tag">追踪</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/langfuse/langfuse">→ LangFuse</a>
+        </div>
+      </div>
+
+      <!-- Microsoft Semantic Kernel -->
+      <div class="project-card" data-tags="framework" data-name="Semantic Kernel" data-desc="微软 .NET/Python LLM 编排 企业集成">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">🔮</div>
+          <div>
+            <div class="project-name">Semantic Kernel</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">microsoft/semantic-kernel</div>
+          </div>
+        </div>
+        <p class="project-desc">微软 .NET 生态首选的 LLM 编排框架。原生与企业系统集成 (Azure、Office 365)。</p>
+        <div class="project-meta">
+          <span>⭐ 22k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>.NET / Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">微软</span>
+          <span class="tag">.NET</span>
+          <span class="tag">企业</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/microsoft/semantic-kernel">→ GitHub</a>
+        </div>
+      </div>
+
+      <!-- Flowise -->
+      <div class="project-card" data-tags="framework tool product" data-name="Flowise" data-desc="可视化拖拽 LangChain 节点 低代码 Agent">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #00d4ff, #00ffa3);">🎨</div>
+          <div>
+            <div class="project-name">Flowise</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">FlowiseAI/Flowise</div>
+          </div>
+        </div>
+        <p class="project-desc">LangChain 的可视化拖拽界面。非工程师也能搭建 Agent，适合做原型。</p>
+        <div class="project-meta">
+          <span>⭐ 37k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>TypeScript</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">可视化</span>
+          <span class="tag">低代码</span>
+          <span class="tag">原型工具</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/FlowiseAI/Flowise">→ GitHub</a>
+        </div>
+      </div>
+
+      <!-- MemGPT -->
+      <div class="project-card" data-tags="research" data-name="MemGPT" data-desc="层次化记忆 Agent 长期记忆 分页机制">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #4a148c, #7b1fa2);">🧠</div>
+          <div>
+            <div class="project-name">MemGPT</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">letta-ai/letta</div>
+          </div>
+        </div>
+        <p class="project-desc">革命性的层次化记忆方案。让 LLM 突破上下文窗口限制，拥有真正"长期记忆"。现更名为 Letta。</p>
+        <div class="project-meta">
+          <span>⭐ 14k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">长期记忆</span>
+          <span class="tag">学术创新</span>
+          <span class="tag">记忆系统</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/letta-ai/letta">→ GitHub</a>
+        </div>
+      </div>
+
+      <!-- AgentBench / SWE-bench -->
+      <div class="project-card" data-tags="eval research" data-name="SWE-bench / AgentBench" data-desc="Agent 评测基准 编程任务 多场景">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #f44336, #ef5350);">📐</div>
+          <div>
+            <div class="project-name">SWE-bench / AgentBench</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">SWE-bench + AgentBench</div>
+          </div>
+        </div>
+        <p class="project-desc">Agent 评估的事实标准基准。SWE-bench 测代码能力，AgentBench 测多场景能力。</p>
+        <div class="project-meta">
+          <span>⭐ 3k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">评测基准</span>
+          <span class="tag">学术</span>
+          <span class="tag">必读</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/SWE-bench/SWE-bench">→ SWE-bench</a>
+        </div>
+      </div>
+
+      <!-- 更多项目 - 简单列举 -->
+      <div class="project-card" data-tags="framework tool" data-name="Composio" data-desc="工具集成枢纽 100+ 即用工具 OAuth 管理">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #ff5722, #ff7043);">🔌</div>
+          <div>
+            <div class="project-name">Composio</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">ComposioHQ/composio</div>
+          </div>
+        </div>
+        <p class="project-desc">100+ 工具的统一集成方案。Gmail、Slack、GitHub、Notion 等开箱即用。</p>
+        <div class="project-meta">
+          <span>⭐ 4k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">工具集成</span>
+          <span class="tag">OAuth</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/ComposioHQ/composio">→ GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="rag" data-name="ChromaDB" data-desc="轻量向量数据库 嵌入式 Python 友好">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #00c853, #69f0ae);">🌲</div>
+          <div>
+            <div class="project-name">ChromaDB</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">chroma-core/chroma</div>
+          </div>
+        </div>
+        <p class="project-desc">轻量级向量数据库，原生 Python 集成友好。RAG 原型阶段首选。</p>
+        <div class="project-meta">
+          <span>⭐ 17k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">向量数据库</span>
+          <span class="tag">轻量</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/chroma-core/chroma">→ GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="product" data-name="Open Interpreter" data-desc="本地代码执行 自然语言编程 沙箱">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #5d4037, #795548);">💻</div>
+          <div>
+            <div class="project-name">Open Interpreter</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">OpenInterpreter/open-interpreter</div>
+          </div>
+        </div>
+        <p class="project-desc">让 LLM 在本地执行代码。市场爆款，展示了"自然语言编程"的未来形态。</p>
+        <div class="project-meta">
+          <span>⭐ 60k+</span>
+          <span style="color: var(--brand-5);">● 减缓</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">代码执行</span>
+          <span class="tag">本地</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/OpenInterpreter/open-interpreter">→ GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="product" data-name="Devin / OpenHands" data-desc="AI 软件工程师 编程 Agent 多步任务">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #311b92, #5e35b1);">🧑‍💻</div>
+          <div>
+            <div class="project-name">OpenHands (前 OpenDevin)</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">All-Hands-AI/OpenHands</div>
+          </div>
+        </div>
+        <p class="project-desc">开源版 Devin。Agent 驱动的软件工程师，能解决 GitHub issue、写代码、调试、测试。</p>
+        <div class="project-meta">
+          <span>⭐ 32k+</span>
+          <span style="color: var(--brand-4);">● 极活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">软件工程师</span>
+          <span class="tag">前沿</span>
+          <span class="tag">Devin 开源版</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/All-Hands-AI/OpenHands">→ GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="multiagent framework" data-name="MetaGPT" data-desc="多 Agent 模拟软件公司 角色化 SOP 化">
+        <div class="project-head">
+          <div class="project-icon" style="background: linear-gradient(135deg, #00897b, #26a69a);">🏢</div>
+          <div>
+            <div class="project-name">MetaGPT</div>
+            <div style="font-size: 0.82rem; color: var(--text-3);">geekan/MetaGPT</div>
+          </div>
+        </div>
+        <p class="project-desc">把多 Agent 抽象成软件公司：产品经理、架构师、工程师、QA 的协作流程。</p>
+        <div class="project-meta">
+          <span>⭐ 45k+</span>
+          <span style="color: var(--brand-4);">● 活跃</span>
+          <span>Python</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">软件公司模拟</span>
+          <span class="tag">多 Agent</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/geekan/MetaGPT">→ GitHub</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; color: var(--text-3); font-size: 0.9rem;">
+      <p>展示精选 24 个项目 · 还有 100+ 项目在持续整理中</p>
+      <a href="#more" class="btn btn-secondary" style="margin-top: 16px;">查看扩展阅读清单 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 选型决策表 -->
+<section class="section" id="more" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">选型决策</span>
+      <h2 class="section-title">面对具体需求时<span class="hl">怎么选</span></h2>
+      <p class="section-subtitle">不是越新越好，也不是越火越好。下面是一个经过社区验证的选型矩阵。</p>
+    </div>
+
+    <div style="overflow-x: auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>场景</th>
+            <th>首选</th>
+            <th>备选</th>
+            <th>关键考量</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>通用 Agent 应用</strong></td>
+            <td><span class="badge badge-purple">LangGraph</span></td>
+            <td>OpenAI Agents SDK / Pydantic AI</td>
+            <td>状态化、可调试、生产可信</td>
+          </tr>
+          <tr>
+            <td><strong>多 Agent 角色协作</strong></td>
+            <td><span class="badge badge-green">CrewAI</span></td>
+            <td>AutoGen / MetaGPT</td>
+            <td>API 直观易学、角色清晰</td>
+          </tr>
+          <tr>
+            <td><strong>对话流 / 多 Agent 群聊</strong></td>
+            <td><span class="badge badge-pink">AutoGen</span></td>
+            <td>CrewAI</td>
+            <td>终止条件、可观察对话</td>
+          </tr>
+          <tr>
+            <td><strong>RAG 为主的应用</strong></td>
+            <td><span class="badge badge-amber">LlamaIndex</span></td>
+            <td>LangChain + 独立 Agent 层</td>
+            <td>索引丰富、检索策略多</td>
+          </tr>
+          <tr>
+            <td><strong>OpenAI 生态深度集成</strong></td>
+            <td><span class="badge badge-cyan">OpenAI Agents SDK</span></td>
+            <td>LangChain OpenAI 集成</td>
+            <td>原生 Tracing、Handoffs</td>
+          </tr>
+          <tr>
+            <td><strong>学习 / 教育</strong></td>
+            <td><span class="badge badge-purple">Smolagents</span></td>
+            <td>BabyAGI</td>
+            <td>代码量少、易读懂</td>
+          </tr>
+          <tr>
+            <td><strong>.NET / 企业环境</strong></td>
+            <td><span class="badge badge-green">Semantic Kernel</span></td>
+            <td>AutoGen</td>
+            <td>微软生态、Azure 集成</td>
+          </tr>
+          <tr>
+            <td><strong>类型安全 / Python 严谨派</strong></td>
+            <td><span class="badge badge-cyan">Pydantic AI</span></td>
+            <td>LangGraph</td>
+            <td>FastAPI 风格、IDE 友好</td>
+          </tr>
+          <tr>
+            <td><strong>Prompt 自动优化</strong></td>
+            <td><span class="badge badge-pink">DSPy</span></td>
+            <td>手动迭代</td>
+            <td>学术严谨、可量化优化</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="notice notice-tip" style="margin-top: 32px;">
+      <span class="notice-icon">★</span>
+      <div>
+        <strong>框架不是越多越好</strong>
+        <p>真正的高手能做到"框架无关" —— 在不同需求下选择最合适的栈，甚至混用。Phase 5 时你会学到这一点。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>项目挑选完了，<span class="hl">动手做</span></h2>
+      <p>让我们进入实战工坊。每一个项目都有完整的代码示例、运行步骤、扩展挑战。</p>
+      <a href="workshop.html" class="btn btn-primary btn-lg">进入实战工坊 →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 18px;">
+          <span class="logo-mark">A</span><span>Agent Academy</span>
+        </div>
+        <p style="color: var(--text-2); font-size: 0.92rem; line-height: 1.7; max-width: 360px;">
+          一份完整、可执行、与时代同步的 AI Agent 学习蓝图。
+        </p>
+      </div>
+      <div><h5>学习路径</h5><ul>
+        <li><a href="knowledge.html">知识体系</a></li>
+        <li><a href="path.html">五阶段路径</a></li>
+        <li><a href="workshop.html">实战工坊</a></li>
+        <li><a href="blueprint.html">项目蓝图</a></li>
+      </ul></div>
+      <div><h5>资源</h5><ul>
+        <li><a href="projects.html">开源项目</a></li>
+        <li><a href="resources.html">论文与课程</a></li>
+        <li><a href="resources.html#books">推荐书目</a></li>
+        <li><a href="resources.html#community">社区</a></li>
+      </ul></div>
+      <div><h5>关于</h5><ul>
+        <li><a href="#">理念与方法</a></li>
+        <li><a href="#">贡献指南</a></li>
+        <li><a href="#">更新日志</a></li>
+        <li><a href="#">联系反馈</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Agent Academy</span>
+      <span>用 💜 为下一代构建者打造</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学习路径 · Agent Academy</title>
+<meta name="description" content="五阶段完整学习周期：从零基础到独立构建大型 Agent 项目。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter' font-size='18' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span><span>Agent Academy</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">首页</a>
+      <a href="knowledge.html" class="nav-link">知识体系</a>
+      <a href="path.html" class="nav-link">学习路径</a>
+      <a href="projects.html" class="nav-link">开源项目</a>
+      <a href="workshop.html" class="nav-link">实战工坊</a>
+      <a href="blueprint.html" class="nav-link">Agent 蓝图</a>
+      <a href="resources.html" class="nav-link">资源中心</a>
+      <a href="#get-started" class="nav-cta">开始学习 →</a>
+    </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow"><span class="pulse-dot"></span><span>完整学习周期 · 全程 12-17 周</span></div>
+    <h1>五阶段<span class="hl">学习路径</span></h1>
+    <p class="hero-subtitle">
+      一条经过精心设计、被数百名学习者验证的路径。每一阶段有明确的输入、输出与检验标准。
+      跟随它，你会从完全不懂，到亲手交付一个完整的大型 Agent 项目。
+    </p>
+
+    <div style="margin-top: 40px;">
+      <div style="display: flex; justify-content: space-between; max-width: 700px; margin: 0 auto; font-size: 0.85rem; color: var(--text-3); margin-bottom: 8px;">
+        <span>完整学习周期</span>
+        <span>12-17 周</span>
+      </div>
+      <div class="progress-track" style="max-width: 700px; margin: 0 auto;">
+        <div class="progress-fill" data-progress="85" style="width: 0%; height: 100%; background: var(--grad-1);"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 学习路径时间线 -->
+<section class="section" id="get-started">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">完整时间线</span>
+      <h2 class="section-title">一条<span class="hl">清晰的路径</span></h2>
+      <p class="section-subtitle">从下到上，每一阶段都有起点、终点和验证方式。</p>
+    </div>
+
+    <div class="timeline">
+      <!-- Phase 1 -->
+      <div class="timeline-item">
+        <div class="timeline-content right-side">
+          <span class="timeline-phase">Phase 1 · 1-2 周</span>
+          <h3>认知与心智模型</h3>
+          <p>理解 Agent 是什么、为什么、怎么做。建立完整的心智地图，掌握 LLM、提示、推理、工具调用的核心概念。</p>
+          <div class="timeline-meta">
+            <span>📚 7 节核心概念</span>
+            <span>🧪 5 个迷你实验</span>
+            <span>✅ 6 项自检清单</span>
+          </div>
+          <div style="margin-top: 16px;">
+            <a href="knowledge.html" class="btn btn-ghost btn-sm">进入知识体系 →</a>
+          </div>
+        </div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content left-side">
+          <strong style="color: var(--brand-2);">📥 输出</strong>
+          <p style="color: var(--text-2); margin-top: 8px; font-size: 0.92rem;">
+            能向任何人讲清楚 Agent 本质。能独立完成 Phase 1 的 6 项自检清单。
+          </p>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="timeline-item">
+        <div class="timeline-content right-side">
+          <span class="timeline-phase">Phase 2 · 2-3 周</span>
+          <h3>技能与工具栈</h3>
+          <p>掌握主流框架（LangChain、LangGraph、CrewAI、AutoGen、LlamaIndex）。学会选型、组合、深度定制。</p>
+          <div class="timeline-meta">
+            <span>📦 5 大框架</span>
+            <span>🔧 20+ 工具集成</span>
+            <span>📊 3 个对比决策表</span>
+          </div>
+          <div style="margin-top: 16px;">
+            <a href="projects.html" class="btn btn-ghost btn-sm">查看开源项目 →</a>
+          </div>
+        </div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content left-side">
+          <strong style="color: var(--brand-2);">📥 输出</strong>
+          <p style="color: var(--text-2); margin-top: 8px; font-size: 0.92rem;">
+            能针对任意需求选择最合适的框架组合，并解释为什么这样选。
+          </p>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="timeline-item">
+        <div class="timeline-content right-side">
+          <span class="timeline-phase">Phase 3 · 3-4 周</span>
+          <h3>完整项目搭建</h3>
+          <p>亲手把零散的模块组装成工程化项目。从架构设计、模块开发、单元测试到部署运维。</p>
+          <div class="timeline-meta">
+            <span>🛠 4 个分层模块</span>
+            <span>🧪 完整测试体系</span>
+            <span>📦 CI/CD 流水线</span>
+          </div>
+          <div style="margin-top: 16px;">
+            <a href="workshop.html" class="btn btn-ghost btn-sm">看实战工坊 →</a>
+          </div>
+        </div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content left-side">
+          <strong style="color: var(--brand-2);">📥 输出</strong>
+          <p style="color: var(--text-2); margin-top: 8px; font-size: 0.92rem;">
+            一个可运行的完整 Agent 系统，包含文档、测试、可视化界面。
+          </p>
+        </div>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="timeline-item">
+        <div class="timeline-content right-side">
+          <span class="timeline-phase">Phase 4 · 2 周</span>
+          <h3>评估与优化</h3>
+          <p>建立评估体系，掌握监控方法。学习 Prompt 优化、成本控制、错误分析的实战技巧。</p>
+          <div class="timeline-meta">
+            <span>📊 10+ 评估指标</span>
+            <span>💰 成本优化策略</span>
+            <span>🐛 调试方法论</span>
+          </div>
+        </div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content left-side">
+          <strong style="color: var(--brand-2);">📥 输出</strong>
+          <p style="color: var(--text-2); margin-top: 8px; font-size: 0.92rem;">
+            完整的 Eval Pipeline + 监控仪表盘 + 优化迭代记录。
+          </p>
+        </div>
+      </div>
+
+      <!-- Phase 5 -->
+      <div class="timeline-item">
+        <div class="timeline-content right-side">
+          <span class="timeline-phase">Phase 5 · 4-6 周</span>
+          <h3>独立大型 Agent 项目</h3>
+          <p>综合运用所学，从需求到交付，亲手搭建一个完整的大型 Agent 项目。</p>
+          <div class="timeline-meta">
+            <span>🎯 自定义需求</span>
+            <span>🏗 完整架构</span>
+            <span>🚀 部署上线</span>
+          </div>
+          <div style="margin-top: 16px;">
+            <a href="blueprint.html" class="btn btn-ghost btn-sm">查看蓝图 →</a>
+          </div>
+        </div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content left-side">
+          <strong style="color: var(--brand-3);">🏆 终点</strong>
+          <p style="color: var(--text-2); margin-top: 8px; font-size: 0.92rem;">
+            一个完整、生产级、可开源或商业化的 Agent 项目。<br>
+            <strong style="color: var(--brand-4);">它就是你最好的作品。</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Phase 详解 -->
+<section class="section" style="background: linear-gradient(180deg, transparent, rgba(124, 92, 255, 0.04), transparent);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">阶段详解</span>
+      <h2 class="section-title">每一阶段的<span class="hl-2">详细内容</span></h2>
+      <p class="section-subtitle">可以按时间线顺序学习，也可以挑选最需要的阶段深入。</p>
+    </div>
+
+    <div data-tab-group>
+      <div class="tabs">
+        <div class="tab active" data-tab="phase1">Phase 1 · 认知</div>
+        <div class="tab" data-tab="phase2">Phase 2 · 技能</div>
+        <div class="tab" data-tab="phase3">Phase 3 · 建造</div>
+        <div class="tab" data-tab="phase4">Phase 4 · 评估</div>
+        <div class="tab" data-tab="phase5">Phase 5 · 交付</div>
+      </div>
+
+      <!-- Phase 1 -->
+      <div class="tab-panel active" id="phase1">
+        <div class="grid grid-2" style="align-items: start;">
+          <div>
+            <h3>认知与心智模型</h3>
+            <p style="color: var(--text-2); margin-bottom: 24px;">
+              这一阶段的目的是建立"Agent 的眼睛"。你不需要会写代码，但你需要能：
+              看到产品需求时，立刻知道背后需要什么样的 Agent 能力；看到论文、博客、教程时，立刻把它们定位到心智地图的某个位置。
+            </p>
+            <h4 style="margin: 20px 0 12px;">📚 核心模块</h4>
+            <div class="steps">
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>1.1 LLM 基础与心智模型</h4>
+                  <p>Transformer 架构、token、上下文窗口、推理参数。理解为什么"温度"和"top-p"有那么大影响。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>1.2 提示工程核心</h4>
+                  <p>Zero-shot、Few-shot、CoT、System Prompt 的设计艺术。结构化输出与 JSON 模式。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>1.3 Function Calling 与工具调用</h4>
+                  <p>从用户输入到工具执行的完整流程。工具描述的设计规范和最佳实践。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>1.4 Agent 范式全景</h4>
+                  <p>ReAct、Plan-and-Execute、Reflection、Multi-Agent。四种核心范式的内在逻辑。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>1.5 推理与思维链</h4>
+                  <p>CoT、Self-Consistency、ToT、ReAct 中的推理。o1/o3 类推理模型的范式转变。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>1.6 记忆与检索</h4>
+                  <p>短期/长期记忆、向量检索、混合检索、RAG 模式全景。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>1.7 评估与可观测性</h4>
+                  <p>为什么要评估、评估什么、怎么评估。可观测性的工业实践。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card" style="position: sticky; top: 100px;">
+              <h4 style="margin-bottom: 18px;">🎯 阶段输出标准</h4>
+              <div style="margin-bottom: 18px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 6px;">
+                  <span>理论掌握度</span><span style="color: var(--brand-2);">85%</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" data-progress="85" style="width: 0%;"></div></div>
+              </div>
+              <div style="margin-bottom: 18px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 6px;">
+                  <span>实验完成度</span><span style="color: var(--brand-4);">100%</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" data-progress="100" style="width: 0%;"></div></div>
+              </div>
+              <div style="margin-bottom: 18px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 6px;">
+                  <span>自检清单</span><span style="color: var(--brand-3);">6/6</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" data-progress="100" style="width: 0%;"></div></div>
+              </div>
+              <div class="divider" style="margin: 20px 0;"></div>
+              <h4 style="margin-bottom: 12px; font-size: 1rem;">🧰 推荐资源</h4>
+              <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-2);">
+                <li style="padding: 6px 0;">📖 <a href="resources.html">OpenAI / Anthropic 官方文档</a></li>
+                <li style="padding: 6px 0;">🎓 DeepLearning.AI 短课程</li>
+                <li style="padding: 6px 0;">📄 经典论文 5 篇 (ReAct/Reflexion/ToT)</li>
+                <li style="padding: 6px 0;">🛠 Anthropic Prompt Engineering 教程</li>
+              </ul>
+              <a href="knowledge.html" class="btn btn-primary" style="width: 100%; margin-top: 18px;">开始 Phase 1 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="tab-panel" id="phase2">
+        <div class="grid grid-2" style="align-items: start;">
+          <div>
+            <h3>技能与工具栈</h3>
+            <p style="color: var(--text-2); margin-bottom: 24px;">
+              这一阶段把认知落地为工具。掌握主流框架的核心理念、设计哲学、典型用法。学到的不只是 API 调用，
+              而是每个框架解决了什么问题、有什么 trade-off、什么场景下不适用。
+            </p>
+            <h4 style="margin: 20px 0 12px;">📚 框架学习矩阵</h4>
+            <div class="steps">
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>2.1 LangChain · 行业基石</h4>
+                  <p>链、提示模板、工具集成、LCEL 表达式语言。理解 LangChain 为何成为事实标准。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>2.2 LangGraph · 有状态编排</h4>
+                  <p>图结构、状态管理、检查点、人机协同。掌握"现代 Agent 构造方式"。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>2.3 LlamaIndex · RAG 专家</h4>
+                  <p>专注文档问答场景。索引、检索器、查询引擎、Agent 集成。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>2.4 CrewAI · 多 Agent 协作</h4>
+                  <p>角色化 Agent、任务分配、流程编排。多 Agent 入门首选。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>2.5 AutoGen · 对话式 Agent</h4>
+                  <p>微软出品，对话驱动、群聊、可终止条件。企业级特性强大。</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num"></div>
+                <div class="step-content">
+                  <h4>2.6 进阶：自建 Agent 引擎</h4>
+                  <p>不依赖框架，从零实现 ReAct 循环。理解所有框架背后的共通抽象。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card" style="position: sticky; top: 100px;">
+              <h4 style="margin-bottom: 18px;">🎯 阶段输出标准</h4>
+              <div style="margin-bottom: 18px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 6px;">
+                  <span>框架掌握数</span><span style="color: var(--brand-2);">5/6</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" data-progress="83" style="width: 0%;"></div></div>
+              </div>
+              <div style="margin-bottom: 18px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 6px;">
+                  <span>工具集成数</span><span style="color: var(--brand-4);">20+</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" data-progress="100" style="width: 0%;"></div></div>
+              </div>
+              <div class="divider" style="margin: 20px 0;"></div>
+              <h4 style="margin-bottom: 12px; font-size: 1rem;">🧰 推荐实践项目</h4>
+              <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-2);">
+                <li style="padding: 6px 0;">🛒 用 LangGraph 搭一个电商助手</li>
+                <li style="padding: 6px 0;">📚 用 LlamaIndex 做技术文档问答</li>
+                <li style="padding: 6px 0;">🧑‍🔬 用 CrewAI 模拟研究团队</li>
+                <li style="padding: 6px 0;">⚙️ 用 AutoGen 搭建多 Agent 会议</li>
+              </ul>
+              <a href="projects.html" class="btn btn-primary" style="width: 100%; margin-top: 18px;">浏览所有项目 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="tab-panel" id="phase3">
+        <div class="grid grid-2" style="align-items: start;">
+          <div>
+            <h3>完整项目搭建</h3>
+            <p style="color: var(--text-2); margin-bottom: 24px;">
+              从代码玩具到生产系统。这一阶段专注于"工程化"——让 Agent 像一个真实的软件产品一样被开发、测试、部署。
+            </p>
+            <h4 style="margin: 20px 0 12px;">🏗 工程化要素</h4>
+            <div class="puzzle-pieces">
+              <div class="puzzle-piece">
+                <h4>配置管理</h4>
+                <p>环境变量、密钥管理、多环境切换。.env、config.yaml、Pydantic Settings。</p>
+              </div>
+              <div class="puzzle-piece">
+                <h4>模块化设计</h4>
+                <p>清晰的目录结构、抽象层、依赖注入。Agent、Tool、Memory、Orchestrator 分层。</p>
+              </div>
+              <div class="puzzle-piece">
+                <h4>可观测性</h4>
+                <p>日志、追踪、监控。LangSmith、LangFuse、OpenTelemetry。</p>
+              </div>
+              <div class="puzzle-piece">
+                <h4>异常处理</h4>
+                <p>工具失败、LLM 调用失败、超时、退避重试。鲁棒性源于细节。</p>
+              </div>
+              <div class="puzzle-piece">
+                <h4>测试体系</h4>
+                <p>单元测试、集成测试、评估测试。LLM-as-a-Judge 与人工标注结合。</p>
+              </div>
+              <div class="puzzle-piece">
+                <h4>部署上线</h4>
+                <p>FastAPI、Gradio、Docker、CI/CD。本地到云端的工程路径。</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card" style="position: sticky; top: 100px;">
+              <h4 style="margin-bottom: 18px;">🎯 阶段输出标准</h4>
+              <div style="margin-bottom: 18px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 6px;">
+                  <span>模块化设计</span><span style="color: var(--brand-2);">完成</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" data-progress="100" style="width: 0%;"></div></div>
+              </div>
+              <div style="margin-bottom: 18px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 6px;">
+                  <span>测试覆盖率</span><span style="color: var(--brand-4);">>70%</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" data-progress="70" style="width: 0%;"></div></div>
+              </div>
+              <div style="margin-bottom: 18px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 6px;">
+                  <span>部署成功</span><span style="color: var(--brand-3);">✓</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" data-progress="100" style="width: 0%;"></div></div>
+              </div>
+              <div class="divider" style="margin: 20px 0;"></div>
+              <h4 style="margin-bottom: 12px; font-size: 1rem;">📦 项目蓝图示例</h4>
+              <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-2);">
+                <li style="padding: 6px 0;">🛒 智能购物助手</li>
+                <li style="padding: 6px 0;">📚 公司知识库 Agent</li>
+                <li style="padding: 6px 0;">🔍 自动研究助手</li>
+                <li style="padding: 6px 0;">💼 销售自动化 Agent</li>
+              </ul>
+              <a href="workshop.html" class="btn btn-primary" style="width: 100%; margin-top: 18px;">查看实战项目 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="tab-panel" id="phase4">
+        <div class="grid grid-2" style="align-items: start;">
+          <div>
+            <h3>评估与优化</h3>
+            <p style="color: var(--text-2); margin-bottom: 24px;">
+              没有评估，Agent 系统就是"黑盒"。这一阶段建立完整的评测体系，掌握持续优化的方法论。
+            </p>
+            <h4 style="margin: 20px 0 12px;">📊 评估维度全景</h4>
+            <div class="grid grid-2" style="gap: 14px;">
+              <div class="card" style="padding: 18px;">
+                <h4 style="margin-bottom: 8px; font-size: 1.05rem;">✅ 任务完成度</h4>
+                <p style="font-size: 0.88rem; color: var(--text-2);">Agent 是否成功达成了最终目标？</p>
+              </div>
+              <div class="card" style="padding: 18px;">
+                <h4 style="margin-bottom: 8px; font-size: 1.05rem;">⚡ 执行效率</h4>
+                <p style="font-size: 0.88rem; color: var(--text-2);">花费的 token 数、调用步数、延迟。</p>
+              </div>
+              <div class="card" style="padding: 18px;">
+                <h4 style="margin-bottom: 8px; font-size: 1.05rem;">🎯 准确率</h4>
+                <p style="font-size: 0.88rem; color: var(--text-2);">结果是否与 ground truth 一致。</p>
+              </div>
+              <div class="card" style="padding: 18px;">
+                <h4 style="margin-bottom: 8px; font-size: 1.05rem;">🛡 鲁棒性</h4>
+                <p style="font-size: 0.88rem; color: var(--text-2);">面对异常输入、错误工具的反应能力。</p>
+              </div>
+              <div class="card" style="padding: 18px;">
+                <h4 style="margin-bottom: 8px; font-size: 1.05rem;">💰 成本</h4>
+                <p style="font-size: 0.88rem; color: var(--text-2);">单次任务平均成本、模型选择策略。</p>
+              </div>
+              <div class="card" style="padding: 18px;">
+                <h4 style="margin-bottom: 8px; font-size: 1.05rem;">😊 用户体验</h4>
+                <p style="font-size: 0.88rem; color: var(--text-2);">响应相关性、可解释性、信任度。</p>
+              </div>
+            </div>
+
+            <h4 style="margin: 24px 0 12px;">🧪 评估方法工具箱</h4>
+            <div class="tag-cloud">
+              <span class="tag">LangSmith</span>
+              <span class="tag">LangFuse</span>
+              <span class="tag">Phoenix (Arize)</span>
+              <span class="tag">OpenAI Evals</span>
+              <span class="tag">RAGAS</span>
+              <span class="tag">TruLens</span>
+              <span class="tag">DeepEval</span>
+              <span class="tag">Braintrust</span>
+              <span class="tag">Patronus AI</span>
+              <span class="tag">OpenLLMetry</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="card" style="position: sticky; top: 100px;">
+              <h4 style="margin-bottom: 18px;">🎯 优化方法清单</h4>
+              <ol style="padding-left: 20px; color: var(--text-2); font-size: 0.95rem; line-height: 1.9;">
+                <li><strong style="color:var(--text-0)">Prompt 优化</strong>: 调整 System Prompt、Few-shot</li>
+                <li><strong style="color:var(--text-0)">模型选择</strong>: Haiku vs Sonnet vs Opus, GPT-3.5/4</li>
+                <li><strong style="color:var(--text-0)">工具精简</strong>: 删除冗余工具,合并重叠工具</li>
+                <li><strong style="color:var(--text-0)">检索优化</strong>: Reranking、HyDE、混合检索</li>
+                <li><strong style="color:var(--text-0)">上下文压缩</strong>: 摘要、剪枝、关键信息提取</li>
+                <li><strong style="color:var(--text-0)">缓存策略</strong>: 语义缓存、提示缓存</li>
+                <li><strong style="color:var(--text-0)">并行化</strong>: 独立子任务并发执行</li>
+                <li><strong style="color:var(--text-0)">反思循环</strong>: Self-Refine、Reflexion</li>
+                <li><strong style="color:var(--text-0)">路由策略</strong>: 简单任务用小模型</li>
+                <li><strong style="color:var(--text-0)">人机协同</strong>: 关键节点让人类确认</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 5 -->
+      <div class="tab-panel" id="phase5">
+        <div class="grid grid-2" style="align-items: start;">
+          <div>
+            <h3>独立大型 Agent 项目</h3>
+            <p style="color: var(--text-2); margin-bottom: 24px;">
+              综合运用前四阶段所有能力，从零交付一个完整、可部署、可开源或商业化的大型 Agent 项目。
+            </p>
+            <h4 style="margin: 20px 0 12px;">🏆 项目目标设定</h4>
+            <div class="notice notice-tip">
+              <span class="notice-icon">★</span>
+              <div>
+                <strong>建议自选方向</strong>
+                <p>与其复刻一个 GPT 套壳产品，不如选一个真正困扰你 / 你团队的需求。这样你会有持续投入的热情。</p>
+              </div>
+            </div>
+
+            <h4 style="margin: 20px 0 12px;">📋 项目交付清单</h4>
+            <ul class="checklist">
+              <li>
+                <div class="checklist-icon">☐</div>
+                <div>
+                  <div class="item-title">需求定义与架构设计</div>
+                  <div class="item-desc">明确核心场景、用户角色、核心 Agent 类型与协作方式。</div>
+                </div>
+              </li>
+              <li>
+                <div class="checklist-icon">☐</div>
+                <div>
+                  <div class="item-title">项目结构与核心模块</div>
+                  <div class="item-desc">agent/, tools/, memory/, graph/, tests/, configs/ 等清晰分层。</div>
+                </div>
+              </li>
+              <li>
+                <div class="checklist-icon">☐</div>
+                <div>
+                  <div class="item-title">核心循环实现</div>
+                  <div class="item-desc">ReAct / Plan-Execute / LangGraph 状态机完整实现。</div>
+                </div>
+              </li>
+              <li>
+                <div class="checklist-icon">☐</div>
+                <div>
+                  <div class="item-title">工具注册与错误处理</div>
+                  <div class="item-desc">至少 3-5 个领域工具，包含超时、重试、降级策略。</div>
+                </div>
+              </li>
+              <li>
+                <div class="checklist-icon">☐</div>
+                <div>
+                  <div class="item-title">评估 Pipeline 与监控</div>
+                  <div class="item-desc">离线 Eval + 在线监控 + Trace 追踪完整链路。</div>
+                </div>
+              </li>
+              <li>
+                <div class="checklist-icon">☐</div>
+                <div>
+                  <div class="item-title">用户界面（Web/CLI）</div>
+                  <div class="item-desc">Gradio / Streamlit / FastAPI 提供可视化交互。</div>
+                </div>
+              </li>
+              <li>
+                <div class="checklist-icon">☐</div>
+                <div>
+                  <div class="item-title">部署上线</div>
+                  <div class="item-desc">Docker 容器化、CI/CD、至少一个云平台部署。</div>
+                </div>
+              </li>
+              <li>
+                <div class="checklist-icon">☐</div>
+                <div>
+                  <div class="item-title">README、Demo、文档</div>
+                  <div class="item-desc">让陌生人也能在 10 分钟内跑通你的项目。</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="card" style="position: sticky; top: 100px;">
+              <h4 style="margin-bottom: 18px;">🎯 项目蓝图示例</h4>
+              <p style="color: var(--text-2); font-size: 0.9rem; margin-bottom: 16px;">
+                仅供参考，最终应选你真正想做的需求。
+              </p>
+
+              <div style="margin-bottom: 16px; padding: 14px; background: var(--bg-2); border-radius: 10px;">
+                <strong style="color: var(--brand-2);">🛒 智能购物助手</strong>
+                <p style="font-size: 0.85rem; color: var(--text-3); margin-top: 4px;">多 Agent · 价格比对 · 评价分析 · 自动下单</p>
+              </div>
+              <div style="margin-bottom: 16px; padding: 14px; background: var(--bg-2); border-radius: 10px;">
+                <strong style="color: var(--brand-4);">📚 公司知识库 Agent</strong>
+                <p style="font-size: 0.85rem; color: var(--text-3); margin-top: 4px;">RAG · 权限管理 · 多源索引 · 引用追溯</p>
+              </div>
+              <div style="margin-bottom: 16px; padding: 14px; background: var(--bg-2); border-radius: 10px;">
+                <strong style="color: var(--brand-3);">🔍 自动化研究助手</strong>
+                <p style="font-size: 0.85rem; color: var(--text-3); margin-top: 4px;">Plan-Execute · 文献检索 · 综述生成</p>
+              </div>
+              <div style="margin-bottom: 16px; padding: 14px; background: var(--bg-2); border-radius: 10px;">
+                <strong style="color: var(--brand-5);">💼 销售自动化 Agent</strong>
+                <p style="font-size: 0.85rem; color: var(--text-3); margin-top: 4px;">线索管理 · 邮件回复 · CRM 集成</p>
+              </div>
+              <div style="margin-bottom: 16px; padding: 14px; background: var(--bg-2); border-radius: 10px;">
+                <strong style="color: var(--brand-1);">💻 编程助手 Agent</strong>
+                <p style="font-size: 0.85rem; color: var(--text-3); margin-top: 4px;">代码理解 · 自动修复 · PR 评审</p>
+              </div>
+
+              <a href="blueprint.html" class="btn btn-primary" style="width: 100%; margin-top: 12px;">查看完整蓝图 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 学习策略 -->
+<section class="section">
+  <div class="container container-sm">
+    <div class="section-head">
+      <span class="eyebrow">学习策略</span>
+      <h2 class="section-title">如何<span class="hl-3">高效地</span>走完这条路径</h2>
+      <p class="section-subtitle">我们观察了大量学习者,总结出几条关键经验。</p>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="badge badge-green" style="margin-bottom: 14px;">原则 01</div>
+        <h4>🚫 不要囤积</h4>
+        <p style="color: var(--text-2); font-size: 0.92rem;">
+          与其收藏 100 篇教程，不如认真消化 10 篇。读完立刻动手实践，写下自己的理解。
+        </p>
+      </div>
+      <div class="card">
+        <div class="badge badge-cyan" style="margin-bottom: 14px;">原则 02</div>
+        <h4>🧪 输出驱动</h4>
+        <p style="color: var(--text-2); font-size: 0.92rem;">
+          每个阶段都要有可展示的"作品"。你能展示给别人看的东西，才是真的学会了。
+        </p>
+      </div>
+      <div class="card">
+        <div class="badge badge-pink" style="margin-bottom: 14px;">原则 03</div>
+        <h4>👥 找同伴</h4>
+        <p style="color: var(--text-2); font-size: 0.92rem;">
+          独自学习很容易放弃。加入社区、小组、项目，与同路人一起走得更远。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>现在就开始<span class="hl">第一步</span></h2>
+      <p>认知基础是地基。这一阶段不需要写代码，但需要持续思考和实验。</p>
+      <a href="knowledge.html" class="btn btn-primary btn-lg">Phase 1 · 建立认知 →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 18px;">
+          <span class="logo-mark">A</span><span>Agent Academy</span>
+        </div>
+        <p style="color: var(--text-2); font-size: 0.92rem; line-height: 1.7; max-width: 360px;">
+          一份完整、可执行、与时代同步的 AI Agent 学习蓝图。
+        </p>
+      </div>
+      <div><h5>学习路径</h5><ul>
+        <li><a href="knowledge.html">知识体系</a></li>
+        <li><a href="path.html">五阶段路径</a></li>
+        <li><a href="workshop.html">实战工坊</a></li>
+        <li><a href="blueprint.html">项目蓝图</a></li>
+      </ul></div>
+      <div><h5>资源</h5><ul>
+        <li><a href="projects.html">开源项目</a></li>
+        <li><a href="resources.html">论文与课程</a></li>
+        <li><a href="resources.html#books">推荐书目</a></li>
+        <li><a href="resources.html#community">社区</a></li>
+      </ul></div>
+      <div><h5>关于</h5><ul>
+        <li><a href="#">理念与方法</a></li>
+        <li><a href="#">贡献指南</a></li>
+        <li><a href="#">更新日志</a></li>
+        <li><a href="#">联系反馈</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Agent Academy</span>
+      <span>用 💜 为下一代构建者打造</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

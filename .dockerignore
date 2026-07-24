@@ -1,0 +1,9 @@
+.git
+.github
+.DS_Store
+*.md
+!README.md
+node_modules
+.vscode
+*.log
+assets/*.png
