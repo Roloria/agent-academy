@@ -30,7 +30,7 @@ jobs:
 
           # 复制所有 HTML 页面
           cp index.html knowledge.html path.html projects.html \
-             workshop.html blueprint.html resources.html public/
+             workshop.html playground.html blueprint.html resources.html public/
 
           # 复制资源目录
           cp -r css js public/
@@ -44,9 +44,6 @@ jobs:
 
           echo "📂 部署文件清单:"
           ls -la public/
-          echo ""
-          echo "📂 部署目录树:"
-          find public/ -type f | sort
 
       - name: 📤 Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
