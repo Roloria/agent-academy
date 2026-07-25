@@ -29,3 +29,5 @@ build/
 
 # 大文件（截图）
 assets/*.png
+
+*.bak
