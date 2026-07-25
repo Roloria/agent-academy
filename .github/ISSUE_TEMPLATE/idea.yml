@@ -1,0 +1,73 @@
+name: 💡 Idea / Idea Suggestion
+description: Propose a new feature, content addition, or improvement
+title: "[IDEA] "
+labels: ["idea"]
+assignees: []
+
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What area is your idea about?
+      options:
+        - Content (new project/paper/lab)
+        - UX / Design
+        - Engineering / Architecture
+        - Educational approach
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: one-liner
+    attributes:
+      label: One-line summary
+      description: In one sentence, what's the idea?
+      placeholder: "e.g. Add a hands-on Voice Agent lab to Workshop"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / motivation
+      description: What pain point does this address? Why does it matter?
+      placeholder: Explain the context: who is affected, how often, etc.
+    validations:
+      required: false
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How would you solve it? Be specific.
+      placeholder: What's the idea? Where would it go (which page)? What would change?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What else did you consider? Why is this option best?
+    validations:
+      required: false
+
+  - type: input
+    id: effort
+    attributes:
+      label: Estimated effort
+      description: How much work? (rough)
+      placeholder: "e.g. 2 hours, 1 day, weekend project"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contributions
+    attributes:
+      label: Would you like to contribute this yourself?
+      options:
+        - label: Yes, I'd like to implement this myself
+        - label: I can help review / discuss
+        - label: Just proposing — anyone can take it
