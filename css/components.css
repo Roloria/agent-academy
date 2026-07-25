@@ -818,3 +818,179 @@ blockquote cite {
     align-self: flex-start;
   }
 }
+
+/* ===== 左侧目录导航 TOC ===== */
+
+.page-with-toc {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+  align-items: start;
+}
+
+.page-content { min-width: 0; }
+
+/* TOC 容器 */
+.toc-container {
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  max-height: calc(100vh - 130px);
+  overflow: hidden;
+  padding: 0;
+  font-size: 0.88rem;
+}
+
+/* TOC 内容包装 */
+.toc-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 14px 18px;
+  overflow: hidden;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOC 头部 */
+.toc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+
+.toc-header-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.toc-progress {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  color: var(--brand-2);
+  background: rgba(0, 212, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  font-weight: 600;
+}
+
+/* 进度条 */
+.toc-progress-bar {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
+  transition: width 0.1s linear;
+  border-radius: 1px;
+}
+
+.toc-wrap { position: relative; }
+
+/* 滚动容器 */
+.toc-nav {
+  overflow-y: auto;
+  margin: 0 -8px;
+  padding: 0 8px 0 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-3) transparent;
+}
+
+.toc-nav::-webkit-scrollbar { width: 4px; }
+.toc-nav::-webkit-scrollbar-thumb { background: var(--bg-3); border-radius: 2px; }
+
+/* 列表 */
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 1px solid var(--border);
+}
+
+.toc-item {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.toc-item a {
+  display: block;
+  padding: 7px 10px 7px 14px;
+  color: var(--text-3);
+  font-size: 0.83rem;
+  line-height: 1.4;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  margin-left: -1px;
+  transition: all 0.15s;
+  border-radius: 0 6px 6px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toc-item a:hover {
+  color: var(--text-0);
+  background: var(--surface-strong);
+}
+
+.toc-item a.active {
+  color: var(--brand-2);
+  border-left-color: var(--brand-1);
+  background: rgba(124, 92, 255, 0.08);
+  font-weight: 600;
+}
+
+/* H3 缩进 */
+.toc-h3 a {
+  padding-left: 24px;
+  font-size: 0.78rem;
+  color: var(--text-4);
+}
+.toc-h3 a.active {
+  color: var(--brand-4);
+  border-left-color: var(--brand-2);
+  background: rgba(0, 212, 255, 0.05);
+}
+
+/* H4 进一步缩进 */
+.toc-h4 a {
+  padding-left: 34px;
+  font-size: 0.74rem;
+  color: var(--text-4);
+}
+
+/* 响应式:移动端隐藏 */
+@media (max-width: 1024px) {
+  .page-with-toc {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .toc-container {
+    display: none;
+  }
+}
+
+/* 浮动 TOC 按钮 (桌面也不遮挡内容) */
+@media (min-width: 1025px) {
+  .page-with-toc .section,
+  .page-with-toc .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -208,7 +208,11 @@ graph TD
 </section>
 
 <!-- 核心概念卡片 -->
-<section class="section">
+<div class="page-with-toc">
+  <!-- ========== Left Sidebar TOC ========== -->
+  <aside class="toc-container" id="toc" data-toc data-toc-title="🧠 知识导航"></aside>
+  <div class="page-content">
+    <section class="section">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">核心概念</span>
@@ -584,6 +588,8 @@ stateDiagram-v2
     </div>
   </div>
 </section>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="container">
@@ -623,6 +629,7 @@ stateDiagram-v2
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/toc.js"></script>
 <script>mermaid.initialize({startOnLoad:true, theme:'dark', themeVariables:{primaryColor:'#7c5cff', primaryTextColor:'#fff', primaryBorderColor:'#7c5cff', lineColor:'#00d4ff', secondaryColor:'#11141d', tertiaryColor:'#1f2433', fontFamily:'Inter'}});</script>
 <!-- ========== Analytics ========== -->
 <script src="js/analytics.js"></script>
