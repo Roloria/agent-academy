@@ -986,11 +986,4 @@ blockquote cite {
   }
 }
 
-/* 浮动 TOC 按钮 (桌面也不遮挡内容) */
-@media (min-width: 1025px) {
-  .page-with-toc .section,
-  .page-with-toc .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+/* 桌面布局保持自然 (让 .container 自己管 padding) */
