@@ -513,38 +513,57 @@ python agent.py</code></pre>
     <!-- Lab 01.4 轻量级应用实战 —— 核心新增 -->
     <div class="knowledge-card" id="lab01-4" style="margin-bottom: 32px; border: 2px solid var(--brand-1);">
       <span class="badge badge-pink" style="margin-bottom: 14px;">01.4 · 核心 · 轻量级应用实战</span>
-      <h3 style="font-size: 1.6rem; margin-bottom: 16px;">🚀 7 个能立刻用上的 AI 智能体</h3>
+      <h3 style="font-size: 1.6rem; margin-bottom: 16px;">🚀 8 个能立刻用上的 AI 智能体</h3>
       <p style="color: var(--text-2); margin-bottom: 18px;">
         <strong style="color:var(--text-0)">这是整个 Agent Academy 最精华的部分。</strong>
-        下面 7 个项目，每一个都<strong style="color:var(--brand-2)">真实解决你的日常问题</strong>。
-        每个项目提供 <strong style="color:var(--brand-2)">3 种实现路径</strong>，你可以根据自己的水平选择。
+        下面 8 个项目,每一个都<strong style="color:var(--brand-2)">真实解决你的日常问题</strong>。
       </p>
 
-      <!-- 实现路径解释 -->
-      <div class="puzzle-pieces" style="margin-bottom: 30px;">
-        <div class="puzzle-piece">
-          <h4>路径 A · 完全无代码</h4>
-          <p>用 ChatGPT Custom GPT / Coze / Dify 的图形界面搭建。适合<strong style="color:var(--text-0)">完全不想碰代码</strong>的人。</p>
-        </div>
-        <div class="puzzle-piece">
-          <h4>路径 B · 可视化平台</h4>
-          <p>用 Dify / Coze / Flowise 拖拽搭建。适合想<strong style="color:var(--text-0)">做更复杂 Agent</strong> 但不想写代码。</p>
-        </div>
-        <div class="puzzle-piece">
-          <h4>路径 C · 写代码</h4>
-          <p>Python 50-100 行完整可运行。适合<strong style="color:var(--text-0)">想深入理解</strong> Agent 工作原理。</p>
+      <div class="notice notice-tip" style="margin-bottom: 28px;">
+        <span class="notice-icon">💡</span>
+        <div>
+          <strong>核心方法论:Master Prompt + AI</strong>
+          <p>每个项目都有一个<strong style="color:var(--text-0)"> Master Prompt</strong>。
+          你只需把它发给任何 AI —— ChatGPT、Claude、Cursor、Copilot —— AI 就会帮你设计完整方案、生成代码、配置服务。
+          <br>
+          <strong style="color:var(--text-0)">你不需要写一行代码。让 AI 写。</strong></p>
         </div>
       </div>
 
+      <h4 style="margin: 18px 0 12px;">📦 同样一段 Prompt,4 种"投放方式"任选</h4>
+      <div class="puzzle-pieces" style="margin-bottom: 30px;">
+        <div class="puzzle-piece">
+          <h4>① Custom GPT · 15 分钟</h4>
+          <p>把 Master Prompt 粘到 Custom GPT 的 Instructions,知识库挂 PDF 即可。<strong style="color:var(--text-0)">只用 ChatGPT 账号</strong>,不需 API Key。</p>
+        </div>
+        <div class="puzzle-piece">
+          <h4>② Dify / Coze 拖拽 · 1-2 小时</h4>
+          <p>把 Master Prompt 粘到节点,拖拽添加工具(搜索/邮件/定时)。<strong style="color:var(--text-0)">能发布给别人用</strong>,支持定时任务。</p>
+        </div>
+        <div class="puzzle-piece">
+          <h4>③ Cursor / Copilot · 30 分钟</h4>
+          <p>把 Master Prompt 喂给 AI IDE,AI <strong style="color:var(--text-0)">直接生成可运行的项目代码</strong>。你只需复制运行。</p>
+        </div>
+        <div class="puzzle-piece">
+          <h4>④ v0.dev / bolt.new · 10 分钟</h4>
+          <p>用 <strong>v0</strong>、<strong>bolt.new</strong>、<strong>Replit Agent</strong> 这些"AI 生成 App"的工具。<strong style="color:var(--text-0)">描述需求,得到可部署的应用</strong>。</p>
+        </div>
+      </div>
+
+      <p style="color: var(--text-2); margin-bottom: 20px; font-size: 0.95rem;">
+        接下来每个项目都给你:
+        <strong style="color: var(--brand-2);">① 核心需求 → ② Master Prompt → ③ AI 会给你什么 → ④ 4 种落地方式</strong>。
+      </p>
+
       <!-- 项目卡片网格 -->
-      <h4 style="margin: 30px 0 18px;">📦 7 个项目速览</h4>
+      <h4 style="margin: 30px 0 18px;">📦 8 个项目速览</h4>
       <div class="grid grid-2" style="gap: 16px;">
 
         <div class="card" style="padding: 22px;">
           <div style="font-size: 1.8rem; margin-bottom: 10px;">📰</div>
           <h4 style="margin-bottom: 8px;">项目 1 · 每日学习摘要 Bot</h4>
           <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
-            自动汇总 RSS / 公众号内容,生成每日精炼摘要推送到你的 IM
+            自动汇总 RSS / 公众号内容,生成每日精炼摘要
           </p>
           <div class="tag-cloud">
             <span class="tag">信息聚合</span>
@@ -557,7 +576,7 @@ python agent.py</code></pre>
           <div style="font-size: 1.8rem; margin-bottom: 10px;">📚</div>
           <h4 style="margin-bottom: 8px;">项目 2 · 个人知识库问答</h4>
           <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
-            上传你的 PDF / 笔记,用自然语言提问,AI 找到原文段落并回答
+            上传 PDF / 笔记,用自然语言提问,AI 引用原文回答
           </p>
           <div class="tag-cloud">
             <span class="tag">RAG</span>
@@ -570,7 +589,7 @@ python agent.py</code></pre>
           <div style="font-size: 1.8rem; margin-bottom: 10px;">⏰</div>
           <h4 style="margin-bottom: 8px;">项目 3 · 时间块规划师</h4>
           <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
-            输入可用时间和任务清单,生成最优作息安排 + 自动设置提醒
+            输入可用时间和任务,生成最优作息 + 自动提醒
           </p>
           <div class="tag-cloud">
             <span class="tag">GTD</span>
@@ -581,14 +600,14 @@ python agent.py</code></pre>
 
         <div class="card" style="padding: 22px;">
           <div style="font-size: 1.8rem; margin-bottom: 10px;">💌</div>
-          <h4 style="margin-bottom: 8px;">项目 4 · 邮件 / 微信回复助手</h4>
+          <h4 style="margin-bottom: 8px;">项目 4 · 邮件 / IM 回复助手</h4>
           <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
-            转发邮件 / 消息 → AI 分析语境 → 生成多个草稿回复供你挑选
+            转发邮件 / 消息 → AI 分析语境 → 生成多个草稿
           </p>
           <div class="tag-cloud">
             <span class="tag">沟通</span>
             <span class="tag">IM</span>
-            <span class="tag">生产效率</span>
+            <span class="tag">效率</span>
           </div>
         </div>
 
@@ -596,7 +615,7 @@ python agent.py</code></pre>
           <div style="font-size: 1.8rem; margin-bottom: 10px;">📝</div>
           <h4 style="margin-bottom: 8px;">项目 5 · 周报 / 月报生成器</h4>
           <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
-            粘贴这周做的零散事项 → 输出结构化、优雅的工作汇报
+            粘贴零散事项 → 输出结构化、优雅的工作汇报
           </p>
           <div class="tag-cloud">
             <span class="tag">写作</span>
@@ -609,7 +628,7 @@ python agent.py</code></pre>
           <div style="font-size: 1.8rem; margin-bottom: 10px;">🔍</div>
           <h4 style="margin-bottom: 8px;">项目 6 · 信息核查助手</h4>
           <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
-            粘贴新闻 / 文章 → AI 从多个角度分析是否可信、可能的偏见
+            粘贴新闻 / 文章 → AI 从多角度分析是否可信
           </p>
           <div class="tag-cloud">
             <span class="tag">批判思维</span>
@@ -622,7 +641,7 @@ python agent.py</code></pre>
           <div style="font-size: 1.8rem; margin-bottom: 10px;">🎴</div>
           <h4 style="margin-bottom: 8px;">项目 7 · 学习卡片生成器</h4>
           <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
-            粘贴学习材料 → 自动生成 Anki 风格问答卡片 → 导出到 Anki
+            粘贴学习材料 → 生成 Anki 风格问答卡片 → 导出
           </p>
           <div class="tag-cloud">
             <span class="tag">教育</span>
@@ -635,7 +654,7 @@ python agent.py</code></pre>
           <div style="font-size: 1.8rem; margin-bottom: 10px;">💼</div>
           <h4 style="margin-bottom: 8px;">项目 8 · 求职 / 面试教练</h4>
           <p style="font-size: 0.88rem; color: var(--text-2); margin-bottom: 12px;">
-            输入职位描述 → 生成模拟面试题 + 回答思路 + 简历优化建议
+            输入职位描述 → 模拟面试 + 简历优化建议
           </p>
           <div class="tag-cloud">
             <span class="tag">求职</span>
@@ -649,198 +668,263 @@ python agent.py</code></pre>
       <div style="background: var(--bg-2); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); padding: 30px; margin-top: 32px;">
         <div class="badge badge-pink" style="margin-bottom: 14px;">📰 详细案例 · 项目 1</div>
         <h3 style="font-size: 1.6rem; margin-bottom: 12px;">每日学习摘要 Bot</h3>
-        <p style="color: var(--text-2); margin-bottom: 16px;">
-          <strong>你想解决的问题</strong>：你关注的领域每天有大量文章,自己读不完。
-          这个 Bot 会自动帮你跟踪多源内容,每天生成精炼摘要发给你。
-        </p>
-        <p style="color: var(--text-2); margin-bottom: 16px;">
-          <strong>耗时</strong>：路径 A 30 分钟 / 路径 B 1.5 小时 / 路径 C 2 小时
-        </p>
 
-        <h4 style="margin: 18px 0 12px; color: var(--brand-2);">🅰️ 路径 A · Custom GPT 30 分钟搞定</h4>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num"></div>
-            <div class="step-content">
-              <h4>步骤 1：准备你的 RSS 源</h4>
-              <p>收集 5-10 个 RSS 链接（包括博客、新闻、Newsletter）。可以用 <a href="https://feedly.com" style="color:var(--brand-2)">Feedly</a> 先聚合,获取一个聚合的 OPML。</p>
+        <!-- ① 你的真实需求 -->
+        <div style="background: var(--bg-3); padding: 18px; border-radius: var(--radius-md); margin-bottom: 24px;">
+          <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand-2); font-weight: 700; margin-bottom: 8px;">① 你想解决的真实问题</div>
+          <p style="color: var(--text-1); margin: 0; font-size: 0.95rem;">
+            你关注的领域每天有大量新内容(博客、新闻、Newsletter、RSS 源),但没时间一个个读。
+            想要一个 Bot 每天自动读完所有源 → 给出精炼摘要 → 推荐最值得读的 3 篇。
+          </p>
+        </div>
+
+        <!-- ② Master Prompt -->
+        <div style="margin-bottom: 24px;">
+          <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand-2); font-weight: 700; margin-bottom: 8px;">② Master Prompt · 完整复制可用</div>
+          <div class="code-block">
+            <div class="code-header">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <span>📋 Master Prompt for Daily Digest Bot</span>
+            </div>
+            <pre><code><span class="code-keyword">你是我的每日学习摘要助手。</span>
+
+<span class="code-comment"># 你的工作流程</span>
+当我说"今日摘要"时,请按以下步骤:
+
+1. <span class="code-keyword">读取源列表</span>:我会给你关注的 RSS / 博客源链接清单
+2. <span class="code-keyword">拉取最新</span>:访问每个源(使用 Web Search 能力),提取今天或近 24 小时的新文章
+3. <span class="code-keyword">过滤噪声</span>:跳过广告、促销、重复内容,只留有实质内容的文章
+4. <span class="code-keyword">生成摘要</span>:每篇文章用 1 句话中文概括 + 1 个"为什么值得读"
+5. <span class="code-keyword">推荐 TOP 3</span>:从所有文章中选 3 篇最值得读的,说明选择理由
+
+<span class="code-comment"># 输出格式</span>
+## 今日文章摘要
+- [标题](链接) — 一句话总结 — 关键洞察
+
+## 🌟 今日推荐 TOP 3
+1. ...
+2. ...
+3. ...
+
+<span class="code-comment"># 风格要求</span>
+- 中文输出
+- 简洁有力,每条不超过 30 字
+- 优先挑给我带来新认知的文章,不是热门八卦
+- 如果某源今天没新内容,跳过它</code></pre>
+          </div>
+          <p style="color: var(--text-3); font-size: 0.82rem; margin-top: 8px;">
+            💡 上面这段 Prompt,会得到一个有"自动读 RSS + 智能摘要 + 推荐"能力的 Agent。
+            你不需要懂 RSS、不需要懂 API、不需要写代码。
+          </p>
+        </div>
+
+        <!-- ③ AI 会给你什么 -->
+        <div style="background: var(--bg-3); padding: 18px; border-radius: var(--radius-md); margin-bottom: 24px;">
+          <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand-2); font-weight: 700; margin-bottom: 8px;">③ AI 给你的输出长这样</div>
+          <div style="background: var(--bg-0); padding: 16px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.6; color: var(--text-2);">
+            <div style="color: var(--text-3);">## 今日文章摘要</div>
+            <div style="margin: 4px 0;">• <a style="color:var(--brand-2)">Claude 3.5 Computer Use 已开放</a> — Anthropic 让 AI 直接操作电脑 — 让 Agent 范式又进一步</div>
+            <div style="margin: 4px 0;">• <a style="color:var(--brand-2)">LangGraph 1.0 发布</a> — 状态机范式被官方认定为生产级 — 多 Agent 协作有新选择</div>
+            <div style="margin: 4px 0;">• <a style="color:var(--brand-2)">DSPy 自动 prompt 调优</a> — 用程序化方法搜索最优 prompt 而非手工 — 评测证据</div>
+            <div style="color: var(--text-3); margin-top: 12px;">## 🌟 今日推荐 TOP 3</div>
+            <div style="margin: 4px 0;"><strong>1. Computer Use</strong> — 改变 Agent 与数字世界交互方式</div>
+            <div style="margin: 4px 0;"><strong>2. LangGraph 1.0</strong> — 状态机范式被验证为生产可用</div>
+            <div style="margin: 4px 0;"><strong>3. DSPy</strong> — prompt 优化的新方法论,影响所有 Agent 项目</div>
+          </div>
+        </div>
+
+        <!-- ④ 4 种落地方式 -->
+        <div style="margin-bottom: 8px;">
+          <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brand-2); font-weight: 700; margin-bottom: 12px;">④ 4 种落地方式 · 任选一种</div>
+
+          <details open style="margin-bottom: 14px;">
+            <summary style="cursor: pointer; padding: 12px 16px; background: rgba(0, 212, 255, 0.08); border: 1px solid var(--brand-2); border-radius: 10px; font-weight: 600; color: var(--text-0); list-style: none;">
+              🚀 方式 1 · Custom GPT (15 分钟,只给自己用)
+            </summary>
+            <div style="padding: 14px 20px; background: var(--bg-3); margin: -1px 0 0; border: 1px solid var(--border); border-top: none; border-radius: 0 0 10px 10px;">
+              <ol style="padding-left: 18px; line-height: 1.9; color: var(--text-2); margin: 0; font-size: 0.9rem;">
+                <li>ChatGPT → Explore GPTs → Create</li>
+                <li>Instructions 框里<strong>粘入上面的 Master Prompt</strong></li>
+                <li>Capabilities 勾选 <strong>Web Search</strong>(让 Agent 能上网)</li>
+                <li>Knowledge 上传你想监控的源链接清单(<strong style="color:var(--brand-2)">粘一段链接也行</strong>)</li>
+                <li>保存 → 完成 → 输入"今日摘要"试试</li>
+              </ol>
+              <p style="color: var(--text-3); font-size: 0.82rem; margin: 10px 0 0;">⏱ 不用 API Key,只用你的 ChatGPT Plus 账号。</p>
+            </div>
+          </details>
+
+          <details style="margin-bottom: 14px;">
+            <summary style="cursor: pointer; padding: 12px 16px; background: rgba(0, 255, 163, 0.08); border: 1px solid var(--brand-4); border-radius: 10px; font-weight: 600; color: var(--text-0); list-style: none;">
+              🎨 方式 2 · Dify / Coze (1-2 小时,可分享 + 定时)
+            </summary>
+            <div style="padding: 14px 20px; background: var(--bg-3); margin: -1px 0 0; border: 1px solid var(--border); border-top: none; border-radius: 0 0 10px 10px;">
+              <ol style="padding-left: 18px; line-height: 1.9; color: var(--text-2); margin: 0; font-size: 0.9rem;">
+                <li>在 <a href="https://cloud.dify.ai" style="color:var(--brand-2)">cloud.dify.ai</a> 创建 Chatflow</li>
+                <li>添加 <strong>开始节点</strong>(user input) → <strong>代码节点</strong>(让 AI 帮你填 Python 拉 RSS) → <strong>LLM 节点</strong>(粘 Master Prompt) → <strong>结束节点</strong></li>
+                <li>打开 Workflow 设置:加<strong>定时触发器</strong>(比如每天早 8 点) → 接 <strong>邮件发送节点</strong></li>
+                <li>发布为 Web App 或分享给好友</li>
+              </ol>
+              <p style="color: var(--text-3); font-size: 0.82rem; margin: 10px 0 0;">💡 不会写代码?复制上面 LLM 节点的 Prompt,问 AI:<strong style="color:var(--brand-2)">"请用 Python 写一个拉 RSS 的代码节点,作为 Dify 工作流的第一步"</strong>。AI 会给你完整代码。</p>
+            </div>
+          </details>
+
+          <details style="margin-bottom: 14px;">
+            <summary style="cursor: pointer; padding: 12px 16px; background: rgba(124, 92, 255, 0.08); border: 1px solid var(--brand-1); border-radius: 10px; font-weight: 600; color: var(--text-0); list-style: none;">
+              💻 方式 3 · Cursor / Copilot (30 分钟,真正能跑起来)
+            </summary>
+            <div style="padding: 14px 20px; background: var(--bg-3); margin: -1px 0 0; border: 1px solid var(--border); border-top: none; border-radius: 0 0 10px 10px;">
+              <ol style="padding-left: 18px; line-height: 1.9; color: var(--text-2); margin: 0; font-size: 0.9rem;">
+                <li>下载 <a href="https://cursor.sh" style="color:var(--brand-2)">Cursor</a> 或用 VS Code + Copilot</li>
+                <li>新建文件夹 <code>my-digest-bot/</code></li>
+                <li>打开 Cursor 的 AI 聊天(快捷键 Cmd+L),粘入这段元指令:<br>
+                  <code style="display:block; padding:10px; margin-top:6px; background:var(--bg-0); border-radius:6px; font-size:0.82rem;">
+                    用 Python 写一个每日 RSS 摘要 Bot。功能:读取我给的 RSS 源列表 → 抓取最新 10 篇 → 调用 OpenAI API 总结 → 输出到终端。<br>
+                    要求:① 完整可运行 ② 有清晰注释 ③ 我要怎么运行它写在 README 里。
+                  </code>
+                </li>
+                <li>AI 直接生成代码 + README → 你点击运行</li>
+              </ol>
+              <p style="color: var(--text-3); font-size: 0.82rem; margin: 10px 0 0;">🔑 这种方式需要 OpenAI API Key,在 <a href="https://platform.openai.com/api-keys" style="color:var(--brand-2)">platform.openai.com/api-keys</a> 获取(新账号送 $5 免费额度)。</p>
+            </div>
+          </details>
+
+          <details style="margin-bottom: 14px;">
+            <summary style="cursor: pointer; padding: 12px 16px; background: rgba(255, 110, 199, 0.08); border: 1px solid var(--brand-3); border-radius: 10px; font-weight: 600; color: var(--text-0); list-style: none;">
+              ⚡ 方式 4 · v0.dev / bolt.new / Replit Agent (10 分钟,一键得到应用)
+            </summary>
+            <div style="padding: 14px 20px; background: var(--bg-3); margin: -1px 0 0; border: 1px solid var(--border); border-top: none; border-radius: 0 0 10px 10px;">
+              <ol style="padding-left: 18px; line-height: 1.9; color: var(--text-2); margin: 0; font-size: 0.9rem;">
+                <li>访问 <a href="https://v0.dev" style="color:var(--brand-2)">v0.dev</a> 或 <a href="https://bolt.new" style="color:var(--brand-2)">bolt.new</a>(无需注册 ChatGPT 即可用)</li>
+                <li>在 prompt 框输入:<strong style="color:var(--text-2)"> "做一个每日学习摘要 Web App。左边一个文本框让我粘 RSS 源,右边一键显示今日摘要 + TOP 3 推荐。用 Next.js + Tailwind。"</strong></li>
+                <li>AI 在 60 秒内生成完整可点击的应用,直接给你部署链接</li>
+                <li>点击链接直接用,不用安装不用配置</li>
+              </ol>
+              <p style="color: var(--text-3); font-size: 0.82rem; margin: 10px 0 0;">🌟 这是最适合"不想懂技术"的路径 —— 你只用描述清楚要什么,AI 直接生成能跑的应用。</p>
+            </div>
+          </details>
+        </div>
+
+      </div>
+
+      <!-- 其他项目的简要指引 -->
+      <div style="margin-top: 40px;">
+        <h4 style="margin-bottom: 16px;">📋 其它 7 个项目的 Master Prompt(可直接复制)</h4>
+        <p style="color: var(--text-2); margin-bottom: 18px; font-size: 0.92rem;">
+          每个项目一行 Master Prompt。<strong style="color:var(--text-0)">粘到任何一个 AI(Custom GPT、Copilot、Cursor、v0.dev)都能用</strong>。
+        </p>
+        <div class="grid grid-2" style="gap: 14px;">
+          <div class="card" style="padding: 18px;">
+            <strong style="color: var(--brand-2);">📚 项目 2 · 知识库问答 Master Prompt</strong>
+            <div class="code-block" style="margin-top: 10px;">
+              <pre><code style="font-size: 0.78rem; line-height: 1.55;">
+你是我的个人知识库助手。我会:
+1. 上传 PDF / Word 文档到知识库
+2. 用自然语言提问
+请严格基于我的资料回答,每条回答必须:
+- 给出答案
+- 标注来自哪份文档、哪一段
+如果资料里没有,直接说"你提供的资料里没提到"</code></pre>
             </div>
           </div>
-          <div class="step">
-            <div class="step-num"></div>
-            <div class="step-content">
-              <h4>步骤 2：创建 Custom GPT,配置 Capabilities</h4>
-              <p>在 Capabilities 里<strong>勾选 "Web Browsing"</strong>。这是给 Agent 装上"工具调用"的眼睛。</p>
+
+          <div class="card" style="padding: 18px;">
+            <strong style="color: var(--brand-2);">⏰ 项目 3 · 时间块规划 Master Prompt</strong>
+            <div class="code-block" style="margin-top: 10px;">
+              <pre><code style="font-size: 0.78rem; line-height: 1.55;">
+你是 GTD 教练。我会粘贴我的:
+- 可用时间段
+- 待办任务列表(标注优先级)
+请你输出:
+- 90 分钟一块的作息表
+- 标注每块做什么、为什么这么排
+- 给 1 条具体的精力管理建议
+风格:简明、不讲废话、给具体时间</code></pre>
             </div>
           </div>
-          <div class="step">
-            <div class="step-num"></div>
-            <div class="step-content">
-              <h4>步骤 3：填写 Instructions (System Prompt)</h4>
-              <p>复制下面的 Prompt:<br><br>
-              <code style="display:block; padding:14px; background:var(--bg-3); border-radius:8px; font-size:0.85rem; line-height:1.7;">
-你是一个每日学习助手。用户给你一份 RSS 源列表。<br>
-当用户说"今日摘要"时：<br>
-1. 用 Web Browsing 访问列表中每个源<br>
-2. 提取今天发布的新文章<br>
-3. 输出每篇文章的一句话摘要 + 一个关键洞察<br>
-4. 最后输出"今日推荐 TOP 3",说明原因<br>
-              </code>
-              </p>
+
+          <div class="card" style="padding: 18px;">
+            <strong style="color: var(--brand-2);">💌 项目 4 · 邮件回复 Master Prompt</strong>
+            <div class="code-block" style="margin-top: 10px;">
+              <pre><code style="font-size: 0.78rem; line-height: 1.55;">
+你是邮件回复助手。我会转发一封邮件给你。
+请基于邮件的语气和上下文,生成 3 个不同风格的回复草稿:
+1. 正式商务风(用于客户/上级)
+2. 友好随性风(用于同事/朋友)
+3. 简洁直接风(用于熟悉的人)
+每个草稿前注明适用场景,我不选你的、我自己选</code></pre>
             </div>
           </div>
-          <div class="step">
-            <div class="step-num"></div>
-            <div class="step-content">
-              <h4>步骤 4：试试效果</h4>
-              <p>在对话开头粘上 RSS 源列表,然后输入"今日摘要"。观察它如何自主决定访问哪些网站。</p>
+
+          <div class="card" style="padding: 18px;">
+            <strong style="color: var(--brand-2);">📝 项目 5 · 周报生成 Master Prompt</strong>
+            <div class="code-block" style="margin-top: 10px;">
+              <pre><code style="font-size: 0.78rem; line-height: 1.55;">
+你是结构化表达专家。我会粘贴本周零散的工作事项(粗糙的笔记),
+请你输出适合给上级看的周报:
+- 按"完成 / 进行中 / 下周计划"分类
+- 每条用动词开头,讲清结果
+- 突出关键成果(有数据的带数字)
+- 300-500 字</code></pre>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 18px;">
+            <strong style="color: var(--brand-2);">🔍 项目 6 · 信息核查 Master Prompt</strong>
+            <div class="code-block" style="margin-top: 10px;">
+              <pre><code style="font-size: 0.78rem; line-height: 1.55;">
+你是批判性思维专家。我会粘贴一段新闻 / 文章,请你输出:
+1. 可验证的事实(可以查证哪些)
+2. 逻辑漏洞(推理上的问题)
+3. 反向思考 3 个可能情况
+4. 给一个"我该怎么看"的谨慎结论
+立场:客观中立,不立场先行</code></pre>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 18px;">
+            <strong style="color: var(--brand-2);">🎴 项目 7 · 学习卡片 Master Prompt</strong>
+            <div class="code-block" style="margin-top: 10px;">
+              <pre><code style="font-size: 0.78rem; line-height: 1.55;">
+你是有教学经验的人。我粘贴学习材料,你输出 8-12 张 Anki
+风格问答卡片:
+- 问题简短清晰,能考察关键概念
+- 答案精确,3 行内
+- 用 Markdown 表格输出 (Question | Answer)
+最后告诉我怎么导入到 Anki</code></pre>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 18px;">
+            <strong style="color: var(--brand-2);">💼 项目 8 · 求职教练 Master Prompt</strong>
+            <div class="code-block" style="margin-top: 10px;">
+              <pre><code style="font-size: 0.78rem; line-height: 1.55;">
+你是资深 HR。我粘贴职位描述,请输出:
+1. 岗位核心 3 项要求
+2. 6 道模拟面试题(2 道行为面+2 道技术面+2 道情景面)
+3. 每题的最佳答案思路(用 STAR 法:情境-任务-行动-结果)
+风格:犀利,直指面试考察点</code></pre>
             </div>
           </div>
         </div>
 
-        <h4 style="margin: 24px 0 12px; color: var(--brand-4);">🅱️ 路径 B · Dify 1.5 小时</h4>
-        <p style="color: var(--text-2); margin-bottom: 12px;">
-          在 <a href="https://cloud.dify.ai" style="color:var(--brand-2)">cloud.dify.ai</a> 上:
-        </p>
-        <ul style="color: var(--text-2); padding-left: 22px; line-height: 1.9; font-size: 0.92rem;">
-          <li>创建一个 Chatflow 工作流</li>
-          <li>添加"开始节点" → 添加"代码节点"(Python 脚本拉 RSS) → 添加"LLM 节点"(总结)</li>
-          <li>拖入"定时触发器",配置为每天早上 8 点运行</li>
-          <li>添加"邮件 / IM 节点",把结果发给你</li>
-        </ul>
-
-        <h4 style="margin: 24px 0 12px; color: var(--brand-2);">🅲 路径 C · 自己写代码 (Python 80 行)</h4>
-        <p style="color: var(--text-2); margin-bottom: 12px;">完整可运行代码:</p>
-
-        <div class="code-block">
-          <div class="code-header">
-            <div class="code-dots"><span></span><span></span><span></span></div>
-            <span>daily_digest.py</span>
-          </div>
-          <pre><code><span class="code-comment"># 每日学习摘要 Bot · 复制即可运行</span>
-<span class="code-comment"># 安装: pip install feedparser openai</span>
-<span class="code-comment"># 设置: export OPENAI_API_KEY="sk-..."</span>
-
-<span class="code-keyword">import</span> feedparser
-<span class="code-keyword">from</span> openai <span class="code-keyword">import</span> OpenAI
-
-<span class="code-comment"># 你关注的 RSS 源列表（可任意添加）</span>
-RSS_FEEDS = [
-    <span class="code-string">"https://hnrss.org/frontpage"</span>,     <span class="code-comment"># Hacker News</span>
-    <span class="code-string">"https://www.smashingmagazine.com/feed/"</span>,
-    <span class="code-string">"https://github.blog/feed/"</span>,
-]
-
-<span class="code-keyword">def</span> <span class="code-function">fetch_articles</span>(feeds, max_per_feed=<span class="code-string">3</span>):
-    <span class="code-string">"""从 RSS 源拉取最新文章"""</span>
-    all_articles = []
-    <span class="code-keyword">for</span> url <span class="code-keyword">in</span> feeds:
-        feed = feedparser.parse(url)
-        <span class="code-keyword">for</span> entry <span class="code-keyword">in</span> feed.entries[:max_per_feed]:
-            all_articles.append({
-                <span class="code-string">"title"</span>: entry.title,
-                <span class="code-string">"link"</span>: entry.link,
-                <span class="code-string">"summary"</span>: getattr(entry, <span class="code-string">"summary"</span>, <span class="code-string">""</span>)[:<span class="code-string">300</span>],
-            })
-    <span class="code-keyword">return</span> all_articles
-
-<span class="code-keyword">def</span> <span class="code-function">summarize_with_llm</span>(articles):
-    <span class="code-string">"""让 LLM 生成摘要 + 推荐"""</span>
-    client = OpenAI()
-    articles_text = <span class="code-string">"\n"</span>.join(
-        <span class="code-string">f"{i+1}. {a['title']}\n   {a['summary']}"</span>
-        <span class="code-keyword">for</span> i, a <span class="code-keyword">in</span> <span class="code-keyword">enumerate</span>(articles)
-    )
-    response = client.chat.completions.create(
-        model=<span class="code-string">"gpt-4o-mini"</span>,
-        messages=[{
-            <span class="code-string">"role"</span>: <span class="code-string">"user"</span>,
-            <span class="code-string">"content"</span>: <span class="code-string">f"""以下是今日抓取的文章列表:
-
-{articles_text}
-
-请输出：
-1. 每篇文章 1 句话中文摘要
-2. 推荐 TOP 3 文章,说明为什么值得读"""</span>
-        }]
-    )
-    <span class="code-keyword">return</span> response.choices[<span class="code-string">0</span>].message.content
-
-<span class="code-keyword">if</span> __name__ == <span class="code-string">"__main__"</span>:
-    articles = fetch_articles(RSS_FEEDS)
-    digest = summarize_with_llm(articles)
-    <span class="code-keyword">print</span>(digest)
-    <span class="code-comment"># 想要自动发邮件?用 smtplib 或者第三方 SendGrid</span></code></pre>
-        </div>
-
-        <div class="notice notice-success" style="margin-top: 20px;">
+        <div class="notice notice-success" style="margin-top: 24px;">
           <span class="notice-icon">✓</span>
           <div>
-            <strong>三种路径的取舍</strong>
+            <strong>不要做什么 vs 应该做什么</strong>
             <p>
-              · 路径 A 最快但定制性差,只给自己用<br>
-              · 路径 B 能发布给他人/定时运行,功能居中<br>
-              · 路径 C 完全控制但要写代码,上限最高
+              ❌ 不需要:读 API 文档、记住 Python 函数、写环境配置、调 bug<br>
+              ✅ 只要:粘 Prompt → 看 AI 输出 → 不好就多迭代几句对话
             </p>
           </div>
         </div>
       </div>
-
-      <!-- 其他项目的简要指引 -->
-      <div style="margin-top: 30px;">
-        <h4 style="margin-bottom: 16px;">📋 其它 6 个项目的快速指引</h4>
-        <p style="color: var(--text-2); margin-bottom: 16px;">下面给出每个项目的核心思路,你可以按相同模式展开。完整代码在 <a href="https://github.com/Roloria/agent-academy-examples" style="color:var(--brand-2)">agent-academy-examples</a> 仓库。</p>
-
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th>项目</th>
-              <th>路径 A：Custom GPT 提示词</th>
-              <th>关键点</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>📚 知识库问答</strong></td>
-              <td>"你是一位问答助手。我会上传 PDF 笔记,请基于笔记内容回答,并标注原文段落。"</td>
-              <td>Knowledge 字段上传 PDF</td>
-            </tr>
-            <tr>
-              <td><strong>⏰ 时间块规划</strong></td>
-              <td>"我会列出可用时间和任务,你是 GTD 教练,请生成 90 分钟作息表。"</td>
-              <td>迭代对话调整</td>
-            </tr>
-            <tr>
-              <td><strong>💌 邮件回复</strong></td>
-              <td>"你是邮件助手。我转发一封邮件,请生成 3 种不同语气(正式/友好/简洁)的回复草稿。"</td>
-              <td>选最好的直接发</td>
-            </tr>
-            <tr>
-              <td><strong>📝 周报生成</strong></td>
-              <td>"我会粘贴本周零散的工作事项,你是结构化表达专家,生成适合给上级看的周报。"</td>
-              <td>可加格式要求</td>
-            </tr>
-            <tr>
-              <td><strong>🔍 信息核查</strong></td>
-              <td>"我会粘贴一段文字,你是批判性思维专家,请:1) 找出可验证的事实 2) 检查逻辑漏洞 3) 列出 3 个反向思考。"</td>
-              <td>结合 Web Browsing</td>
-            </tr>
-            <tr>
-              <td><strong>🎴 学习卡片</strong></td>
-              <td>"你是有教学经验的人。我粘贴学习内容,请你生成 8-12 张 Anki 风格问答卡片 (问答对格式)。"</td>
-              <td>导出为 CSV 即可</td>
-            </tr>
-            <tr>
-              <td><strong>💼 求职教练</strong></td>
-              <td>"你是资深 HR。我会粘贴职位描述,请:1) 提炼岗位核心要求 2) 设计 6 道模拟面试题 3) 用 STAR 法举例最佳答案。"</td>
-              <td>迭代深化</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
     </div>
 
-    <!-- Lab 01.5 何时写代码? -->
+  </div>
+</section>
+
+
+      <!-- Lab 01.5 何时写代码? -->
     <div class="knowledge-card">
       <span class="badge badge-amber" style="margin-bottom: 14px;">01.5 · 给 0 基础人的建议</span>
       <h3 style="font-size: 1.6rem; margin-bottom: 16px;">🧭 什么时候开始写代码？</h3>
